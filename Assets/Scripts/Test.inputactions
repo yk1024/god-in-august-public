@@ -1,0 +1,45 @@
+{
+    "name": "Test",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "291a7894-9a4c-4f58-802e-1f93b1614b9d",
+            "actions": [
+                {
+                    "name": "Test",
+                    "type": "Button",
+                    "id": "8a771394-2c23-41d0-9484-411f4f19574c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "52e6aa92-08b8-437f-9dd0-15b733de39c3",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a6bc473-fe91-4a8a-a82f-0d7aec8744cc",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
