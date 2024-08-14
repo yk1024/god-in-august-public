@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interact : MonoBehaviour
 {
@@ -24,17 +25,16 @@ public class Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Clicked");
 
-            if (Physics.BoxCast(interactionPosition.position, halfExtent, interactionPosition.forward, out RaycastHit hit, Quaternion.identity, distance))
+    }
+
+    public void OnInteract(InputValue inputValue)
+    {
+        if (Physics.BoxCast(interactionPosition.position, halfExtent, interactionPosition.forward, out RaycastHit hit, Quaternion.identity, distance))
+        {
+            if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
             {
-                if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
-                {
-                    Debug.Log(hit.collider.name);
-                    interactable.Interact();
-                }
+                interactable.Interact();
             }
         }
     }
