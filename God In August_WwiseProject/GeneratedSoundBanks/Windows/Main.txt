@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	864545973	MostCoolest			\Default Work Unit\MostCoolest	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	558460643	モストクーレストガイ	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\モストクーレストガイ_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\モストクーレストガイ		6656160
+

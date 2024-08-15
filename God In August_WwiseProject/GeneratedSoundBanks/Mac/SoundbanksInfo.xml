@@ -22,10 +22,23 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3B51E889-948F-7EDA-A1E8-111109B087A1}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C74FEFBF-E851-BFB9-2C33-AF7B74FB562B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="558460643" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>モストクーレストガイ.wav</ShortName>
+					<CachePath>SFX/モストクーレストガイ_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="864545973" Name="MostCoolest" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="558460643"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6505E63A-D812-4B79-2012-B607387F2E2F}</FileHash>
+	<FileHash>{A0F10EA2-852D-A5A8-C3F6-842BAE1CB8CE}</FileHash>
 </SoundBanksInfo>
