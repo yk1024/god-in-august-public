@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField]
     private string sceneName;
+
     // Start is called before the first frame update
     void Start()
     {
