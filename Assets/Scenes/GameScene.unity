@@ -829,6 +829,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215963981}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &243218749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243218750}
+  m_Layer: 0
+  m_Name: Anomalies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243218750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243218749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 888023341}
+  - {fileID: 1764439335}
+  m_Father: {fileID: 1628791264}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296154031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,7 +1948,7 @@ GameObject:
   - component: {fileID: 888023339}
   - component: {fileID: 888023338}
   m_Layer: 0
-  m_Name: anomaly001
+  m_Name: Anomaly001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2002,13 +2035,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888023337}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3, y: 1, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 734554191}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 243218750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &960765049
 GameObject:
@@ -2908,6 +2941,7 @@ Transform:
   m_Children:
   - {fileID: 393627470}
   - {fileID: 1403386750}
+  - {fileID: 243218750}
   m_Father: {fileID: 448883042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759987244
@@ -3026,7 +3060,7 @@ GameObject:
   - component: {fileID: 1764439333}
   - component: {fileID: 1764439332}
   m_Layer: 0
-  m_Name: anomaly002
+  m_Name: Anomaly002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3113,13 +3147,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764439331}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3, y: 1, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 960765050}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 243218750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855631553
 GameObject:
@@ -3360,5 +3394,3 @@ SceneRoots:
   - {fileID: 407787241}
   - {fileID: 1759987248}
   - {fileID: 1006682370}
-  - {fileID: 888023341}
-  - {fileID: 1764439335}
