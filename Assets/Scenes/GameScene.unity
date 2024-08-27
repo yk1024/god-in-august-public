@@ -1140,6 +1140,7 @@ MonoBehaviour:
   - {fileID: 888023337}
   - {fileID: 1764439331}
   probability: 0.66
+  overlayPanelAnimator: {fileID: 1397104480}
 --- !u!1 &447132588
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,8 +4005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfce4368b44e415c8df044a825f595f, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  overlayPanelAnimator: {fileID: 1397104480}
-  nextSceneName: GameScene
   confirmationPanel: {fileID: 716740831}
 --- !u!1 &1419816236
 GameObject:
