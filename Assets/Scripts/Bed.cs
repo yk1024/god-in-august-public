@@ -1,27 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class Bed : MonoBehaviour, IInteractable
 {
     [SerializeField]
-    private Animator overlayPanelAnimator;
-
-    [SerializeField]
-    private string nextSceneName;
-
-    [SerializeField]
     private GameObject confirmationPanel;
 
-    private PlayerInput playerInput;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerInput = FindObjectOfType<PlayerInput>();
-        WakeUp();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -35,27 +26,9 @@ public class Bed : MonoBehaviour, IInteractable
         confirmationPanel.SetActive(true);
     }
 
-    private void WakeUp()
-    {
-        overlayPanelAnimator.SetTrigger(Constants.FadeInTrigger);
-        Invoke("EnableInput", 5);
-    }
-
-    private void EnableInput()
-    {
-        playerInput.SwitchCurrentActionMap(Constants.PlayerActionMap);
-    }
-
     public void Sleep()
     {
-        playerInput.DeactivateInput();
+        gameManager.EndDay();
         confirmationPanel.SetActive(false);
-        overlayPanelAnimator.SetTrigger(Constants.FadeOutTrigger);
-        Invoke("LoadNextScene", 5);
-    }
-
-    private void LoadNextScene()
-    {
-        SceneManager.LoadScene(nextSceneName);
     }
 }

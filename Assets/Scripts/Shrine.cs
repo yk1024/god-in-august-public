@@ -7,12 +7,14 @@ public class Shrine : MonoBehaviour, IInteractable
     [SerializeField]
     private GameObject prayPanel;
 
-    private bool alreadPrayed = false;
+    private bool alreadyPrayed = false;
+
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -23,17 +25,17 @@ public class Shrine : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (!alreadPrayed)
+        if (!alreadyPrayed)
         {
             prayPanel.SetActive(true);
         }
     }
 
-    public void Pray(PrayType prayType)
+    private void Pray(PrayType prayType)
     {
-        Debug.Log($"Prayed For {prayType}");
+        gameManager.PrayType = prayType;
         prayPanel.SetActive(false);
-        alreadPrayed = true;
+        alreadyPrayed = true;
     }
 
     public void PrayForGratitude()
