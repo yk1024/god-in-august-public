@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         Invoke("LoadNextDay", 5);
     }
 
-    public void LoadNextDay()
+    private void LoadNextDay()
     {
         if (anomalyExists && prayType == PrayType.Wish)
         {

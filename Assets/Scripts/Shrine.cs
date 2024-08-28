@@ -31,7 +31,7 @@ public class Shrine : MonoBehaviour, IInteractable
         }
     }
 
-    public void Pray(PrayType prayType)
+    private void Pray(PrayType prayType)
     {
         gameManager.PrayType = prayType;
         prayPanel.SetActive(false);
