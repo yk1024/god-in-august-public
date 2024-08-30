@@ -1,4 +1,4 @@
-public interface IInteractable
+public interface IInteractable : ILookAtTarget
 {
     public void Interact();
 }
