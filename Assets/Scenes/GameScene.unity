@@ -1215,6 +1215,7 @@ Transform:
   - {fileID: 58854416}
   - {fileID: 730933815}
   - {fileID: 1454365863}
+  - {fileID: 1812367472}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &513451853
@@ -3246,7 +3247,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 448883042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855631553
 GameObject:
@@ -3487,4 +3488,3 @@ SceneRoots:
   - {fileID: 407787241}
   - {fileID: 1759987248}
   - {fileID: 1006682370}
-  - {fileID: 1812367472}
