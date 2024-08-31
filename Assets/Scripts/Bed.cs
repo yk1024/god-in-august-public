@@ -9,6 +9,11 @@ public class Bed : MonoBehaviour, IInteractable
 
     private GameManager gameManager;
 
+    public Transform TargetPoint { get => targetPoint; }
+
+    [SerializeField]
+    private Transform targetPoint;
+
     // Start is called before the first frame update
     void Start()
     {

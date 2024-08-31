@@ -6,36 +6,37 @@ using UnityEngine.InputSystem;
 public class Interact : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 area;
-
-    private Vector3 halfExtent;
-
-    [SerializeField]
     private float distance;
 
-    [SerializeField]
-    private Transform interactionPosition;
+    private bool interacting;
+    private LookAtHandler lookAt;
 
     // Start is called before the first frame update
     void Start()
     {
-        halfExtent = 0.5f * area;
+        lookAt = GetComponent<LookAtHandler>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        (ILookAtTarget target, float distance) = lookAt.LookAtFirstTarget();
 
+        InteractTarget(target, distance);
+
+        interacting = false;
     }
 
     public void OnInteract(InputValue inputValue)
     {
-        if (Physics.BoxCast(interactionPosition.position, halfExtent, interactionPosition.forward, out RaycastHit hit, Quaternion.identity, distance))
+        interacting = true;
+    }
+
+    private void InteractTarget(ILookAtTarget target, float distance)
+    {
+        if (interacting && target is IInteractable interactable && distance <= this.distance)
         {
-            if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
-            {
-                interactable.Interact();
-            }
+            interactable.Interact();
         }
     }
 }

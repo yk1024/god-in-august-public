@@ -6,4 +6,6 @@ public static class Constants
 
     public const string FadeInTrigger = "FadeIn";
     public const string FadeOutTrigger = "FadeOut";
+
+    public const string PlayerTag = "Player";
 }
