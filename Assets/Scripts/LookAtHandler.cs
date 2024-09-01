@@ -22,12 +22,15 @@ public class LookAtHandler : MonoBehaviour
     private Animator animator;
     private float ikLookAtWeight = 0;
     private Vector3 ikLookAtPosition;
+    private Vector3 lastHeadPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         vrm10Instance = GetComponent<Vrm10Instance>();
         vrm10Instance.TryGetBoneTransform(HumanBodyBones.Head, out head);
+        lastHeadPosition = head.position;
+        ikLookAtPosition = head.position + head.forward;
 
         animator = GetComponent<Animator>();
     }
@@ -40,9 +43,9 @@ public class LookAtHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out ILookAtTarget target))
+        if (!other.isTrigger && other.TryGetComponent(out ILookAtTarget target))
         {
-            targets.Add(other.gameObject, target);
+            targets.TryAdd(other.gameObject, target);
         }
     }
 
@@ -73,6 +76,7 @@ public class LookAtHandler : MonoBehaviour
             });
 
         PrepareAnimation(target);
+        lastHeadPosition = head.position;
 
         return (target, distance);
     }
@@ -96,10 +100,10 @@ public class LookAtHandler : MonoBehaviour
 
     Vector3 CalculateNextPosition(Vector3 targetPosition)
     {
-        if (ikLookAtPosition == null || ikLookAtWeight == 0 || ikLookAtPosition == targetPosition) return targetPosition;
+        if (ikLookAtWeight == 0 || ikLookAtPosition == targetPosition) return targetPosition;
 
         Vector3 targetDirection = targetPosition - head.position;
-        Vector3 currentDirection = ikLookAtPosition - head.position;
+        Vector3 currentDirection = ikLookAtPosition - lastHeadPosition;
 
         Vector3 nextDirection = Vector3.RotateTowards(currentDirection, targetDirection, rotationSpeed * Time.deltaTime, 0);
 
@@ -108,11 +112,7 @@ public class LookAtHandler : MonoBehaviour
 
     void OnAnimatorIK(int layerIndex)
     {
-        if (ikLookAtPosition != null)
-        {
-            animator.SetLookAtPosition(ikLookAtPosition);
-        }
-
+        animator.SetLookAtPosition(ikLookAtPosition);
         animator.SetLookAtWeight(ikLookAtWeight);
     }
 }

@@ -11,12 +11,14 @@ public class MobController : MonoBehaviour
     private Animator animator;
     private NavMeshAgent navMeshAgent;
     private int navigationIndex = 0;
+    private LookAtHandler lookAtHandler;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        lookAtHandler = GetComponent<LookAtHandler>();
 
         animator.SetFloat("MotionSpeed", 1);
     }
@@ -31,6 +33,8 @@ public class MobController : MonoBehaviour
 
         float speed = navMeshAgent.velocity.magnitude;
         animator.SetFloat("Speed", speed);
+
+        lookAtHandler.LookAtFirstTarget();
     }
 
     private void SetDestination()
