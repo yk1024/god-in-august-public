@@ -7,20 +7,32 @@ using UniVRM10;
 
 public class LookAtHandler : MonoBehaviour
 {
-    private float viewingAngle = 60;
+    [SerializeField]
+    private float viewingAngle;
     private Dictionary<GameObject, ILookAtTarget> targets = new Dictionary<GameObject, ILookAtTarget>();
     private Vrm10Instance vrm10Instance;
     private Transform head;
-    private Transform neck;
-    private Action rotateHeadOnLateUpdate;
-    private float rotateSpeed = 90;
+
+    [SerializeField]
+    private float rotationSpeed;
+
+    [SerializeField]
+    private float reactionSpeed;
+
+    private Animator animator;
+    private float ikLookAtWeight = 0;
+    private Vector3 ikLookAtPosition;
+    private Vector3 lastHeadPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         vrm10Instance = GetComponent<Vrm10Instance>();
         vrm10Instance.TryGetBoneTransform(HumanBodyBones.Head, out head);
-        vrm10Instance.TryGetBoneTransform(HumanBodyBones.Neck, out neck);
+        lastHeadPosition = head.position;
+        ikLookAtPosition = head.position + head.forward;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,20 +41,11 @@ public class LookAtHandler : MonoBehaviour
 
     }
 
-    private void LateUpdate()
-    {
-        if (rotateHeadOnLateUpdate != null)
-        {
-            rotateHeadOnLateUpdate();
-            rotateHeadOnLateUpdate = null;
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out ILookAtTarget target))
+        if (!other.isTrigger && other.TryGetComponent(out ILookAtTarget target))
         {
-            targets.Add(other.gameObject, target);
+            targets.TryAdd(other.gameObject, target);
         }
     }
 
@@ -69,15 +72,47 @@ public class LookAtHandler : MonoBehaviour
                 if (hit.collider.gameObject != target.Key) return false;
 
                 distance = hit.distance;
-                RotateHead(target.Value);
                 return true;
             });
+
+        PrepareAnimation(target);
+        lastHeadPosition = head.position;
 
         return (target, distance);
     }
 
-    private void RotateHead(ILookAtTarget target)
+    void PrepareAnimation(ILookAtTarget target)
     {
+        float ikWeightReaction = reactionSpeed * Time.deltaTime;
 
+        if (target != null)
+        {
+            ikLookAtPosition = CalculateNextPosition(target.TargetPoint.position);
+            ikLookAtWeight += ikWeightReaction;
+        }
+        else
+        {
+            ikLookAtWeight -= ikWeightReaction;
+        }
+
+        ikLookAtWeight = Mathf.Clamp(ikLookAtWeight, 0, 1);
+    }
+
+    Vector3 CalculateNextPosition(Vector3 targetPosition)
+    {
+        if (ikLookAtWeight == 0 || ikLookAtPosition == targetPosition) return targetPosition;
+
+        Vector3 targetDirection = targetPosition - head.position;
+        Vector3 currentDirection = ikLookAtPosition - lastHeadPosition;
+
+        Vector3 nextDirection = Vector3.RotateTowards(currentDirection, targetDirection, rotationSpeed * Time.deltaTime, 0);
+
+        return nextDirection + head.position;
+    }
+
+    void OnAnimatorIK(int layerIndex)
+    {
+        animator.SetLookAtPosition(ikLookAtPosition);
+        animator.SetLookAtWeight(ikLookAtWeight);
     }
 }
