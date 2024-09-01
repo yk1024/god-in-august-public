@@ -6,33 +6,22 @@ public class UIPanel : MonoBehaviour
 {
     private PlayerInput playerInput;
     private Selectable firstSelectable;
-    private bool justEnabled = false;
 
-    void Start()
+    [SerializeField]
+    private InputActionReference cancelAction;
+
+    void Awake()
     {
         playerInput = FindObjectOfType<PlayerInput>();
         firstSelectable = GetComponentInChildren<Selectable>(true);
     }
 
-    void Update()
-    {
-        if (justEnabled)
-        {
-            playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
-            firstSelectable.Select();
-            Cursor.lockState = CursorLockMode.None;
-            justEnabled = false;
-        }
-
-        if (Input.GetButtonDown("Cancel"))
-        {
-            OnCancel();
-        }
-    }
-
     void OnEnable()
     {
-        justEnabled = true;
+        playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
+        firstSelectable.Select();
+        Cursor.lockState = CursorLockMode.None;
+        cancelAction.action.performed += OnCancel;
     }
 
     void OnDisable()
@@ -42,11 +31,18 @@ public class UIPanel : MonoBehaviour
             playerInput.SwitchCurrentActionMap(Constants.PlayerActionMap);
         }
 
+        cancelAction.action.performed -= OnCancel;
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OnCancel()
     {
         gameObject.SetActive(false);
+    }
+
+    public void OnCancel(InputAction.CallbackContext context)
+    {
+        OnCancel();
     }
 }

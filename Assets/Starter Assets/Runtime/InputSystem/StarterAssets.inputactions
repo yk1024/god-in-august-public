@@ -233,8 +233,30 @@
         {
             "name": "UI",
             "id": "1a9aeec7-f956-4bf5-aad1-25683f9d2077",
-            "actions": [],
-            "bindings": []
+            "actions": [
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "5b8ff1c7-a801-4302-8859-1897858f0d99",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "39f5685e-682d-4403-8e97-d25efb421c0b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
