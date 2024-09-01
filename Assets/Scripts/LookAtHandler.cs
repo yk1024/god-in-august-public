@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,9 +7,6 @@ public class LookAtHandler : MonoBehaviour
 {
     [SerializeField]
     private float viewingAngle;
-    private Dictionary<GameObject, ILookAtTarget> targets = new Dictionary<GameObject, ILookAtTarget>();
-    private Vrm10Instance vrm10Instance;
-    private Transform head;
 
     [SerializeField]
     private float rotationSpeed;
@@ -19,12 +14,14 @@ public class LookAtHandler : MonoBehaviour
     [SerializeField]
     private float reactionSpeed;
 
+    private Dictionary<GameObject, ILookAtTarget> targets = new Dictionary<GameObject, ILookAtTarget>();
+    private Vrm10Instance vrm10Instance;
+    private Transform head;
     private Animator animator;
     private float ikLookAtWeight = 0;
     private Vector3 ikLookAtPosition;
     private Vector3 lastHeadPosition;
 
-    // Start is called before the first frame update
     void Start()
     {
         vrm10Instance = GetComponent<Vrm10Instance>();
@@ -33,12 +30,6 @@ public class LookAtHandler : MonoBehaviour
         ikLookAtPosition = head.position + head.forward;
 
         animator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnTriggerEnter(Collider other)

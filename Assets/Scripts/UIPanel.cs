@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -11,14 +8,12 @@ public class UIPanel : MonoBehaviour
     private Selectable firstSelectable;
     private bool justEnabled = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerInput = FindObjectOfType<PlayerInput>();
         firstSelectable = GetComponentInChildren<Selectable>(true);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (justEnabled)

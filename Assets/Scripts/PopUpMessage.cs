@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PopUpMessage : MonoBehaviour
@@ -9,13 +7,11 @@ public class PopUpMessage : MonoBehaviour
 
     private GameObject mainCamera;
 
-    // Start is called before the first frame update
     void Start()
     {
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        mainCamera = GameObject.FindGameObjectWithTag(Constants.MainCameraTag);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (popUpObject.activeInHierarchy)
