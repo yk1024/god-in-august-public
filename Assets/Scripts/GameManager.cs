@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -19,17 +17,10 @@ public class GameManager : MonoBehaviour
 
     private PrayType prayType = PrayType.None;
 
-    public PrayType PrayType
-    {
-        set
-        {
-            prayType = value;
-        }
-    }
+    public PrayType PrayType { set => prayType = value; }
 
     private bool anomalyExists;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerInput = FindObjectOfType<PlayerInput>();
@@ -42,12 +33,6 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log($"Date: {GameState.DateIndex}; Loop: {GameState.LoopIndex}; anomalyExists: {anomalyExists}");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void SetupAnomaly()
@@ -66,7 +51,7 @@ public class GameManager : MonoBehaviour
     private void StartDay()
     {
         overlayPanelAnimator.SetTrigger(Constants.FadeInTrigger);
-        Invoke("EnableInput", 5);
+        Invoke(nameof(EnableInput), 5);
     }
 
     private void EnableInput()
@@ -78,7 +63,7 @@ public class GameManager : MonoBehaviour
     {
         playerInput.DeactivateInput();
         overlayPanelAnimator.SetTrigger(Constants.FadeOutTrigger);
-        Invoke("LoadNextDay", 5);
+        Invoke(nameof(LoadNextDay), 5);
     }
 
     private void LoadNextDay()

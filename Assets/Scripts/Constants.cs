@@ -8,4 +8,8 @@ public static class Constants
     public const string FadeOutTrigger = "FadeOut";
 
     public const string PlayerTag = "Player";
+    public const string MainCameraTag = "MainCamera";
+
+    public const string MotionSpeedAnimatorParameter = "MotionSpeed";
+    public const string SpeedAnimatorParameter = "Speed";
 }
