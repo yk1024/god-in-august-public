@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -21,19 +20,12 @@ public class Dialogue : MonoBehaviour
     [SerializeField, TextArea]
     private string[] initialText;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (initialText.Length != 0)
         {
             StartCoroutine(ShowText(initialText));
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public IEnumerator ShowText(params string[] text)

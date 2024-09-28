@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UniVRM10;
 
 public class LookAtHandler : MonoBehaviour
 {
@@ -15,7 +14,6 @@ public class LookAtHandler : MonoBehaviour
     private float reactionSpeed;
 
     private Dictionary<GameObject, ILookAtTarget> targets = new Dictionary<GameObject, ILookAtTarget>();
-    private Vrm10Instance vrm10Instance;
     private Transform head;
     private Animator animator;
     private float ikLookAtWeight = 0;
@@ -24,12 +22,10 @@ public class LookAtHandler : MonoBehaviour
 
     void Start()
     {
-        vrm10Instance = GetComponent<Vrm10Instance>();
-        vrm10Instance.TryGetBoneTransform(HumanBodyBones.Head, out head);
+        animator = GetComponent<Animator>();
+        head = animator.GetBoneTransform(HumanBodyBones.Head);
         lastHeadPosition = head.position;
         ikLookAtPosition = head.position + head.forward;
-
-        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,7 +38,10 @@ public class LookAtHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        targets.Remove(other.gameObject);
+        if (!other.isTrigger)
+        {
+            targets.Remove(other.gameObject);
+        }
     }
 
     public (ILookAtTarget target, float distance) LookAtFirstTarget()
@@ -86,7 +85,7 @@ public class LookAtHandler : MonoBehaviour
             ikLookAtWeight -= ikWeightReaction;
         }
 
-        ikLookAtWeight = Mathf.Clamp(ikLookAtWeight, 0, 1);
+        ikLookAtWeight = Mathf.Clamp01(ikLookAtWeight);
     }
 
     Vector3 CalculateNextPosition(Vector3 targetPosition)
