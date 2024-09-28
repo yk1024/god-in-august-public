@@ -918,7 +918,6 @@ MonoBehaviour:
   - {fileID: 888023337}
   - {fileID: 1764439331}
   probability: 0.66
-  overlayPanelAnimator: {fileID: 1397104480}
 --- !u!1 &447132588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,6 +2558,7 @@ GameObject:
   - component: {fileID: 1397104479}
   - component: {fileID: 1397104478}
   - component: {fileID: 1397104480}
+  - component: {fileID: 1397104481}
   m_Layer: 5
   m_Name: OverlayPanel
   m_TagString: Untagged
@@ -2644,6 +2644,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1397104481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397104476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b470e5527154ff990c9b4d35c52aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1403386749
 GameObject:
   m_ObjectHideFlags: 0

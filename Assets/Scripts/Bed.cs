@@ -24,7 +24,7 @@ public class Bed : MonoBehaviour, IInteractable
 
     public void Sleep()
     {
-        gameManager.EndDay();
         confirmationPanel.SetActive(false);
+        StartCoroutine(gameManager.EndDay());
     }
 }

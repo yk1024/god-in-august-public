@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -10,8 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField, Range(0, 1)]
     private float probability;
 
-    [SerializeField, Header("UI")]
-    private Animator overlayPanelAnimator;
+    private OverlayPanel overlayPanel;
 
     private PlayerInput playerInput;
 
@@ -24,8 +24,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         playerInput = FindObjectOfType<PlayerInput>();
+        overlayPanel = FindObjectOfType<OverlayPanel>();
 
-        StartDay();
+        StartCoroutine(StartDay());
 
         if (GameState.LoopIndex != 0 || GameState.DateIndex != 0)
         {
@@ -48,10 +49,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void StartDay()
+    private IEnumerator StartDay()
     {
-        overlayPanelAnimator.SetTrigger(Constants.FadeInTrigger);
-        Invoke(nameof(EnableInput), 5);
+        yield return overlayPanel.FadeIn();
+        EnableInput();
     }
 
     private void EnableInput()
@@ -59,11 +60,11 @@ public class GameManager : MonoBehaviour
         playerInput.SwitchCurrentActionMap(Constants.PlayerActionMap);
     }
 
-    public void EndDay()
+    public IEnumerator EndDay()
     {
         playerInput.DeactivateInput();
-        overlayPanelAnimator.SetTrigger(Constants.FadeOutTrigger);
-        Invoke(nameof(LoadNextDay), 5);
+        yield return overlayPanel.FadeOut();
+        LoadNextDay();
     }
 
     private void LoadNextDay()
