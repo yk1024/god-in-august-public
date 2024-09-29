@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField, Range(0, 1)]
     private float probability;
 
+    [SerializeField, Header("Ending Settings")]
+    private int duration;
+
+    [SerializeField]
+    private string nextSceneName;
+
     private OverlayPanel overlayPanel;
 
     private PlayerInput playerInput;
@@ -21,19 +27,25 @@ public class GameManager : MonoBehaviour
 
     private bool anomalyExists;
 
+    private GameState gameState;
+
     void Start()
     {
+        gameState = GameState.State ?? GameState.NewGame();
+
         playerInput = FindObjectOfType<PlayerInput>();
         overlayPanel = FindObjectOfType<OverlayPanel>();
 
         StartCoroutine(StartDay());
 
-        if (GameState.LoopIndex != 0 || GameState.DateIndex != 0)
+        if (gameState.LoopIndex != 0 || gameState.DateIndex != 0)
         {
             SetupAnomaly();
         }
 
-        Debug.Log($"Date: {GameState.DateIndex}; Loop: {GameState.LoopIndex}; anomalyExists: {anomalyExists}");
+        Cursor.lockState = CursorLockMode.Locked;
+
+        Debug.Log($"Date: {gameState.DateIndex}; Loop: {gameState.LoopIndex}; anomalyExists: {anomalyExists}");
     }
 
     private void SetupAnomaly()
@@ -71,19 +83,31 @@ public class GameManager : MonoBehaviour
     {
         if (anomalyExists && prayType == PrayType.Wish)
         {
-            GameState.LoopIndex++;
+            gameState.LoopIndex++;
         }
         else if (!anomalyExists && prayType == PrayType.Gratitude)
         {
-            GameState.DateIndex++;
+            gameState.DateIndex++;
         }
         else
         {
-            GameState.DateIndex = 0;
-            GameState.LoopIndex++;
+            gameState.DateIndex = 0;
+            gameState.LoopIndex++;
         }
 
-        string sceneName = SceneManager.GetActiveScene().name;
+        string sceneName;
+
+        if (gameState.DateIndex > duration)
+        {
+            sceneName = nextSceneName;
+            Cursor.lockState = CursorLockMode.None;
+            GameState.State = null;
+        }
+        else
+        {
+            sceneName = SceneManager.GetActiveScene().name;
+        }
+
         SceneManager.LoadScene(sceneName);
     }
 }

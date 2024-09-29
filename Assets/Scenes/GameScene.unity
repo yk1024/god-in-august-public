@@ -918,6 +918,8 @@ MonoBehaviour:
   - {fileID: 888023337}
   - {fileID: 1764439331}
   probability: 0.66
+  duration: 3
+  nextSceneName: EpilogueScene
 --- !u!1 &447132588
 GameObject:
   m_ObjectHideFlags: 0

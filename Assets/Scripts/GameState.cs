@@ -1,5 +1,14 @@
 public class GameState
 {
-    public static int DateIndex = 0;
-    public static int LoopIndex = 0;
+    private GameState() { }
+    public int DateIndex { get; set; } = 0;
+    public int LoopIndex { get; set; } = 0;
+
+    public static GameState State;
+
+    public static GameState NewGame()
+    {
+        State = new GameState();
+        return State;
+    }
 }
