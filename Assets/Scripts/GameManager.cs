@@ -17,7 +17,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private string nextSceneName;
 
+    [SerializeField, Header("Text Settings")]
+    private string strangenessText;
+
     private OverlayPanel overlayPanel;
+    private Dialogue dialogue;
 
     private PlayerInput playerInput;
 
@@ -35,6 +39,7 @@ public class GameManager : MonoBehaviour
 
         playerInput = FindObjectOfType<PlayerInput>();
         overlayPanel = FindObjectOfType<OverlayPanel>();
+        dialogue = FindObjectOfType<Dialogue>(true);
 
         StartCoroutine(StartDay());
 
@@ -64,6 +69,15 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartDay()
     {
         yield return overlayPanel.FadeIn();
+
+        if (gameState.LoopIndex == 1)
+        {
+            playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
+            dialogue.gameObject.SetActive(true);
+            yield return dialogue.ShowText(strangenessText);
+            dialogue.gameObject.SetActive(false);
+        }
+
         EnableInput();
     }
 

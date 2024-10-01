@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -90,11 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshProUGUI: {fileID: 64805387173241880}
-  onDialogueDone:
-    m_PersistentCalls:
-      m_Calls: []
-  toNextAction: {fileID: 4546884997888292709, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
-  initialText: []
+  toNextAction: {fileID: 3881446545790432586, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
 --- !u!1 &8137189620673939748
 GameObject:
   m_ObjectHideFlags: 0

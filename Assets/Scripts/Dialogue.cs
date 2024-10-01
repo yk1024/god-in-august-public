@@ -10,23 +10,9 @@ public class Dialogue : MonoBehaviour
     private TextMeshProUGUI textMeshProUGUI;
 
     [SerializeField]
-    private UnityEvent onDialogueDone;
-
-    [SerializeField]
     private InputActionReference toNextAction;
 
     private const float TimePerCharacter = 0.1f;
-
-    [SerializeField, TextArea]
-    private string[] initialText;
-
-    void Start()
-    {
-        if (initialText.Length != 0)
-        {
-            StartCoroutine(ShowText(initialText));
-        }
-    }
 
     public IEnumerator ShowText(params string[] text)
     {
@@ -44,7 +30,5 @@ public class Dialogue : MonoBehaviour
 
             yield return new WaitUntil(() => toNextAction.action.IsPressed());
         }
-
-        onDialogueDone.Invoke();
     }
 }
