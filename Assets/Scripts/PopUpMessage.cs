@@ -16,7 +16,7 @@ public class PopUpMessage : MonoBehaviour
     {
         if (popUpObject.activeInHierarchy)
         {
-            popUpObject.transform.forward = popUpObject.transform.position - mainCamera.transform.position;
+            popUpObject.transform.forward = mainCamera.transform.forward;
         }
     }
 

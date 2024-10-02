@@ -235,6 +235,15 @@
             "id": "1a9aeec7-f956-4bf5-aad1-25683f9d2077",
             "actions": [
                 {
+                    "name": "OK",
+                    "type": "Button",
+                    "id": "c548cd44-b015-48f7-9736-18c712ee9d15",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Cancel",
                     "type": "Button",
                     "id": "5b8ff1c7-a801-4302-8859-1897858f0d99",
@@ -245,6 +254,28 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "8fa02d0f-e0c0-4c48-b2b8-a57982a21e7e",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "OK",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0000afa1-d7a4-4722-92d4-3474066a02c5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "OK",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "",
                     "id": "39f5685e-682d-4403-8e97-d25efb421c0b",

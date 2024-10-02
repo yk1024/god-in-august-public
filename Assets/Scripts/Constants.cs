@@ -4,9 +4,6 @@ public static class Constants
 
     public const string UIActionMap = "UI";
 
-    public const string FadeInTrigger = "FadeIn";
-    public const string FadeOutTrigger = "FadeOut";
-
     public const string PlayerTag = "Player";
     public const string MainCameraTag = "MainCamera";
 
