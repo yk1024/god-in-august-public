@@ -18,14 +18,23 @@ public class OverlayPanel : MonoBehaviour
     {
         animator.SetTrigger(FadeInTrigger);
 
-        yield return new WaitForEvent(onAnimationEnd);
+        yield return WaitForAnimationEnd();
     }
 
     public IEnumerator FadeOut()
     {
         animator.SetTrigger(FadeOutTrigger);
 
-        yield return new WaitForEvent(onAnimationEnd);
+        yield return WaitForAnimationEnd();
+    }
+
+    private IEnumerator WaitForAnimationEnd()
+    {
+        bool triggered = false;
+        void callback() => triggered = true;
+        onAnimationEnd.AddListener(callback);
+        yield return new WaitUntil(() => triggered);
+        onAnimationEnd.RemoveListener(callback);
     }
 
     public void EndAnimation()

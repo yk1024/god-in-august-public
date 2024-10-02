@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
 
-        Debug.Log($"Date: {gameState.DateIndex}; Loop: {gameState.LoopIndex}; anomalyExists: {anomalyExists}");
+        Debug.Log($"Date: {gameState.DateIndex}; DailyLoop: {gameState.DailyLoopIndex}; OverallLoop: {gameState.OverallLoopIndex}; anomalyExists: {anomalyExists}");
     }
 
     private void SetupAnomaly()
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         yield return overlayPanel.FadeIn();
 
-        if (gameState.LoopIndex == 1)
+        if (gameState.LoopIndex == 1 && gameState.PrayHistory[^1].IsLoop())
         {
             playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
             dialogue.gameObject.SetActive(true);
@@ -95,18 +95,21 @@ public class GameManager : MonoBehaviour
 
     private void LoadNextDay()
     {
-        if (anomalyExists && prayType == PrayType.Wish)
+        PrayHistory prayHistory = new PrayHistory(prayType, anomalyExists);
+        gameState.PrayHistory.Add(prayHistory);
+
+        if (prayHistory.IsDailyLoop())
         {
-            gameState.LoopIndex++;
+            gameState.DailyLoopIndex++;
         }
-        else if (!anomalyExists && prayType == PrayType.Gratitude)
+        else if (prayHistory.IsProceed())
         {
             gameState.DateIndex++;
         }
         else
         {
             gameState.DateIndex = 0;
-            gameState.LoopIndex++;
+            gameState.OverallLoopIndex++;
         }
 
         string sceneName;
