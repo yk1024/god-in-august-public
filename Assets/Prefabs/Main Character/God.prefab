@@ -209,6 +209,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5694092435888646316, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5694092435888646316, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
       propertyPath: m_AABB.m_Center.x
       value: -0.000010550022
       objectReference: {fileID: 0}
@@ -593,6 +597,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2953604236389334553, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953604236389334553, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
       propertyPath: m_AABB.m_Center.x
       value: 0.0011419728
       objectReference: {fileID: 0}
@@ -890,6 +898,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7140606858727328969, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
       propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7140606858727328969, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7140606858727328969, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
