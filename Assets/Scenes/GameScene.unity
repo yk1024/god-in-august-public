@@ -8375,7 +8375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   confirmationPanel: {fileID: 716740831}
-  targetPoint: {fileID: 593417769}
+  <TargetPoint>k__BackingField: {fileID: 593417769}
 --- !u!1 &1419816236
 GameObject:
   m_ObjectHideFlags: 0
@@ -9407,7 +9407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prayPanel: {fileID: 405226152}
-  targetPoint: {fileID: 515109766}
+  <TargetPoint>k__BackingField: {fileID: 515109766}
 --- !u!1001 &1899568650
 PrefabInstance:
   m_ObjectHideFlags: 0

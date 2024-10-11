@@ -43,10 +43,7 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(StartDay());
 
-        if (gameState.DateIndex != 0)
-        {
-            SetupAnomaly();
-        }
+        SetupAnomaly();
 
         ActivateDailyObjects();
 
@@ -57,8 +54,19 @@ public class GameManager : MonoBehaviour
 
     private void SetupAnomaly()
     {
-        float f = Random.value;
-        anomalyExists = probability > f;
+        if (gameState.DateIndex == 0)
+        {
+            anomalyExists = false;
+        }
+        else if (gameState.OverallLoopIndex == 0)
+        {
+            anomalyExists = true;
+        }
+        else
+        {
+            float f = Random.value;
+            anomalyExists = probability > f;
+        }
 
         if (anomalyExists)
         {

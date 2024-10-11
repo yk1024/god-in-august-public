@@ -7,10 +7,8 @@ public class Bed : MonoBehaviour, IInteractable
 
     private GameManager gameManager;
 
-    public Transform TargetPoint { get => targetPoint; }
-
-    [SerializeField]
-    private Transform targetPoint;
+    [field: SerializeField]
+    public Transform TargetPoint { get; private set; }
 
     public bool Available { get; set; } = true;
 

@@ -9,10 +9,8 @@ public class Shrine : MonoBehaviour, IInteractable
 
     private GameManager gameManager;
 
-    public Transform TargetPoint { get => targetPoint; }
-
-    [SerializeField]
-    private Transform targetPoint;
+    [field: SerializeField]
+    public Transform TargetPoint { get; private set; }
 
     void Start()
     {
