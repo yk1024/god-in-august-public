@@ -43,4 +43,10 @@ public class Shrine : MonoBehaviour, IInteractable
     {
         Pray(PrayType.Wish);
     }
+
+    public void FirstPray()
+    {
+        PrayForGratitude();
+        FindObjectOfType<Bed>().Available = true;
+    }
 }
