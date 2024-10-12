@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         {
             anomalyExists = false;
         }
-        else if (gameState.OverallLoopIndex == 0)
+        else if (gameState.LoopIndex == 0)
         {
             anomalyExists = true;
         }
