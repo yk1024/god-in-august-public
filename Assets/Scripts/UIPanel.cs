@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -5,7 +7,7 @@ using UnityEngine.UI;
 public class UIPanel : MonoBehaviour
 {
     private PlayerInput playerInput;
-    private Selectable firstSelectable;
+    private IEnumerable<Selectable> selectables;
 
     [SerializeField]
     private InputActionReference cancelAction;
@@ -13,13 +15,13 @@ public class UIPanel : MonoBehaviour
     void Awake()
     {
         playerInput = FindObjectOfType<PlayerInput>();
-        firstSelectable = GetComponentInChildren<Selectable>(true);
+        selectables = GetComponentsInChildren<Selectable>(true);
     }
 
     void OnEnable()
     {
         playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
-        firstSelectable.Select();
+        selectables.First((selectable) => selectable.gameObject.activeSelf).Select();
         Cursor.lockState = CursorLockMode.None;
         cancelAction.action.performed += OnCancel;
     }

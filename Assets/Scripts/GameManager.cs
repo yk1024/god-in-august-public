@@ -43,10 +43,9 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(StartDay());
 
-        if (gameState.LoopIndex != 0 || gameState.DateIndex != 0)
-        {
-            SetupAnomaly();
-        }
+        SetupAnomaly();
+
+        ActivateDailyObjects();
 
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -55,8 +54,19 @@ public class GameManager : MonoBehaviour
 
     private void SetupAnomaly()
     {
-        float f = Random.value;
-        anomalyExists = probability > f;
+        if (gameState.DateIndex == 0)
+        {
+            anomalyExists = false;
+        }
+        else if (gameState.LoopIndex == 0)
+        {
+            anomalyExists = true;
+        }
+        else
+        {
+            float f = Random.value;
+            anomalyExists = probability > f;
+        }
 
         if (anomalyExists)
         {
@@ -108,7 +118,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            gameState.DateIndex = 0;
+            gameState.DateIndex = 1;
             gameState.OverallLoopIndex++;
         }
 
@@ -126,5 +136,13 @@ public class GameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void ActivateDailyObjects()
+    {
+        foreach (ActivateOnSpecificDay activateOnSpecificDay in FindObjectsOfType<ActivateOnSpecificDay>(true))
+        {
+            activateOnSpecificDay.ActivateOrDeactivate();
+        }
     }
 }
