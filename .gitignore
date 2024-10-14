@@ -76,3 +76,5 @@ crashlytics-build.properties
 
 # Wwise
 Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+
+*.blend?
