@@ -70,9 +70,9 @@ public class GameManager : MonoBehaviour
 
         if (anomalyExists)
         {
-            int i = Random.Range(0, anomalies.Length);
-            GameObject anomaly = anomalies[i];
-            anomaly.SetActive(true);
+            int i =  Random.Range(0, anomalies.Length);
+            IAnomaly anomaly = anomalies[i].GetComponent<IAnomaly>();
+            anomaly.OnOccur();
         }
     }
 
