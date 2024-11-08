@@ -7,24 +7,28 @@ public class Bed : MonoBehaviour, IInteractable
 
     private GameManager gameManager;
 
-    public Transform TargetPoint { get => targetPoint; }
+    [field: SerializeField]
+    public Transform TargetPoint { get; private set; }
 
-    [SerializeField]
-    private Transform targetPoint;
+    public bool Available { get; set; } = true;
 
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        if (GameState.State.DateIndex == 0) Available = false;
     }
 
     public void Interact()
     {
-        confirmationPanel.SetActive(true);
+        if (Available)
+        {
+            confirmationPanel.SetActive(true);
+        }
     }
 
     public void Sleep()
     {
-        gameManager.EndDay();
         confirmationPanel.SetActive(false);
+        StartCoroutine(gameManager.EndDay());
     }
 }
