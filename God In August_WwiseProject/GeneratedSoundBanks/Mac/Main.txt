@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3126765036	Play_BGM			\Default Work Unit\Play_BGM	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11300919	Music	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\Home_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Music		9699600
+	103957728	Music	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\Shrine_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Music		9699600
+	612169947	Music	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\Hill_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Music		9699600
+	832691718	Music	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\Field_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Music		9699600
+
