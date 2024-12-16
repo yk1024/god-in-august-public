@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 8710490757914122985}
   - component: {fileID: 1520778971517427075}
   - component: {fileID: 4373423765623905491}
+  - component: {fileID: 2989712233557212512}
   m_Layer: 0
   m_Name: Whiteline
   m_TagString: Untagged
@@ -138,6 +139,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2989712233557212512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923680598842860182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2391cf3bdba814050b3105c3984bd02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 244e41241c8a844dd8d849f6b7a21c12, type: 2}
 --- !u!1 &6419989869509317387
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +169,7 @@ GameObject:
   - component: {fileID: 5244232330412277340}
   - component: {fileID: 8718841731218193669}
   - component: {fileID: 4622119986629472933}
+  - component: {fileID: 6495284440067574403}
   m_Layer: 0
   m_Name: Asphalt
   m_TagString: Untagged
@@ -243,3 +263,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6495284440067574403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419989869509317387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2391cf3bdba814050b3105c3984bd02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 244e41241c8a844dd8d849f6b7a21c12, type: 2}

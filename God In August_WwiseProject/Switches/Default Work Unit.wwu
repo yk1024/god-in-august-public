@@ -3,7 +3,13 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{32C65A60-DE36-4C54-9161-DCD4756A84FF}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="Ground" ID="{2934672C-0FCA-4809-9C9F-8172EB156735}"/>
+				<SwitchGroup Name="Ground" ID="{2934672C-0FCA-4809-9C9F-8172EB156735}">
+					<ChildrenList>
+						<Switch Name="Asphalt" ID="{12FDCD5F-FC29-487E-8711-AAD60A2C4AD2}"/>
+						<Switch Name="Gravel" ID="{BBE1D1BB-A325-4619-8571-7E186BB4B31C}"/>
+						<Switch Name="Dirt" ID="{5A29133B-8DCA-498D-A2EC-9DA6E1814E75}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

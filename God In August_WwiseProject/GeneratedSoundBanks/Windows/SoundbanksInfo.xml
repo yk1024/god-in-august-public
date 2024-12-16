@@ -34,14 +34,100 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="2528658256" Name="Ground">
-					<Switches/>
+					<Switches>
+						<Switch Id="2185786256" Name="Gravel"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="4169408098" Name="Asphalt"/>
+					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3B51E889-948F-7EDA-A1E8-111109B087A1}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A656D74C-6C64-63EA-31D2-2EC11E14329E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="11300919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Home.wav</ShortName>
+					<CachePath>SFX/Home_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="103957728" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Shrine.wav</ShortName>
+					<CachePath>SFX/Shrine_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="380502942" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>07064114.wav</ShortName>
+					<CachePath>SFX/07064114_B00E74AA.wem</CachePath>
+				</File>
+				<File Id="612169947" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hill.wav</ShortName>
+					<CachePath>SFX/Hill_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="672967582" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>07064096.wav</ShortName>
+					<CachePath>SFX/07064096_3D35DDEB.wem</CachePath>
+				</File>
+				<File Id="739222829" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>07039254.wav</ShortName>
+					<CachePath>SFX/07039254_B638A5DD.wem</CachePath>
+				</File>
+				<File Id="832691718" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Field.wav</ShortName>
+					<CachePath>SFX/Field_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3126765036" Name="Play_BGM" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="11300919"/>
+						<MediaRef Id="103957728"/>
+						<MediaRef Id="612169947"/>
+						<MediaRef Id="832691718"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.3099928" DurationMax="0.6354338">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2528658256" Id="2195636714" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="380502942"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2528658256" Id="4169408098"/>
+							<MediaRefs>
+								<MediaRef Id="672967582"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2528658256" Id="2185786256"/>
+							<MediaRefs>
+								<MediaRef Id="739222829"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="3686139462" Name="Area">
+					<States>
+						<State Id="407166184" Name="Shrine"/>
+						<State Id="514358619" Name="Field"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="3181406844" Name="Home"/>
+						<State Id="3634696612" Name="Hill"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="2528658256" Name="Ground">
+					<Switches>
+						<Switch Id="2185786256" Name="Gravel"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="4169408098" Name="Asphalt"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{76F2564E-54A1-C76C-EEF7-650284563086}</FileHash>
+	<FileHash>{ADF5E520-9337-65B2-3589-A7655632E5EE}</FileHash>
 </SoundBanksInfo>

@@ -14,7 +14,9 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Shrine" ID="{F1A1E3EA-6D1D-4537-A776-F4961E1864DF}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Asphalt" ID="{12FDCD5F-FC29-487E-8711-AAD60A2C4AD2}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

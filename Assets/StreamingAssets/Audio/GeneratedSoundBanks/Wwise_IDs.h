@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BGM = 3126765036U;
+        static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
     } // namespace EVENTS
 
     namespace STATES
@@ -42,6 +43,9 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID ASPHALT = 4169408098U;
+                static const AkUniqueID DIRT = 2195636714U;
+                static const AkUniqueID GRAVEL = 2185786256U;
             } // namespace SWITCH
         } // namespace GROUND
 
