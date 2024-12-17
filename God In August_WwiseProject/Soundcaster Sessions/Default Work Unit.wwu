@@ -12,7 +12,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Shrine" ID="{F1A1E3EA-6D1D-4537-A776-F4961E1864DF}"/>
+						<CurrentStateRef Name="Hill" ID="{35D1B691-8C15-4C6D-81CC-788AE5020540}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Asphalt" ID="{12FDCD5F-FC29-487E-8711-AAD60A2C4AD2}"/>

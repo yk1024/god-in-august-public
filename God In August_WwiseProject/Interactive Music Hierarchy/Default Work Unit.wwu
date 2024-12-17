@@ -54,7 +54,7 @@
 					<ChildrenList>
 						<MusicSegment Name="BGM" ID="{C23CBB10-71B7-44B4-A97E-919DBA2C2234}" ShortID="226828809">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="56828.9694377161"/>
+								<Property Name="EndPosition" Type="Real64" Value="113333.333333333"/>
 								<Property Name="Tempo" Type="Real64" Value="144"/>
 							</PropertyList>
 							<ReferenceList>
@@ -127,25 +127,25 @@
 												<MediaID ID="832691718"/>
 											</MediaIDList>
 										</AudioFileSource>
-										<AudioFileSource Name="Hill" ID="{B8C933C1-21FF-4DE5-ACD3-CF800A0D4B5A}">
-											<Language>SFX</Language>
-											<AudioFile>Hill.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="612169947"/>
-											</MediaIDList>
-										</AudioFileSource>
-										<AudioFileSource Name="Home" ID="{8B9886E5-EBA4-49EC-AD39-FD81D8C6951E}">
-											<Language>SFX</Language>
-											<AudioFile>Home.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="11300919"/>
-											</MediaIDList>
-										</AudioFileSource>
 										<AudioFileSource Name="Shrine" ID="{64C43D79-D8AE-446B-AF50-A5CE05E8FB66}">
 											<Language>SFX</Language>
 											<AudioFile>Shrine.wav</AudioFile>
 											<MediaIDList>
 												<MediaID ID="103957728"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="山BGM" ID="{3F0F91FF-2F05-42EE-85B2-BDD460FD4F39}">
+											<Language>SFX</Language>
+											<AudioFile>山BGM.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="266892003"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="HomeBGM" ID="{3759CC8D-8232-41AF-98FB-83709EFAB2A3}">
+											<Language>SFX</Language>
+											<AudioFile>HomeBGM.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="219275273"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -244,13 +244,13 @@
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="Hill" ID="{33248D3A-BAA1-4690-8650-0E098D7F6825}">
+																		<MusicClip Name="山BGM" ID="{56BDBC10-36D8-48C8-84FA-73117A98B525}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="54984.8526077097"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="53333.3333333333"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="Hill" ID="{B8C933C1-21FF-4DE5-ACD3-CF800A0D4B5A}"/>
+																			<AudioSourceRef Name="山BGM" ID="{3F0F91FF-2F05-42EE-85B2-BDD460FD4F39}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -271,13 +271,72 @@
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="Home" ID="{B3F2E70E-7215-49AF-AC75-B731B29ADF9B}">
+																		<MusicClip Name="HomeBGM" ID="{DB4887AB-5ECE-45D0-AD83-05D50ECD691D}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="54984.8526077097"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="53333.3333333333"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="Home" ID="{8B9886E5-EBA4-49EC-AD39-FD81D8C6951E}"/>
+																			<AudioSourceRef Name="HomeBGM" ID="{3759CC8D-8232-41AF-98FB-83709EFAB2A3}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{D25104CF-F367-48B0-993B-D3AB37A5D1E8}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>53.33333</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{5CFF4FC2-AC1D-464F-B708-FEB2AF954B68}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>53.33333</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{A13ECE89-B00D-4DFE-8711-264401A7F546}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>53.33333</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
 																		</MusicClip>
 																	</Local>
 																</Reference>

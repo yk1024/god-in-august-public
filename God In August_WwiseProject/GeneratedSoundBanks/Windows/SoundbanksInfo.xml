@@ -42,25 +42,25 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A656D74C-6C64-63EA-31D2-2EC11E14329E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{175E12B4-E08E-F3D5-E89F-2D85A2A294DF}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
-				<File Id="11300919" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Home.wav</ShortName>
-					<CachePath>SFX/Home_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="103957728" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shrine.wav</ShortName>
 					<CachePath>SFX/Shrine_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="219275273" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HomeBGM.wav</ShortName>
+					<CachePath>SFX/HomeBGM_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="266892003" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>山BGM.wav</ShortName>
+					<CachePath>SFX/山BGM_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="380502942" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>07064114.wav</ShortName>
 					<CachePath>SFX/07064114_B00E74AA.wem</CachePath>
-				</File>
-				<File Id="612169947" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Hill.wav</ShortName>
-					<CachePath>SFX/Hill_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="672967582" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>07064096.wav</ShortName>
@@ -78,13 +78,13 @@
 			<Events>
 				<Event Id="3126765036" Name="Play_BGM" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="11300919"/>
 						<MediaRef Id="103957728"/>
-						<MediaRef Id="612169947"/>
+						<MediaRef Id="219275273"/>
+						<MediaRef Id="266892003"/>
 						<MediaRef Id="832691718"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.3099928" DurationMax="0.6354338">
+				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.24604143" DurationMax="0.8005964">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2528658256" Id="2195636714" Default="true"/>
@@ -129,5 +129,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ADF5E520-9337-65B2-3589-A7655632E5EE}</FileHash>
+	<FileHash>{471040A4-0BF0-70FB-AB54-7D5B63F6BE3E}</FileHash>
 </SoundBanksInfo>
