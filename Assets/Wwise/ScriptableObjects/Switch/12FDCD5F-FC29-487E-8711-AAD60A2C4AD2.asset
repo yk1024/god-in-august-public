@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254231cbf7a18430db82893dac7ed74c, type: 3}
+  m_Name: 12FDCD5F-FC29-487E-8711-AAD60A2C4AD2
+  m_EditorClassIdentifier: 
+  objectName: Asphalt
+  id: 4169408098
+  guid: 12FDCD5F-FC29-487E-8711-AAD60A2C4AD2
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 6dc5f9332c11b42dfa3e21f8e98d3bd3, type: 2}

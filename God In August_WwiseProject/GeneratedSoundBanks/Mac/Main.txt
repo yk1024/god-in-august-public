@@ -1,0 +1,21 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1602358412	Play_Footstep			\Default Work Unit\Play_Footstep	
+	3126765036	Play_BGM			\Default Work Unit\Play_BGM	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2528658256	Ground			\Default Work Unit\Ground	
+
+Switch	ID	Name	Switch Group			Notes
+	2185786256	Gravel	Ground			
+	2195636714	Dirt	Ground			
+	4169408098	Asphalt	Ground			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	103957728	Music	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\Shrine_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Music		9699600
+	219275273	Music	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\HomeBGM_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Music		4704096
+	266892003	Music	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\山BGM_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Music		9408272
+	380502942	07064114	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\07064114_B00E74AA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\07064114		99960
+	672967582	07064096	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\07064096_3D35DDEB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\07064096		61476
+	739222829	07039254	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\07039254_B638A5DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\07039254		90888
+	832691718	Music	Y:\God In August\God In August_WwiseProject\.cache\Mac\SFX\Field_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Music		9699600
+

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca98899c28fe4caeaab12d2fa1624fa, type: 3}
+  m_Name: F1A1E3EA-6D1D-4537-A776-F4961E1864DF
+  m_EditorClassIdentifier: 
+  objectName: Shrine
+  id: 407166184
+  guid: F1A1E3EA-6D1D-4537-A776-F4961E1864DF
+  WwiseStateGroupReference: {fileID: 11400000, guid: 1c85785ffeb3547c9b48b2582d68f31b, type: 2}
