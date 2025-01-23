@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_BGM = 3126765036U;
         static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
+        static const AkUniqueID STOP_BGM = 1073466678U;
     } // namespace EVENTS
 
     namespace STATES

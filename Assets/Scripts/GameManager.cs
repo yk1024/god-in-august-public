@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator EndDay()
     {
         playerInput.DeactivateInput();
+        FindObjectOfType<MusicManager>().FadeOut();
         yield return overlayPanel.FadeOut();
         LoadNextDay();
     }

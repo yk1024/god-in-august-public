@@ -49,7 +49,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{292386EB-7917-0CC2-8A57-0A1DF186E009}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{02E9DD0C-0B58-810B-A4DB-35000554BEFC}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -128,6 +128,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1073466678" Name="Stop_BGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="3686139462" Name="Area">
@@ -158,5 +159,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B1B445CF-8E3B-55F5-AE90-67CFB22F9350}</FileHash>
+	<FileHash>{020AF91B-B108-3B97-C16B-A0ABFB921AB7}</FileHash>
 </SoundBanksInfo>

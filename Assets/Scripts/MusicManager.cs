@@ -7,6 +7,9 @@ public class MusicManager : MonoBehaviour
     private AK.Wwise.Event bgmEvent;
 
     [SerializeField]
+    private AK.Wwise.Event fadeOutEvent;
+
+    [SerializeField]
     private AK.Wwise.State defaultState;
 
     private List<AK.Wwise.State> states = new List<AK.Wwise.State>();
@@ -39,5 +42,10 @@ public class MusicManager : MonoBehaviour
         {
             states[0].SetValue();
         }
+    }
+
+    public void FadeOut()
+    {
+        fadeOutEvent.Post(gameObject);
     }
 }
