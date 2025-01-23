@@ -1210,6 +1210,30 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b43d19d3dcb4f4d48a7ff777bebb1c27, type: 2}
+  defaultGroundSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f0225f27d10f54ab39a19f2f3bcbc5e0, type: 2}
+  stopSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b5473f43806f64635ae8d6d0b02b1a87, type: 2}
+  walkSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0064f2c64802943168fb541ad515dbc2, type: 2}
+  sprintSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9c039c019fda24ac09cb7e178ce4df1e, type: 2}
 --- !u!4 &6388542794591633256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -9055416251393219258, guid: f8625a53ea640440ab6a568fc004e31a, type: 3}

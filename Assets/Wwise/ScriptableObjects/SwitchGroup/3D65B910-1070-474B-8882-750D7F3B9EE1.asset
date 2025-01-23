@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a99c2e37b34a40c7843b7f3299503fc, type: 3}
+  m_Name: 3D65B910-1070-474B-8882-750D7F3B9EE1
+  m_EditorClassIdentifier: 
+  objectName: MoveSpeed
+  id: 1086842483
+  guid: 3D65B910-1070-474B-8882-750D7F3B9EE1

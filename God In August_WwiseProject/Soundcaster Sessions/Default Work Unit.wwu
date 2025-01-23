@@ -12,9 +12,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Hill" ID="{35D1B691-8C15-4C6D-81CC-788AE5020540}"/>
+						<CurrentStateRef Name="Home" ID="{DB99C35B-773F-4FB5-9B8E-030750A420BC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Stop" ID="{897B8711-3C78-4C9B-A3F6-BAD539CF1248}"/>
 						<CurrentSwitchRef Name="Asphalt" ID="{12FDCD5F-FC29-487E-8711-AAD60A2C4AD2}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

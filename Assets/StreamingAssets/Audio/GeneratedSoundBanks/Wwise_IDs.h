@@ -49,6 +49,18 @@ namespace AK
             } // namespace SWITCH
         } // namespace GROUND
 
+        namespace MOVESPEED
+        {
+            static const AkUniqueID GROUP = 1086842483U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID SPRINT = 1296465089U;
+                static const AkUniqueID STOP = 788884573U;
+                static const AkUniqueID WALK = 2108779966U;
+            } // namespace SWITCH
+        } // namespace MOVESPEED
+
     } // namespace SWITCHES
 
     namespace BANKS

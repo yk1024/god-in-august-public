@@ -1587,10 +1587,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heroine
       objectReference: {fileID: 0}
-    - target: {fileID: 5341158884224332795, guid: d1f3feef1b0174612814c0a447a56b37, type: 3}
-      propertyPath: defaultGroundSwitch.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: f0225f27d10f54ab39a19f2f3bcbc5e0, type: 2}
     - target: {fileID: 6508915030071119518, guid: d1f3feef1b0174612814c0a447a56b37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.20000005

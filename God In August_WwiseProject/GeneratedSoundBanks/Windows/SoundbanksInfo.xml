@@ -33,6 +33,13 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="1086842483" Name="MoveSpeed">
+					<Switches>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="1296465089" Name="Sprint"/>
+						<Switch Id="2108779966" Name="Walk"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="2528658256" Name="Ground">
 					<Switches>
 						<Switch Id="2185786256" Name="Gravel"/>
@@ -42,7 +49,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{175E12B4-E08E-F3D5-E89F-2D85A2A294DF}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{292386EB-7917-0CC2-8A57-0A1DF186E009}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -70,9 +77,21 @@
 					<ShortName>07039254.wav</ShortName>
 					<CachePath>SFX/07039254_B638A5DD.wem</CachePath>
 				</File>
+				<File Id="809682705" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run.wav</ShortName>
+					<CachePath>SFX/Run_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="832691718" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Field.wav</ShortName>
 					<CachePath>SFX/Field_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1049545620" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk.wav</ShortName>
+					<CachePath>SFX/Walk_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1070438277" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stop.wav</ShortName>
+					<CachePath>SFX/Stop_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -81,7 +100,10 @@
 						<MediaRef Id="103957728"/>
 						<MediaRef Id="219275273"/>
 						<MediaRef Id="266892003"/>
+						<MediaRef Id="809682705"/>
 						<MediaRef Id="832691718"/>
+						<MediaRef Id="1049545620"/>
+						<MediaRef Id="1070438277"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.24604143" DurationMax="0.8005964">
@@ -119,6 +141,13 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="1086842483" Name="MoveSpeed">
+					<Switches>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="1296465089" Name="Sprint"/>
+						<Switch Id="2108779966" Name="Walk"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="2528658256" Name="Ground">
 					<Switches>
 						<Switch Id="2185786256" Name="Gravel"/>
@@ -129,5 +158,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{471040A4-0BF0-70FB-AB54-7D5B63F6BE3E}</FileHash>
+	<FileHash>{7F545A64-EB42-2DD6-9CAD-82A0B09A4909}</FileHash>
 </SoundBanksInfo>
