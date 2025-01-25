@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 4828088930626234609}
   - component: {fileID: 1776872320235935457}
   - component: {fileID: 5164543869584532013}
+  - component: {fileID: 3274605617421923515}
   m_Layer: 0
   m_Name: SampleAnomaly
   m_TagString: Untagged
@@ -223,6 +224,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fda676a452a64cd7b49635100ed6d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3274605617421923515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3967957511848453740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a5c13748bf74fd4a741eb5b5b4b13c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 0
+  radius: 10
+  blendDistance: 15
 --- !u!1 &5419881855738618849
 GameObject:
   m_ObjectHideFlags: 0

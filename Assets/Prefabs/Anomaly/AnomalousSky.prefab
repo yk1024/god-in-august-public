@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7216506247299217010}
   - component: {fileID: 3197383478314858656}
+  - component: {fileID: 8807954302676966086}
   m_Layer: 0
   m_Name: AnomalousSky
   m_TagString: Untagged
@@ -45,3 +46,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skyboxMaterial: {fileID: 2100000, guid: f6c51332ac7d92541a38fb263b09d2a8, type: 2}
+--- !u!114 &8807954302676966086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062804230060623480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a5c13748bf74fd4a741eb5b5b4b13c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 1
+  radius: 0
+  blendDistance: 0

@@ -245,6 +245,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1728013695380148634, guid: 85dc21a0b5989493383cf2bd4d8e62c6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6204432758336612700}
+    - targetCorrespondingSourceObject: {fileID: -1728013695380148634, guid: 85dc21a0b5989493383cf2bd4d8e62c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 163990475286241005}
   m_SourcePrefab: {fileID: -3956505258223990651, guid: 85dc21a0b5989493383cf2bd4d8e62c6, type: 3}
 --- !u!4 &4345437429108503684 stripped
 Transform:
@@ -380,6 +383,21 @@ MonoBehaviour:
   anomalousRenderer: {fileID: 6701957329672445195}
   anomalousMaterial: {fileID: -876546973899608171, guid: ab3b73cce190042a7bf8ed2b30fd5747, type: 3}
   textMeshProUGUI: {fileID: 8401875890155914163}
+--- !u!114 &163990475286241005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205527110040272804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a5c13748bf74fd4a741eb5b5b4b13c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 0
+  radius: 5
+  blendDistance: 10
 --- !u!137 &6701957329672445195 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7140606858727328969, guid: 85dc21a0b5989493383cf2bd4d8e62c6, type: 3}

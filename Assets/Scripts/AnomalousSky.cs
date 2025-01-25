@@ -8,5 +8,6 @@ public class AnomalousSky : MonoBehaviour, IAnomaly
     public void OnOccur()
     {
         RenderSettings.skybox = skyboxMaterial;
+        FindObjectOfType<MusicManager>().SetVicinityToAnomaly(1);
     }
 }

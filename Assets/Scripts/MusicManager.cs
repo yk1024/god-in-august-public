@@ -14,6 +14,9 @@ public class MusicManager : MonoBehaviour
 
     private List<AK.Wwise.State> states = new List<AK.Wwise.State>();
 
+    [SerializeField]
+    private AK.Wwise.RTPC vicinityToAnomalyRTPC;
+
     void Start()
     {
         defaultState.SetValue();
@@ -47,5 +50,10 @@ public class MusicManager : MonoBehaviour
     public void FadeOut()
     {
         fadeOutEvent.Post(gameObject);
+    }
+
+    public void SetVicinityToAnomaly(float vicinity)
+    {
+        vicinityToAnomalyRTPC.SetValue(gameObject, vicinity);
     }
 }

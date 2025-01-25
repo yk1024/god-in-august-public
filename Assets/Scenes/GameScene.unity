@@ -5345,6 +5345,10 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 2a628d833cbf04bf0bddb047d0392ffe, type: 2}
+  vicinityToAnomalyRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8ac6159a6e6ad4933bede2fa55f339ec, type: 2}
 --- !u!1001 &410473609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18882,7 +18886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4907185532252116883, guid: 959f8d2ce1ea14dea9647e3d3e7807b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4907185532252116883, guid: 959f8d2ce1ea14dea9647e3d3e7807b4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -49526,7 +49530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4907185532252116883, guid: 959f8d2ce1ea14dea9647e3d3e7807b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4907185532252116883, guid: 959f8d2ce1ea14dea9647e3d3e7807b4, type: 3}
       propertyPath: m_LocalRotation.w

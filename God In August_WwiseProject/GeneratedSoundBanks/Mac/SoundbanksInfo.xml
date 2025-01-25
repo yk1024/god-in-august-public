@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{20138E0B-989A-8479-973E-98ED7806BE71}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{506CF40F-9770-0765-6F88-9851F51241CA}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,6 +21,9 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="3467476706" Name="ProximityToAnomaly"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="3686139462" Name="Area">
 					<States>
@@ -159,5 +162,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{020AF91B-B108-3B97-C16B-A0ABFB921AB7}</FileHash>
+	<FileHash>{555E3E4A-4857-C523-3FF5-B78286D42C32}</FileHash>
 </SoundBanksInfo>
