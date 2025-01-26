@@ -372,11 +372,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6205527110040272804}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fedbaddf7288045f0a927fc31370a0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  global: 0
+  radius: 5
+  blendDistance: 10
   anomalousRenderer: {fileID: 6701957329672445195}
   anomalousMaterial: {fileID: -876546973899608171, guid: ab3b73cce190042a7bf8ed2b30fd5747, type: 3}
   textMeshProUGUI: {fileID: 8401875890155914163}

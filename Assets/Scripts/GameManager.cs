@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField, Header("Anomaly Settings")]
-    private GameObject[] anomalies;
+    private Anomaly[] anomalies;
 
     [SerializeField, Range(0, 1)]
     private float probability;
@@ -25,11 +25,10 @@ public class GameManager : MonoBehaviour
 
     private PlayerInput playerInput;
 
-    private PrayType prayType = PrayType.None;
+    public PrayType PrayType { get; set; } = PrayType.None;
 
-    public PrayType PrayType { set => prayType = value; }
-
-    private bool anomalyExists;
+    public bool AnomalyExists { get; private set; }
+    public Anomaly Anomaly { get; private set; }
 
     private GameState gameState;
 
@@ -48,31 +47,29 @@ public class GameManager : MonoBehaviour
         ActivateDailyObjects();
 
         Cursor.lockState = CursorLockMode.Locked;
-
-        Debug.Log($"Date: {gameState.DateIndex}; DailyLoop: {gameState.DailyLoopIndex}; OverallLoop: {gameState.OverallLoopIndex}; anomalyExists: {anomalyExists}");
     }
 
     private void SetupAnomaly()
     {
         if (gameState.DateIndex == 0)
         {
-            anomalyExists = false;
+            AnomalyExists = false;
         }
         else if (gameState.LoopIndex == 0)
         {
-            anomalyExists = true;
+            AnomalyExists = true;
         }
         else
         {
             float f = Random.value;
-            anomalyExists = probability > f;
+            AnomalyExists = probability > f;
         }
 
-        if (anomalyExists)
+        if (AnomalyExists)
         {
-            int i =  Random.Range(0, anomalies.Length);
-            IAnomaly anomaly = anomalies[i].GetComponent<IAnomaly>();
-            anomaly.OnOccur();
+            int i = Random.Range(0, anomalies.Length);
+            Anomaly = anomalies[i];
+            Anomaly.OnOccur();
         }
     }
 
@@ -99,13 +96,14 @@ public class GameManager : MonoBehaviour
     public IEnumerator EndDay()
     {
         playerInput.DeactivateInput();
+        FindObjectOfType<MusicManager>().FadeOut();
         yield return overlayPanel.FadeOut();
         LoadNextDay();
     }
 
     private void LoadNextDay()
     {
-        PrayHistory prayHistory = new PrayHistory(prayType, anomalyExists);
+        PrayHistory prayHistory = new PrayHistory(PrayType, AnomalyExists);
         gameState.PrayHistory.Add(prayHistory);
 
         if (prayHistory.IsDailyLoop())

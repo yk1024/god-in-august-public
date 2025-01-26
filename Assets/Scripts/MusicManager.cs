@@ -3,41 +3,88 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField]
-    private AK.Wwise.Event bgmEvent;
+    [SerializeField, Header("Event")]
+    private AK.Wwise.Event playBGMEvent;
 
     [SerializeField]
-    private AK.Wwise.State defaultState;
+    private AK.Wwise.Event stopBGMEvent;
 
-    private List<AK.Wwise.State> states = new List<AK.Wwise.State>();
+    [SerializeField, Header("Area State")]
+    private AK.Wwise.State defaultAreaState;
+
+    public AK.Wwise.State AreaState { get; set; }
+
+    private List<AK.Wwise.State> areaStates = new List<AK.Wwise.State>();
+
+    [SerializeField, Header("Proximity To Anomaly RTPC")]
+    private AK.Wwise.RTPC proximityToAnomalyRTPC;
+
+    public float ProximityToAnomaly { get; set; }
+
+    [SerializeField, Header("Move Speed Switch")]
+    private AK.Wwise.Switch stopSwitch;
+
+    [SerializeField]
+    private AK.Wwise.Switch walkSwitch;
+
+    [SerializeField]
+    private AK.Wwise.Switch sprintSwitch;
+
+    public AK.Wwise.Switch MoveSpeedSwitch { get; set; }
 
     void Start()
     {
-        defaultState.SetValue();
-        bgmEvent.Post(gameObject);
+        defaultAreaState.SetValue();
+        playBGMEvent.Post(gameObject);
     }
 
-    public void AddState(AK.Wwise.State state)
+    public void AddAreaState(AK.Wwise.State areaState)
     {
-        states.Add(state);
-        SetState();
+        areaStates.Add(areaState);
+        SetAreaState();
     }
 
-    public void RemoveState(AK.Wwise.State state)
+    public void RemoveAreaState(AK.Wwise.State areaState)
     {
-        states.Remove(state);
-        SetState();
+        areaStates.Remove(areaState);
+        SetAreaState();
     }
 
-    private void SetState()
+    private void SetAreaState()
     {
-        if (states.Count == 0)
+        if (areaStates.Count == 0)
         {
-            defaultState.SetValue();
+            AreaState = defaultAreaState;
         }
         else
         {
-            states[0].SetValue();
+            AreaState = areaStates[0];
         }
+
+        AreaState.SetValue();
+    }
+
+    public void FadeOut()
+    {
+        stopBGMEvent.Post(gameObject);
+    }
+
+    public void SetProximityToAnomaly(float proximity)
+    {
+        ProximityToAnomaly = proximity;
+        proximityToAnomalyRTPC.SetValue(gameObject, proximity);
+    }
+
+    public void SetMoveSpeed(MoveSpeed moveSpeed)
+    {
+        MoveSpeedSwitch =
+            moveSpeed switch
+            {
+                MoveSpeed.Walk => walkSwitch,
+                MoveSpeed.Sprint => sprintSwitch,
+                _ => stopSwitch
+            };
+
+        MoveSpeedSwitch.SetValue(gameObject);
     }
 }

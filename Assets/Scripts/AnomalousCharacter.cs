@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class AnomalousCharacter : MonoBehaviour, IAnomaly
+public class AnomalousCharacter : Anomaly
 {
     [SerializeField]
     private Renderer anomalousRenderer;
@@ -14,8 +14,10 @@ public class AnomalousCharacter : MonoBehaviour, IAnomaly
 
     private const string AnomalousTextCharacters = "!#$%&'()-^¥@[;:],./=~|`{+*}<>?_";
 
-    public void OnOccur()
+    protected override void Start()
     {
+        base.Start();
+
         Material[] materials = anomalousRenderer.materials;
 
         for (int i = 0; i < materials.Length; i++)

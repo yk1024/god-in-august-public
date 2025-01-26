@@ -8,10 +8,12 @@ public class FootstepManager : MonoBehaviour
     [SerializeField]
     private AK.Wwise.Switch defaultGroundSwitch;
 
+    public AK.Wwise.Switch GroundSwitch { get; set; }
+
     public void TriggerFootstepSound()
     {
-        AK.Wwise.Switch groundSwitch = GetGroundSwitch();
-        groundSwitch.SetValue(gameObject);
+        GroundSwitch = GetGroundSwitch();
+        GroundSwitch.SetValue(gameObject);
 
         footstepEvent.Post(gameObject);
     }

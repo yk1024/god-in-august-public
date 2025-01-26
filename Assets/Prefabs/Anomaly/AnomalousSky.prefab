@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7216506247299217010
 Transform:
   m_ObjectHideFlags: 0
@@ -44,4 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62d3c59cc1bb42c8a60e27348144dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skyboxMaterial: {fileID: 2100000, guid: f6c51332ac7d92541a38fb263b09d2a8, type: 2}
+  global: 1
+  radius: 0
+  blendDistance: 0
+  skyboxMaterial: {fileID: -876546973899608171, guid: ab3b73cce190042a7bf8ed2b30fd5747, type: 3}

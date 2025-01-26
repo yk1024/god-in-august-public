@@ -25,6 +25,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_BGM" ID="{907DC9A5-F80B-4A65-9A7C-68D5BBF49CC7}">
+					<ChildrenList>
+						<Action Name="" ID="{F1BB89C0-E6AE-4193-BEA1-B6F2F1C40615}" ShortID="468173973">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{66156614-E056-4FB5-910A-03E50C6F44B7}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM" ID="{369EAECF-94FD-4710-B544-5AFE492C5400}" WorkUnitID="{0D0A89C6-0661-4623-9720-BBEFE9F85DF6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

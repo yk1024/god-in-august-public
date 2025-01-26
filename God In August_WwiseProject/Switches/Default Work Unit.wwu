@@ -10,6 +10,13 @@
 						<Switch Name="Dirt" ID="{5A29133B-8DCA-498D-A2EC-9DA6E1814E75}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="MoveSpeed" ID="{3D65B910-1070-474B-8882-750D7F3B9EE1}">
+					<ChildrenList>
+						<Switch Name="Walk" ID="{4EDBEA91-3BE5-4A46-A078-9CB1D8A75234}"/>
+						<Switch Name="Stop" ID="{897B8711-3C78-4C9B-A3F6-BAD539CF1248}"/>
+						<Switch Name="Sprint" ID="{B7F3B446-65B2-43B2-967C-C3B50B8D5D89}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

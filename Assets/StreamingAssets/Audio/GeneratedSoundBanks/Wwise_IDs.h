@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_BGM = 3126765036U;
         static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
+        static const AkUniqueID STOP_BGM = 1073466678U;
     } // namespace EVENTS
 
     namespace STATES
@@ -49,7 +50,24 @@ namespace AK
             } // namespace SWITCH
         } // namespace GROUND
 
+        namespace MOVESPEED
+        {
+            static const AkUniqueID GROUP = 1086842483U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID SPRINT = 1296465089U;
+                static const AkUniqueID STOP = 788884573U;
+                static const AkUniqueID WALK = 2108779966U;
+            } // namespace SWITCH
+        } // namespace MOVESPEED
+
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID PROXIMITYTOANOMALY = 3467476706U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

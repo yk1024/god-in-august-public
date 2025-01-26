@@ -16,7 +16,7 @@ public class Area : MonoBehaviour
     {
         if (other.CompareTag(Constants.PlayerTag))
         {
-            musicManager.AddState(AreaState);
+            musicManager.AddAreaState(AreaState);
         }
     }
 
@@ -24,7 +24,7 @@ public class Area : MonoBehaviour
     {
         if (other.CompareTag(Constants.PlayerTag))
         {
-            musicManager.RemoveState(AreaState);
+            musicManager.RemoveAreaState(AreaState);
         }
     }
 }
