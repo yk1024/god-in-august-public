@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField, Header("Anomaly Settings")]
-    private GameObject[] anomalies;
+    private Anomaly[] anomalies;
 
     [SerializeField, Range(0, 1)]
     private float probability;
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
         if (anomalyExists)
         {
             int i =  Random.Range(0, anomalies.Length);
-            IAnomaly anomaly = anomalies[i].GetComponent<IAnomaly>();
+            Anomaly anomaly = anomalies[i];
             anomaly.OnOccur();
         }
     }

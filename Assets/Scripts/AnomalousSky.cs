@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class AnomalousSky : MonoBehaviour, IAnomaly
+public class AnomalousSky : Anomaly
 {
     [SerializeField]
     private Material skyboxMaterial;
 
-    public void OnOccur()
+    protected override void Start()
     {
+        base.Start();
+
         RenderSettings.skybox = skyboxMaterial;
-        FindObjectOfType<MusicManager>().SetVicinityToAnomaly(1);
     }
 }

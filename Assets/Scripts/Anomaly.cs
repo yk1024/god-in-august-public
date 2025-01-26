@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnomalousMusicController : MonoBehaviour
+public class Anomaly : MonoBehaviour
 {
     [SerializeField]
     private bool global;
@@ -16,14 +16,14 @@ public class AnomalousMusicController : MonoBehaviour
     private MusicManager musicManager;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         player = GameObject.FindWithTag(Constants.PlayerTag);
         musicManager = FindObjectOfType<MusicManager>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         float vicinityToAnomaly;
 
@@ -40,5 +40,11 @@ public class AnomalousMusicController : MonoBehaviour
         }
 
         musicManager.SetVicinityToAnomaly(vicinityToAnomaly);
+    }
+
+    public void OnOccur()
+    {
+        gameObject.SetActive(true);
+        enabled = true;
     }
 }
