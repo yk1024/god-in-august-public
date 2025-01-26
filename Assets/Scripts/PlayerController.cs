@@ -1,7 +1,8 @@
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Interact : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private float distance;
@@ -9,9 +10,15 @@ public class Interact : MonoBehaviour
     private bool interacting;
     private LookAtHandler lookAt;
 
+    private StarterAssetsInputs starterAssetsInputs;
+
+    private MusicManager musicManager;
+
     void Start()
     {
         lookAt = GetComponent<LookAtHandler>();
+        starterAssetsInputs = GetComponent<StarterAssetsInputs>();
+        musicManager = FindObjectOfType<MusicManager>();
     }
 
     void Update()
@@ -21,6 +28,10 @@ public class Interact : MonoBehaviour
         InteractTarget(target, distance);
 
         interacting = false;
+
+        MoveSpeed moveSpeed = GetMoveSpeed();
+
+        musicManager.SetMoveSpeed(moveSpeed);
     }
 
     public void OnInteract(InputValue inputValue)
@@ -33,6 +44,22 @@ public class Interact : MonoBehaviour
         if (interacting && target is IInteractable interactable && distance <= this.distance)
         {
             interactable.Interact();
+        }
+    }
+
+    private MoveSpeed GetMoveSpeed()
+    {
+        if (starterAssetsInputs.move == Vector2.zero)
+        {
+            return MoveSpeed.Stop;
+        }
+        else if (starterAssetsInputs.sprint)
+        {
+            return MoveSpeed.Sprint;
+        }
+        else
+        {
+            return MoveSpeed.Walk;
         }
     }
 }

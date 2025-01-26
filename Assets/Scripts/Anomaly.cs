@@ -11,35 +11,33 @@ public class Anomaly : MonoBehaviour
     [SerializeField, Min(0)]
     private float blendDistance;
 
-    private GameObject player;
+    private PlayerController player;
 
     private MusicManager musicManager;
 
-    // Start is called before the first frame update
     protected virtual void Start()
     {
-        player = GameObject.FindWithTag(Constants.PlayerTag);
+        player = FindObjectOfType<PlayerController>();
         musicManager = FindObjectOfType<MusicManager>();
     }
 
-    // Update is called once per frame
     protected virtual void Update()
     {
-        float vicinityToAnomaly;
+        float proximityToAnomaly;
 
         if (global)
         {
-            vicinityToAnomaly = 1;
+            proximityToAnomaly = 1;
         }
         else
         {
             Vector3 direction = player.transform.position - transform.position;
             float distance = direction.magnitude;
 
-            vicinityToAnomaly = Mathf.Clamp01(((radius - distance) / blendDistance) + 1);
+            proximityToAnomaly = Mathf.Clamp01(((radius - distance) / blendDistance) + 1);
         }
 
-        musicManager.SetVicinityToAnomaly(vicinityToAnomaly);
+        musicManager.SetProximityToAnomaly(proximityToAnomaly);
     }
 
     public void OnOccur()
