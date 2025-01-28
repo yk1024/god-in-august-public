@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -11,6 +12,8 @@ public class UIPanel : MonoBehaviour
 
     [SerializeField]
     private InputActionReference cancelAction;
+
+    public UnityEvent OnCancelCallback { get; } = new UnityEvent();
 
     void Awake()
     {
@@ -41,6 +44,7 @@ public class UIPanel : MonoBehaviour
     public void OnCancel()
     {
         gameObject.SetActive(false);
+        OnCancelCallback.Invoke();
     }
 
     public void OnCancel(InputAction.CallbackContext context)

@@ -1,9 +1,12 @@
+using System.Collections;
+using Cinemachine;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Shrine : MonoBehaviour, IInteractable
 {
     [SerializeField]
-    private GameObject prayPanel;
+    private UIPanel prayPanel;
 
     private bool alreadyPrayed = false;
 
@@ -12,39 +15,87 @@ public class Shrine : MonoBehaviour, IInteractable
     [field: SerializeField]
     public Transform TargetPoint { get; private set; }
 
+    private PlayerController player;
+
+    [SerializeField]
+    private Transform prayPosition;
+
+    [SerializeField]
+    private CinemachineVirtualCamera prayCamera;
+
+    private CinemachineBrain cinemachineBrain;
+
+    private OverlayPanel overlayPanel;
+    private PlayerInput playerInput;
+
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        player = FindObjectOfType<PlayerController>();
+        overlayPanel = FindObjectOfType<OverlayPanel>();
+        prayPanel.OnCancelCallback.AddListener(Cancel);
+        playerInput = FindObjectOfType<PlayerInput>();
+        cinemachineBrain = FindObjectOfType<CinemachineBrain>();
+    }
+
+    private void OnDestroy()
+    {
+        prayPanel.OnCancelCallback.RemoveListener(Cancel);
     }
 
     public void Interact()
     {
         if (!alreadyPrayed)
         {
-            prayPanel.SetActive(true);
+            StartCoroutine(OnInteract());
         }
     }
 
-    private void Pray(PrayType prayType)
+    private IEnumerator OnInteract()
+    {
+        yield return overlayPanel.FadeOut(1);
+        prayCamera.Priority = cinemachineBrain.ActiveVirtualCamera.Priority + 1;
+        player.transform.SetPositionAndRotation(prayPosition.position, prayPosition.rotation);
+        prayPanel.gameObject.SetActive(true);
+        yield return overlayPanel.FadeIn(1);
+    }
+
+    private IEnumerator Pray(PrayType prayType)
     {
         gameManager.PrayType = prayType;
-        prayPanel.SetActive(false);
+        prayPanel.gameObject.SetActive(false);
         alreadyPrayed = true;
+        playerInput.DeactivateInput();
+        yield return player.Pray();
+        playerInput.ActivateInput();
+        yield return EndInteraction();
     }
 
     public void PrayForGratitude()
     {
-        Pray(PrayType.Gratitude);
+        StartCoroutine(Pray(PrayType.Gratitude));
     }
 
     public void PrayForWish()
     {
-        Pray(PrayType.Wish);
+        StartCoroutine(Pray(PrayType.Wish));
     }
 
     public void FirstPray()
     {
         PrayForGratitude();
         FindObjectOfType<Bed>().Available = true;
+    }
+
+    private void Cancel()
+    {
+        StartCoroutine(EndInteraction());
+    }
+
+    private IEnumerator EndInteraction()
+    {
+        yield return overlayPanel.FadeOut(1);
+        prayCamera.Priority = 0;
+        yield return overlayPanel.FadeIn(1);
     }
 }

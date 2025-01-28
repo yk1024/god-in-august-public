@@ -1,31 +1,41 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class OverlayPanel : MonoBehaviour
 {
     private Animator animator;
     private const string FadeInTrigger = "FadeIn";
     private const string FadeOutTrigger = "FadeOut";
+    private const string TransitionSpeedParameter = "TransitionSpeed";
     private readonly UnityEvent onAnimationEnd = new UnityEvent();
+    private PlayerInput playerInput;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+        playerInput = FindObjectOfType<PlayerInput>();
     }
 
-    public IEnumerator FadeIn()
+    public IEnumerator FadeIn(float transitionSeconds)
     {
-        animator.SetTrigger(FadeInTrigger);
-
-        yield return WaitForAnimationEnd();
+        yield return Animate(FadeInTrigger, transitionSeconds);
     }
 
-    public IEnumerator FadeOut()
+    public IEnumerator FadeOut(float transitionSeconds)
     {
-        animator.SetTrigger(FadeOutTrigger);
+        yield return Animate(FadeOutTrigger, transitionSeconds);
+    }
+
+    private IEnumerator Animate(string trigger, float transitionSeconds)
+    {
+        playerInput.DeactivateInput();
+        animator.SetFloat(TransitionSpeedParameter, 1 / transitionSeconds);
+        animator.SetTrigger(trigger);
 
         yield return WaitForAnimationEnd();
+        playerInput.ActivateInput();
     }
 
     private IEnumerator WaitForAnimationEnd()

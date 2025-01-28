@@ -80,29 +80,22 @@ public class GameManager : MonoBehaviour
     {
         playAmbienceEvent.Post(gameObject);
 
-        yield return overlayPanel.FadeIn();
+        yield return overlayPanel.FadeIn(5);
 
         if (gameState.LoopIndex == 1 && gameState.PrayHistory[^1].IsLoop())
         {
             playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
             dialogue.gameObject.SetActive(true);
             yield return dialogue.ShowText(strangenessText);
+            playerInput.SwitchCurrentActionMap(Constants.PlayerActionMap);
             dialogue.gameObject.SetActive(false);
         }
-
-        EnableInput();
-    }
-
-    private void EnableInput()
-    {
-        playerInput.SwitchCurrentActionMap(Constants.PlayerActionMap);
     }
 
     public IEnumerator EndDay()
     {
-        playerInput.DeactivateInput();
         FindObjectOfType<MusicManager>().FadeOut();
-        yield return overlayPanel.FadeOut();
+        yield return overlayPanel.FadeOut(5);
         LoadNextDay();
     }
 

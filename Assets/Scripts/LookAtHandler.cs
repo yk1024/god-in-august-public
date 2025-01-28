@@ -20,6 +20,9 @@ public class LookAtHandler : MonoBehaviour
     private Vector3 ikLookAtPosition;
     private Vector3 lastHeadPosition;
 
+    [SerializeField]
+    private bool suspended = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -75,7 +78,7 @@ public class LookAtHandler : MonoBehaviour
     {
         float ikWeightReaction = reactionSpeed * Time.deltaTime;
 
-        if (target != null)
+        if (!suspended && target != null)
         {
             ikLookAtPosition = CalculateNextPosition(target.TargetPoint.position);
             ikLookAtWeight += ikWeightReaction;
