@@ -6,8 +6,12 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{3149CC20-A74A-4ED4-8068-124A95683C41}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_BGM" ID="{CCA726A5-5F70-40E5-B80E-D2FDFC92524A}" WorkUnitID="{D7383C39-238C-4417-BF00-545DDCA947F6}"/>
+							<ObjectRef Name="Forest_Air" ID="{A84DD0AB-4329-4FB6-9315-ED624F6BC97A}" WorkUnitID="{24B12B6B-25E2-4E4E-A0A1-5426AC22758D}"/>
 							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Town_Air" ID="{5B1680A2-C7F2-43D5-A2EA-2B17BF8BAB62}" WorkUnitID="{24B12B6B-25E2-4E4E-A0A1-5426AC22758D}"/>
+							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -17,7 +21,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Home" ID="{DB99C35B-773F-4FB5-9B8E-030750A420BC}"/>
+						<CurrentStateRef Name="Shrine" ID="{F1A1E3EA-6D1D-4537-A776-F4961E1864DF}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Sprint" ID="{B7F3B446-65B2-43B2-967C-C3B50B8D5D89}"/>
