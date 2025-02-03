@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
 
     private GameState gameState;
 
+    [SerializeField, Header("Event")]
+    private AK.Wwise.Event playAmbienceEvent;
+
     void Start()
     {
         gameState = GameState.State ?? GameState.NewGame();
@@ -75,6 +78,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartDay()
     {
+        playAmbienceEvent.Post(gameObject);
+
         yield return overlayPanel.FadeIn();
 
         if (gameState.LoopIndex == 1 && gameState.PrayHistory[^1].IsLoop())

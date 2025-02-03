@@ -52,45 +52,261 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{02E9DD0C-0B58-810B-A4DB-35000554BEFC}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2C08C645-AB3E-D055-66C8-D69181396709}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="6451901" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel run 4.wav</ShortName>
+					<CachePath>SFX/Gravel run 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="8199434" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel walk 4.wav</ShortName>
+					<CachePath>SFX/Gravel walk 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="20769673" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 12.wav</ShortName>
+					<CachePath>SFX/Dirt walk 12_818F3B66.wem</CachePath>
+				</File>
+				<File Id="27853563" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.5.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="53124337" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 8.wav</ShortName>
+					<CachePath>SFX/Dirt walk 8_818F3B66.wem</CachePath>
+				</File>
 				<File Id="103957728" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shrine.wav</ShortName>
 					<CachePath>SFX/Shrine_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="108112770" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.10.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.10_818F3B66.wem</CachePath>
+				</File>
+				<File Id="129458914" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 9.wav</ShortName>
+					<CachePath>SFX/Dirt run 9_818F3B66.wem</CachePath>
+				</File>
+				<File Id="165684977" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.1.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="178502378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel run 1.wav</ShortName>
+					<CachePath>SFX/Gravel run 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="179302188" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 2.wav</ShortName>
+					<CachePath>SFX/Dirt run 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="201063146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Forest_Air.wav</ShortName>
+					<CachePath>SFX/Forest_Air_360ACBB4.wem</CachePath>
+				</File>
+				<File Id="211083415" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 9.wav</ShortName>
+					<CachePath>SFX/Dirt walk 9_818F3B66.wem</CachePath>
 				</File>
 				<File Id="219275273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HomeBGM.wav</ShortName>
 					<CachePath>SFX/HomeBGM_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="225504356" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 5.wav</ShortName>
+					<CachePath>SFX/Dirt walk 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="247961818" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 4.wav</ShortName>
+					<CachePath>SFX/Dirt run 4_818F3B66.wem</CachePath>
+				</File>
 				<File Id="266892003" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>山BGM.wav</ShortName>
 					<CachePath>SFX/山BGM_FBC78EF0.wem</CachePath>
 				</File>
-				<File Id="380502942" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>07064114.wav</ShortName>
-					<CachePath>SFX/07064114_B00E74AA.wem</CachePath>
+				<File Id="291589594" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.9.wav</ShortName>
+					<CachePath>SFX/Asphalt run.9_818F3B66.wem</CachePath>
 				</File>
-				<File Id="672967582" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>07064096.wav</ShortName>
-					<CachePath>SFX/07064096_3D35DDEB.wem</CachePath>
+				<File Id="305540098" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.1.wav</ShortName>
+					<CachePath>SFX/Asphalt run.1_818F3B66.wem</CachePath>
 				</File>
-				<File Id="739222829" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>07039254.wav</ShortName>
-					<CachePath>SFX/07039254_B638A5DD.wem</CachePath>
+				<File Id="328005477" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.3.wav</ShortName>
+					<CachePath>SFX/Asphalt run.3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="344522054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.4.wav</ShortName>
+					<CachePath>SFX/Asphalt run.4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="361337595" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel walk 7.wav</ShortName>
+					<CachePath>SFX/Gravel walk 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="399830354" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 3.wav</ShortName>
+					<CachePath>SFX/Dirt walk 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="403327069" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel walk 6.wav</ShortName>
+					<CachePath>SFX/Gravel walk 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="432726777" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.2.wav</ShortName>
+					<CachePath>SFX/Asphalt run.2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="453651551" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.5.wav</ShortName>
+					<CachePath>SFX/Asphalt run.5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="471899438" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 11.wav</ShortName>
+					<CachePath>SFX/Dirt walk 11_818F3B66.wem</CachePath>
+				</File>
+				<File Id="486790675" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 3.wav</ShortName>
+					<CachePath>SFX/Dirt run 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="506141790" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 7.wav</ShortName>
+					<CachePath>SFX/Dirt run 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="516108938" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Town_Air.wav</ShortName>
+					<CachePath>SFX/Town_Air_DD03BACC.wem</CachePath>
+				</File>
+				<File Id="536992516" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 7.wav</ShortName>
+					<CachePath>SFX/Dirt walk 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="555775989" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.3.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="557487097" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 1.wav</ShortName>
+					<CachePath>SFX/Dirt run 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="576011904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.4.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="588760276" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.2.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="592610623" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel walk 2.wav</ShortName>
+					<CachePath>SFX/Gravel walk 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="601887913" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.6.wav</ShortName>
+					<CachePath>SFX/Asphalt run.6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="607916078" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 1.wav</ShortName>
+					<CachePath>SFX/Dirt walk 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="626202736" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel walk 5.wav</ShortName>
+					<CachePath>SFX/Gravel walk 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="654027807" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel run 5.wav</ShortName>
+					<CachePath>SFX/Gravel run 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="741795278" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.6.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="768349160" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel run 2.wav</ShortName>
+					<CachePath>SFX/Gravel run 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="774210971" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel walk 8.wav</ShortName>
+					<CachePath>SFX/Gravel walk 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="778278167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 8.wav</ShortName>
+					<CachePath>SFX/Dirt run 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="794473109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 10.wav</ShortName>
+					<CachePath>SFX/Dirt walk 10_818F3B66.wem</CachePath>
 				</File>
 				<File Id="809682705" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run.wav</ShortName>
 					<CachePath>SFX/Run_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="824705841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.8.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="832389137" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel walk 1.wav</ShortName>
+					<CachePath>SFX/Gravel walk 1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="832691718" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Field.wav</ShortName>
 					<CachePath>SFX/Field_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="845965348" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.7.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="883283124" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel run 3.wav</ShortName>
+					<CachePath>SFX/Gravel run 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="886318924" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 2.wav</ShortName>
+					<CachePath>SFX/Dirt walk 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="893274131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel run 6.wav</ShortName>
+					<CachePath>SFX/Gravel run 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="901329353" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 10.wav</ShortName>
+					<CachePath>SFX/Dirt run 10_818F3B66.wem</CachePath>
+				</File>
+				<File Id="921596219" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 5.wav</ShortName>
+					<CachePath>SFX/Dirt run 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="996891236" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 4.wav</ShortName>
+					<CachePath>SFX/Dirt walk 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1001896128" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt run 6.wav</ShortName>
+					<CachePath>SFX/Dirt run 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1010937240" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt Walk.9.wav</ShortName>
+					<CachePath>SFX/Asphalt Walk.9_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1037439670" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.8.wav</ShortName>
+					<CachePath>SFX/Asphalt run.8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1038305340" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Asphalt run.7.wav</ShortName>
+					<CachePath>SFX/Asphalt run.7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1042254113" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gravel walk 3.wav</ShortName>
+					<CachePath>SFX/Gravel walk 3_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1049545620" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk.wav</ShortName>
 					<CachePath>SFX/Walk_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1063050520" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dirt walk 6.wav</ShortName>
+					<CachePath>SFX/Dirt walk 6_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1070438277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Stop.wav</ShortName>
@@ -98,6 +314,12 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="278617630" Name="Play_Ambience" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="201063146"/>
+						<MediaRef Id="516108938"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3126765036" Name="Play_BGM" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="103957728"/>
@@ -109,25 +331,107 @@
 						<MediaRef Id="1070438277"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.24604143" DurationMax="0.8005964">
+				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.24135911" DurationMax="1.9308729">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2528658256" Id="2195636714" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="380502942"/>
-							</MediaRefs>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1086842483" Id="1296465089"/>
+									<MediaRefs>
+										<MediaRef Id="129458914"/>
+										<MediaRef Id="179302188"/>
+										<MediaRef Id="247961818"/>
+										<MediaRef Id="486790675"/>
+										<MediaRef Id="506141790"/>
+										<MediaRef Id="557487097"/>
+										<MediaRef Id="778278167"/>
+										<MediaRef Id="901329353"/>
+										<MediaRef Id="921596219"/>
+										<MediaRef Id="1001896128"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1086842483" Id="2108779966" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="20769673"/>
+										<MediaRef Id="53124337"/>
+										<MediaRef Id="211083415"/>
+										<MediaRef Id="225504356"/>
+										<MediaRef Id="399830354"/>
+										<MediaRef Id="471899438"/>
+										<MediaRef Id="536992516"/>
+										<MediaRef Id="607916078"/>
+										<MediaRef Id="794473109"/>
+										<MediaRef Id="886318924"/>
+										<MediaRef Id="996891236"/>
+										<MediaRef Id="1063050520"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2528658256" Id="4169408098"/>
-							<MediaRefs>
-								<MediaRef Id="672967582"/>
-							</MediaRefs>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1086842483" Id="1296465089"/>
+									<MediaRefs>
+										<MediaRef Id="291589594"/>
+										<MediaRef Id="305540098"/>
+										<MediaRef Id="328005477"/>
+										<MediaRef Id="344522054"/>
+										<MediaRef Id="432726777"/>
+										<MediaRef Id="453651551"/>
+										<MediaRef Id="601887913"/>
+										<MediaRef Id="1037439670"/>
+										<MediaRef Id="1038305340"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1086842483" Id="2108779966" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="27853563"/>
+										<MediaRef Id="108112770"/>
+										<MediaRef Id="165684977"/>
+										<MediaRef Id="555775989"/>
+										<MediaRef Id="576011904"/>
+										<MediaRef Id="588760276"/>
+										<MediaRef Id="741795278"/>
+										<MediaRef Id="824705841"/>
+										<MediaRef Id="845965348"/>
+										<MediaRef Id="1010937240"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2528658256" Id="2185786256"/>
-							<MediaRefs>
-								<MediaRef Id="739222829"/>
-							</MediaRefs>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1086842483" Id="1296465089"/>
+									<MediaRefs>
+										<MediaRef Id="6451901"/>
+										<MediaRef Id="178502378"/>
+										<MediaRef Id="654027807"/>
+										<MediaRef Id="768349160"/>
+										<MediaRef Id="883283124"/>
+										<MediaRef Id="893274131"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1086842483" Id="2108779966" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="8199434"/>
+										<MediaRef Id="361337595"/>
+										<MediaRef Id="403327069"/>
+										<MediaRef Id="592610623"/>
+										<MediaRef Id="626202736"/>
+										<MediaRef Id="774210971"/>
+										<MediaRef Id="832389137"/>
+										<MediaRef Id="1042254113"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -162,5 +466,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{79F52AA5-3437-0F2F-4925-6B7205BB2BDF}</FileHash>
+	<FileHash>{6D86D16A-89E2-75E6-AFE6-C82C5A9EA6D8}</FileHash>
 </SoundBanksInfo>
