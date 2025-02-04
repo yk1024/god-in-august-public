@@ -5,6 +5,29 @@
 			<ChildrenList>
 				<SwitchContainer Name="Footstep" ID="{705F4C05-E343-4CBD-BF09-DC6AB38F22EA}" ShortID="36383087">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>22</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{02BF8D0B-477F-4F91-A4F1-95B498797FA0}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="7"/>
+											<Property Name="Min" Type="Real64" Value="-7"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{EF180CD1-5EA2-4815-B91A-A64ED63B779B}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -20,14 +43,13 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-10</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{0B86A051-769A-4F00-8637-B90BABDA0932}">
 										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Min" Type="Real64" Value="-10"/>
+											<Property Name="Min" Type="Real64" Value="-2"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -542,6 +564,13 @@
 							</GroupingInfo>
 						</SwitchContainer>
 						<SwitchContainer Name="Dirt" ID="{E513FC32-C81D-45A7-935C-2CCF91919320}" ShortID="1067677070">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
@@ -1100,6 +1129,13 @@
 							</GroupingInfo>
 						</SwitchContainer>
 						<SwitchContainer Name="Gravel" ID="{6E82E3FA-35B1-4F58-9B9F-5AB1E6DEE89F}" ShortID="596706442">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>

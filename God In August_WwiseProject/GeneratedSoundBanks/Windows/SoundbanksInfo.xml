@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D2B79BB9-5139-F560-D786-4CDF6393F8A7}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6E18780D-24DF-DAD5-6B12-F81CA430597E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,6 +19,9 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="1040548709" Name="Melody"/>
+				<Bus Id="1931523302" Name="Anomary"/>
+				<Bus Id="3642081725" Name="Rhythm"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<GameParameters>
@@ -52,7 +55,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2C08C645-AB3E-D055-66C8-D69181396709}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{41A9F839-8C56-3ED8-C2BD-F30515B4D997}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -76,9 +79,17 @@
 					<ShortName>Dirt walk 8.wav</ShortName>
 					<CachePath>SFX/Dirt walk 8_818F3B66.wem</CachePath>
 				</File>
-				<File Id="103957728" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Shrine.wav</ShortName>
-					<CachePath>SFX/Shrine_FBC78EF0.wem</CachePath>
+				<File Id="61213708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rhythm_Stop.wav</ShortName>
+					<CachePath>SFX/Rhythm_Stop_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="74120617" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rhythm_Walk.wav</ShortName>
+					<CachePath>SFX/Rhythm_Walk_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="90676810" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>山BGM_NewVer.wav</ShortName>
+					<CachePath>SFX/山BGM_NewVer_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="108112770" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.10.wav</ShortName>
@@ -100,6 +111,10 @@
 					<ShortName>Dirt run 2.wav</ShortName>
 					<CachePath>SFX/Dirt run 2_818F3B66.wem</CachePath>
 				</File>
+				<File Id="193392232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>街BGM_NewVer.wav</ShortName>
+					<CachePath>SFX/街BGM_NewVer_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="201063146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Forest_Air.wav</ShortName>
 					<CachePath>SFX/Forest_Air_360ACBB4.wem</CachePath>
@@ -108,10 +123,6 @@
 					<ShortName>Dirt walk 9.wav</ShortName>
 					<CachePath>SFX/Dirt walk 9_818F3B66.wem</CachePath>
 				</File>
-				<File Id="219275273" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>HomeBGM.wav</ShortName>
-					<CachePath>SFX/HomeBGM_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="225504356" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 5.wav</ShortName>
 					<CachePath>SFX/Dirt walk 5_818F3B66.wem</CachePath>
@@ -119,10 +130,6 @@
 				<File Id="247961818" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt run 4.wav</ShortName>
 					<CachePath>SFX/Dirt run 4_818F3B66.wem</CachePath>
-				</File>
-				<File Id="266892003" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>山BGM.wav</ShortName>
-					<CachePath>SFX/山BGM_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="291589594" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt run.9.wav</ShortName>
@@ -216,6 +223,14 @@
 					<ShortName>Gravel run 5.wav</ShortName>
 					<CachePath>SFX/Gravel run 5_818F3B66.wem</CachePath>
 				</File>
+				<File Id="679924021" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Anomary_BGM.wav</ShortName>
+					<CachePath>SFX/Anomary_BGM_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="684550026" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rhythm_Sprint.wav</ShortName>
+					<CachePath>SFX/Rhythm_Sprint_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="741795278" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.6.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.6_818F3B66.wem</CachePath>
@@ -236,10 +251,6 @@
 					<ShortName>Dirt walk 10.wav</ShortName>
 					<CachePath>SFX/Dirt walk 10_818F3B66.wem</CachePath>
 				</File>
-				<File Id="809682705" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Run.wav</ShortName>
-					<CachePath>SFX/Run_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="824705841" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.8.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.8_818F3B66.wem</CachePath>
@@ -255,6 +266,10 @@
 				<File Id="845965348" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.7.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="855388387" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>社BGM_NewVer.wav</ShortName>
+					<CachePath>SFX/社BGM_NewVer_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="883283124" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gravel run 3.wav</ShortName>
@@ -300,17 +315,9 @@
 					<ShortName>Gravel walk 3.wav</ShortName>
 					<CachePath>SFX/Gravel walk 3_818F3B66.wem</CachePath>
 				</File>
-				<File Id="1049545620" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Walk.wav</ShortName>
-					<CachePath>SFX/Walk_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="1063050520" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 6.wav</ShortName>
 					<CachePath>SFX/Dirt walk 6_818F3B66.wem</CachePath>
-				</File>
-				<File Id="1070438277" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Stop.wav</ShortName>
-					<CachePath>SFX/Stop_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -322,13 +329,14 @@
 				</Event>
 				<Event Id="3126765036" Name="Play_BGM" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="103957728"/>
-						<MediaRef Id="219275273"/>
-						<MediaRef Id="266892003"/>
-						<MediaRef Id="809682705"/>
+						<MediaRef Id="61213708"/>
+						<MediaRef Id="74120617"/>
+						<MediaRef Id="90676810"/>
+						<MediaRef Id="193392232"/>
+						<MediaRef Id="679924021"/>
+						<MediaRef Id="684550026"/>
 						<MediaRef Id="832691718"/>
-						<MediaRef Id="1049545620"/>
-						<MediaRef Id="1070438277"/>
+						<MediaRef Id="855388387"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.24135911" DurationMax="1.9308729">
@@ -437,6 +445,9 @@
 				</Event>
 				<Event Id="1073466678" Name="Stop_BGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="3467476706" Name="ProximityToAnomaly"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="3686139462" Name="Area">
 					<States>
@@ -466,5 +477,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6D86D16A-89E2-75E6-AFE6-C82C5A9EA6D8}</FileHash>
+	<FileHash>{59E245A1-3151-D926-65BB-8CA5B41B61FA}</FileHash>
 </SoundBanksInfo>

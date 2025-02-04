@@ -26,24 +26,28 @@ State	ID	Name	State Group			Notes
 	3181406844	Home	Area			
 	3634696612	Hill	Area			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3467476706	ProximityToAnomaly			\Default Work Unit\ProximityToAnomaly	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	6451901	Gravel run 4	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel run 4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel run\Gravel run 4		65744
 	8199434	Gravel walk 4	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel walk 4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel walk\Gravel walk 4		196816
 	20769673	Dirt walk 12	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt walk 12_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 12		196816
 	27853563	Asphalt Walk_5	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt Walk.5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_5		131280
 	53124337	Dirt walk 8	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt walk 8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 8		196816
-	103957728	Melody	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Shrine_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9699600
+	61213708	Rhythm	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Rhythm_Stop_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Rhythm		9702096
+	74120617	Rhythm	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Rhythm_Walk_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Rhythm		9702096
+	90676810	Melody	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\山BGM_NewVer_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9702272
 	108112770	Asphalt Walk_10	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt Walk.10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_10		131280
 	129458914	Dirt run 9	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt run 9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt run\Dirt run 9		65744
 	165684977	Asphalt Walk_1	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt Walk.1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_1		196816
 	178502378	Gravel run 1	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel run 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel run\Gravel run 1		65744
 	179302188	Dirt run 2	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt run 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt run\Dirt run 2		131280
+	193392232	Melody	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\街BGM_NewVer_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9702272
 	201063146	Forest_Air	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Forest_Air_360ACBB4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Forest_Air		5596284
 	211083415	Dirt walk 9	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt walk 9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 9		196816
-	219275273	Melody	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\HomeBGM_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		4704096
 	225504356	Dirt walk 5	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt walk 5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 5		196816
 	247961818	Dirt run 4	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt run 4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt run\Dirt run 4		65744
-	266892003	Melody	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\山BGM_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9408272
 	291589594	Asphalt run_9	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt run.9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt run\Asphalt run_9		65744
 	305540098	Asphalt run_1	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt run.1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt run\Asphalt run_1		65744
 	328005477	Asphalt run_3	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt run.3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt run\Asphalt run_3		131280
@@ -67,16 +71,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	607916078	Dirt walk 1	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt walk 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 1		196816
 	626202736	Gravel walk 5	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel walk 5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel walk\Gravel walk 5		196816
 	654027807	Gravel run 5	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel run 5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel run\Gravel run 5		65744
+	679924021	Anomary	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Anomary_BGM_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Anomary		9702096
+	684550026	Rhythm	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Rhythm_Sprint_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Rhythm		9702096
 	741795278	Asphalt Walk_6	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt Walk.6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_6		196816
 	768349160	Gravel run 2	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel run 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel run\Gravel run 2		65744
 	774210971	Gravel walk 8	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel walk 8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel walk\Gravel walk 8		131280
 	778278167	Dirt run 8	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt run 8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt run\Dirt run 8		65744
 	794473109	Dirt walk 10	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt walk 10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 10		196816
-	809682705	Rhythm	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Run_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Rhythm		294160
 	824705841	Asphalt Walk_8	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt Walk.8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_8		196816
 	832389137	Gravel walk 1	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel walk 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel walk\Gravel walk 1		196816
 	832691718	Melody	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Field_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9699600
 	845965348	Asphalt Walk_7	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt Walk.7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_7		131280
+	855388387	Melody	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\社BGM_NewVer_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9702272
 	883283124	Gravel run 3	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel run 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel run\Gravel run 3		65744
 	886318924	Dirt walk 2	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt walk 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 2		196816
 	893274131	Gravel run 6	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel run 6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel run\Gravel run 6		65744
@@ -88,7 +94,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1037439670	Asphalt run_8	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt run.8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt run\Asphalt run_8		65744
 	1038305340	Asphalt run_7	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Asphalt run.7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt run\Asphalt run_7		131280
 	1042254113	Gravel walk 3	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Gravel walk 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel walk\Gravel walk 3		131280
-	1049545620	Rhythm	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Walk_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Rhythm		294160
 	1063050520	Dirt walk 6	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Dirt walk 6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 6		196816
-	1070438277	Rhythm	Y:\god-in-august\God In August_WwiseProject\.cache\Mac\SFX\Stop_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Rhythm		294160
 
