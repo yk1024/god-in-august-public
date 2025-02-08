@@ -1577,9 +1577,8 @@
 							<ChildrenList>
 								<AudioFileSource Name="Forest_Air" ID="{A10A30DA-874A-47FE-BC51-BC0BCA33765B}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.516809455611819"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.477054882103214"/>
-										<Property Name="LoopEnd" Type="Real64" Value="31.4856222188123"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.71794398098702"/>
+										<Property Name="LoopEnd" Type="Real64" Value="29.7279242209935"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -1641,9 +1640,8 @@
 							<ChildrenList>
 								<AudioFileSource Name="Town_Air" ID="{1F8C853D-F0D3-4E6F-B54C-D8BC159D53F8}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="2.02447160986366"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="1.49634858120358"/>
-										<Property Name="LoopEnd" Type="Real64" Value="69.4481782688013"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.480853403124569"/>
+										<Property Name="LoopEnd" Type="Real64" Value="68.9180159531988"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<Language>SFX</Language>

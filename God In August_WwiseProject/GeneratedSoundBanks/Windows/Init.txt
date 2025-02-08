@@ -9,9 +9,6 @@ State	ID	Name	State Group			Notes
 	3634696612	Hill	Area			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	1040548709	Melody			\Default Work Unit\Master Audio Bus\Melody	
-	1931523302	Anomary			\Default Work Unit\Master Audio Bus\Anomary	
-	3642081725	Rhythm			\Default Work Unit\Master Audio Bus\Rhythm	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Audio Devices	ID	Name	Type				Notes

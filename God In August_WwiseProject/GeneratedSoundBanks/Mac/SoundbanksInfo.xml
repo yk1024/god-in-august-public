@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7BF0413B-1133-6F82-68AA-DE1D7A85AE84}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{506CF40F-9770-0765-6F88-9851F51241CA}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,9 +19,6 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="1040548709" Name="Melody"/>
-				<Bus Id="1931523302" Name="Anomary"/>
-				<Bus Id="3642081725" Name="Rhythm"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<GameParameters>
@@ -55,7 +52,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{41A9F839-8C56-3ED8-C2BD-F30515B4D997}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2C92EE91-3B15-499A-DEAA-1EF021DC91BF}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -117,7 +114,7 @@
 				</File>
 				<File Id="201063146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Forest_Air.wav</ShortName>
-					<CachePath>SFX/Forest_Air_360ACBB4.wem</CachePath>
+					<CachePath>SFX/Forest_Air_A3F03733.wem</CachePath>
 				</File>
 				<File Id="211083415" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 9.wav</ShortName>
@@ -181,7 +178,7 @@
 				</File>
 				<File Id="516108938" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Town_Air.wav</ShortName>
-					<CachePath>SFX/Town_Air_DD03BACC.wem</CachePath>
+					<CachePath>SFX/Town_Air_154E0F24.wem</CachePath>
 				</File>
 				<File Id="536992516" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 7.wav</ShortName>
@@ -261,7 +258,7 @@
 				</File>
 				<File Id="832691718" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Field.wav</ShortName>
-					<CachePath>SFX/Field_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/Field_5DE90193.wem</CachePath>
 				</File>
 				<File Id="845965348" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.7.wav</ShortName>
@@ -477,5 +474,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0B606FCA-6B87-6265-2BF8-65FF73176289}</FileHash>
+	<FileHash>{950F8137-02C6-73C9-B37A-D5BE0C2D0FA0}</FileHash>
 </SoundBanksInfo>
