@@ -67,6 +67,9 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID DIRECTIONTOANOMALYX = 1106591598U;
+        static const AkUniqueID DIRECTIONTOANOMALYY = 1106591599U;
+        static const AkUniqueID DIRECTIONTOANOMALYZ = 1106591596U;
         static const AkUniqueID PROXIMITYTOANOMALY = 3467476706U;
     } // namespace GAME_PARAMETERS
 

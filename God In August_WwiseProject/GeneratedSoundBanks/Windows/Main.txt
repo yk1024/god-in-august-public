@@ -27,6 +27,9 @@ State	ID	Name	State Group			Notes
 	3634696612	Hill	Area			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	1106591596	DirectionToAnomalyZ			\Default Work Unit\DirectionToAnomaly\DirectionToAnomalyZ	
+	1106591598	DirectionToAnomalyX			\Default Work Unit\DirectionToAnomaly\DirectionToAnomalyX	
+	1106591599	DirectionToAnomalyY			\Default Work Unit\DirectionToAnomaly\DirectionToAnomalyY	
 	3467476706	ProximityToAnomaly			\Default Work Unit\ProximityToAnomaly	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -80,7 +83,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	794473109	Dirt walk 10	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Dirt walk 10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 10		196816
 	824705841	Asphalt Walk_8	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Asphalt Walk.8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_8		196816
 	832389137	Gravel walk 1	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Gravel walk 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel walk\Gravel walk 1		196816
-	832691718	Melody	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Field_5DE90193.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9699600
+	832691718	Melody	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Field_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9699600
 	845965348	Asphalt Walk_7	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Asphalt Walk.7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_7		131280
 	855388387	Melody	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\社BGM_NewVer_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\BGM\Melody		9702272
 	883283124	Gravel run 3	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Gravel run 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel run\Gravel run 3		65744
