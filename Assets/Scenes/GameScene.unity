@@ -5390,6 +5390,18 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 8ac6159a6e6ad4933bede2fa55f339ec, type: 2}
+  directionToAnomalyXRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b99521670622b46c5bb142b4f1a4a5af, type: 2}
+  directionToAnomalyYRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 318b3f72ccba64adfb41271d242bca25, type: 2}
+  directionToAnomalyZRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d6b181be35482498987faf0c6ab9ae0e, type: 2}
   stopSwitch:
     idInternal: 0
     valueGuidInternal: 
