@@ -37,7 +37,7 @@ public class Anomaly : MonoBehaviour
             proximityToAnomaly = Mathf.Clamp01(((radius - distance) / blendDistance) + 1);
         }
 
-        musicManager.SetProximityToAnomaly(proximityToAnomaly);
+        musicManager.SetProximityToAnomaly(proximityToAnomaly, transform.position);
     }
 
     public void OnOccur()

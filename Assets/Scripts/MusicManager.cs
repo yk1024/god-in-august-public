@@ -21,6 +21,15 @@ public class MusicManager : MonoBehaviour
 
     public float ProximityToAnomaly { get; set; }
 
+    [SerializeField]
+    private AK.Wwise.RTPC directionToAnomalyXRTPC;
+
+    [SerializeField]
+    private AK.Wwise.RTPC directionToAnomalyYRTPC;
+
+    [SerializeField]
+    private AK.Wwise.RTPC directionToAnomalyZRTPC;
+
     [SerializeField, Header("Move Speed Switch")]
     private AK.Wwise.Switch stopSwitch;
 
@@ -32,10 +41,13 @@ public class MusicManager : MonoBehaviour
 
     public AK.Wwise.Switch MoveSpeedSwitch { get; set; }
 
+    private GameObject mainCamera;
+
     void Start()
     {
         defaultAreaState.SetValue();
         playBGMEvent.Post(gameObject);
+        mainCamera = GameObject.FindWithTag(Constants.MainCameraTag);
     }
 
     public void AddAreaState(AK.Wwise.State areaState)
@@ -69,10 +81,18 @@ public class MusicManager : MonoBehaviour
         stopBGMEvent.Post(gameObject);
     }
 
-    public void SetProximityToAnomaly(float proximity)
+    public void SetProximityToAnomaly(float proximity, Vector3 anomalyPosition)
     {
         ProximityToAnomaly = proximity;
+
+        Vector3 direction = mainCamera.transform.InverseTransformDirection(anomalyPosition - mainCamera.transform.position);
+
+        direction = direction.normalized * (1 - proximity);
+
         proximityToAnomalyRTPC.SetValue(gameObject, proximity);
+        directionToAnomalyXRTPC.SetValue(gameObject, direction.x);
+        directionToAnomalyYRTPC.SetValue(gameObject, direction.y);
+        directionToAnomalyZRTPC.SetValue(gameObject, direction.z);
     }
 
     public void SetMoveSpeed(MoveSpeed moveSpeed)

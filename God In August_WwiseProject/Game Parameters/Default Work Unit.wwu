@@ -9,6 +9,31 @@
 						<Property Name="Max" Type="Real64" Value="1"/>
 					</PropertyList>
 				</GameParameter>
+				<Folder Name="DirectionToAnomaly" ID="{873D338E-9BF4-4B82-8CB7-2B1B6BEF8A93}" ShortID="779349007">
+					<ChildrenList>
+						<GameParameter Name="DirectionToAnomalyX" ID="{77A1F502-4561-4078-B9B3-D8AE9B3089FC}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+								<Property Name="Min" Type="Real64" Value="-1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="DirectionToAnomalyY" ID="{392759A9-8995-48D8-9349-5337B78EEC6E}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+								<Property Name="Min" Type="Real64" Value="-1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="DirectionToAnomalyZ" ID="{D0070F0A-24BA-4FCD-A031-21C587F7BF79}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+								<Property Name="Min" Type="Real64" Value="-1"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

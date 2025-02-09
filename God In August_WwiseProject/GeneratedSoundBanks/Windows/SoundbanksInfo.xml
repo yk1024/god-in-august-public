@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D2B79BB9-5139-F560-D786-4CDF6393F8A7}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2496FB6A-C537-F424-0C64-334BE2A36C99}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,6 +22,9 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
+				<GameParameter Id="1106591598" Name="DirectionToAnomalyX"/>
+				<GameParameter Id="1106591599" Name="DirectionToAnomalyY"/>
 				<GameParameter Id="3467476706" Name="ProximityToAnomaly"/>
 			</GameParameters>
 			<StateGroups>
@@ -52,7 +55,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2C92EE91-3B15-499A-DEAA-1EF021DC91BF}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{64534AC1-DBBC-B70F-C4DF-D800FF38CC85}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -258,7 +261,7 @@
 				</File>
 				<File Id="832691718" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Field.wav</ShortName>
-					<CachePath>SFX/Field_5DE90193.wem</CachePath>
+					<CachePath>SFX/Field_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="845965348" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.7.wav</ShortName>
@@ -443,6 +446,9 @@
 				<Event Id="1073466678" Name="Stop_BGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
+				<GameParameter Id="1106591598" Name="DirectionToAnomalyX"/>
+				<GameParameter Id="1106591599" Name="DirectionToAnomalyY"/>
 				<GameParameter Id="3467476706" Name="ProximityToAnomaly"/>
 			</GameParameters>
 			<StateGroups>
@@ -474,5 +480,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{31CA6E0F-2344-0AF9-5E5C-035847995110}</FileHash>
+	<FileHash>{48E9F911-4FBB-B8D4-B044-BBE3C1E360A2}</FileHash>
 </SoundBanksInfo>

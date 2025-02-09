@@ -16,7 +16,19 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="DirectionToAnomalyX" ID="{77A1F502-4561-4078-B9B3-D8AE9B3089FC}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="ProximityToAnomaly" ID="{1C48EF35-E988-4216-9E2F-E8D0E9681354}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="DirectionToAnomalyY" ID="{392759A9-8995-48D8-9349-5337B78EEC6E}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="DirectionToAnomalyZ" ID="{D0070F0A-24BA-4FCD-A031-21C587F7BF79}"/>
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>

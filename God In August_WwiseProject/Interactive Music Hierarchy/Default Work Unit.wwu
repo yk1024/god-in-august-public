@@ -594,7 +594,10 @@
 								</MusicTrack>
 								<MusicTrack Name="Anomaly" ID="{E40F2B1C-B8CB-4156-A339-9F67A59E1E64}" ShortID="400735925">
 									<PropertyList>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -625,6 +628,119 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{DC4E7CE8-EB30-4B60-B15A-861F641DAFA0}">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{F3860817-2E14-418A-BB37-79844B19C11F}" ShortID="994172375">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="PanX"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="DirectionToAnomalyX" ID="{77A1F502-4561-4078-B9B3-D8AE9B3089FC}" WorkUnitID="{A49476AB-9866-4EA0-B22D-00FBA6C3C14E}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{D57BA492-A294-43E8-A2DD-D324F2C642BD}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{F9EE24BB-A7A6-4C23-A134-5BC42E6E4229}" ShortID="680297786">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="PanZ"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="DirectionToAnomalyY" ID="{392759A9-8995-48D8-9349-5337B78EEC6E}" WorkUnitID="{A49476AB-9866-4EA0-B22D-00FBA6C3C14E}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{B733EB21-162E-4618-A43C-C1BCD16E1B4F}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{B7CA734B-9FD0-46A2-85F6-DE9C93BD7DDF}" ShortID="503439231">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="PanY"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="DirectionToAnomalyZ" ID="{D0070F0A-24BA-4FCD-A031-21C587F7BF79}" WorkUnitID="{A49476AB-9866-4EA0-B22D-00FBA6C3C14E}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{C87DB79A-E65A-4B5A-A568-6DECDB02D445}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</Panner>
+									</PositioningInfo>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
 											<Reference>
