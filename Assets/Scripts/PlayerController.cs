@@ -1,5 +1,7 @@
+using System.Collections;
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -14,11 +16,16 @@ public class PlayerController : MonoBehaviour
 
     private MusicManager musicManager;
 
+    private Animator animator;
+
+    private readonly UnityEvent onAnimationEnd = new UnityEvent();
+
     void Start()
     {
         lookAt = GetComponent<LookAtHandler>();
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         musicManager = FindObjectOfType<MusicManager>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -61,5 +68,25 @@ public class PlayerController : MonoBehaviour
         {
             return MoveSpeed.Walk;
         }
+    }
+
+    public IEnumerator Pray()
+    {
+        animator.SetTrigger(Constants.PrayAnimatorTrigger);
+        yield return WaitForAnimationEnd();
+    }
+
+    private IEnumerator WaitForAnimationEnd()
+    {
+        bool triggered = false;
+        void callback() => triggered = true;
+        onAnimationEnd.AddListener(callback);
+        yield return new WaitUntil(() => triggered);
+        onAnimationEnd.RemoveListener(callback);
+    }
+
+    public void EndAnimation()
+    {
+        onAnimationEnd.Invoke();
     }
 }

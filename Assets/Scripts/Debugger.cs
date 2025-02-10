@@ -40,16 +40,16 @@ public class Debugger : MonoBehaviour
 
     public void Sleep()
     {
-        FindObjectOfType<Bed>().Sleep();
+        StartCoroutine(gameManager.EndDay());
     }
 
     public void PrayForGratitude()
     {
-        FindObjectOfType<Shrine>().PrayForGratitude();
+        gameManager.PrayType = PrayType.Gratitude;
     }
 
     public void PrayForWish()
     {
-        FindObjectOfType<Shrine>().PrayForWish();
+        gameManager.PrayType = PrayType.Wish;
     }
 }

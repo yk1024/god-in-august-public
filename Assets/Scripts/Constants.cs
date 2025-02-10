@@ -9,4 +9,5 @@ public static class Constants
 
     public const string MotionSpeedAnimatorParameter = "MotionSpeed";
     public const string SpeedAnimatorParameter = "Speed";
+    public const string PrayAnimatorTrigger = "Pray";
 }
