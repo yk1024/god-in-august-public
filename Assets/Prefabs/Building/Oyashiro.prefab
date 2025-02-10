@@ -3696,7 +3696,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2371590601527959917}
         m_TargetAssemblyTypeName: Shrine, Assembly-CSharp
         m_MethodName: PrayForWish
         m_Mode: 1
@@ -4586,7 +4586,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2371590601527959917}
         m_TargetAssemblyTypeName: Shrine, Assembly-CSharp
         m_MethodName: FirstPray
         m_Mode: 1
@@ -9723,6 +9723,7 @@ MonoBehaviour:
   <TargetPoint>k__BackingField: {fileID: 2674310450983188249}
   prayPosition: {fileID: 2930907829652583152}
   prayCamera: {fileID: 2444582643586251437}
+  fadeTime: 0.5
 --- !u!65 &1364696748857002998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28970,7 +28971,7 @@ PrefabInstance:
     - target: {fileID: 59491288016664904, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2371590601527959917}
     - target: {fileID: 59491288016664904, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PrayForGratitude

@@ -28,6 +28,9 @@ public class Shrine : MonoBehaviour, IInteractable
     private OverlayPanel overlayPanel;
     private PlayerInput playerInput;
 
+    [SerializeField]
+    private float fadeTime;
+
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -53,11 +56,11 @@ public class Shrine : MonoBehaviour, IInteractable
 
     private IEnumerator OnInteract()
     {
-        yield return overlayPanel.FadeOut(1);
+        yield return overlayPanel.FadeOut(fadeTime);
         prayCamera.Priority = cinemachineBrain.ActiveVirtualCamera.Priority + 1;
         player.transform.SetPositionAndRotation(prayPosition.position, prayPosition.rotation);
         prayPanel.gameObject.SetActive(true);
-        yield return overlayPanel.FadeIn(1);
+        yield return overlayPanel.FadeIn(fadeTime);
     }
 
     private IEnumerator Pray(PrayType prayType)
@@ -94,8 +97,8 @@ public class Shrine : MonoBehaviour, IInteractable
 
     private IEnumerator EndInteraction()
     {
-        yield return overlayPanel.FadeOut(1);
+        yield return overlayPanel.FadeOut(fadeTime);
         prayCamera.Priority = 0;
-        yield return overlayPanel.FadeIn(1);
+        yield return overlayPanel.FadeIn(fadeTime);
     }
 }
