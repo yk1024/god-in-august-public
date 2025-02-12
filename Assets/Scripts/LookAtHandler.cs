@@ -13,12 +13,13 @@ public class LookAtHandler : MonoBehaviour
     [SerializeField]
     private float reactionSpeed;
 
+    [SerializeField]
+    private Transform lookAtPosition;
+
     private Dictionary<GameObject, ILookAtTarget> targets = new Dictionary<GameObject, ILookAtTarget>();
     private Transform head;
     private Animator animator;
     private float ikLookAtWeight = 0;
-    private Vector3 ikLookAtPosition;
-    private Vector3 lastHeadPosition;
 
     [SerializeField]
     private bool suspended = false;
@@ -27,8 +28,6 @@ public class LookAtHandler : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         head = animator.GetBoneTransform(HumanBodyBones.Head);
-        lastHeadPosition = head.position;
-        ikLookAtPosition = head.position + head.forward;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -69,7 +68,6 @@ public class LookAtHandler : MonoBehaviour
             });
 
         PrepareAnimation(target);
-        lastHeadPosition = head.position;
 
         return (target, distance);
     }
@@ -80,7 +78,7 @@ public class LookAtHandler : MonoBehaviour
 
         if (!suspended && target != null)
         {
-            ikLookAtPosition = CalculateNextPosition(target.TargetPoint.position);
+            CalculateNextPosition(target.TargetPoint.position);
             ikLookAtWeight += ikWeightReaction;
         }
         else
@@ -91,21 +89,21 @@ public class LookAtHandler : MonoBehaviour
         ikLookAtWeight = Mathf.Clamp01(ikLookAtWeight);
     }
 
-    Vector3 CalculateNextPosition(Vector3 targetPosition)
+    private void CalculateNextPosition(Vector3 targetPosition)
     {
-        if (ikLookAtWeight == 0 || ikLookAtPosition == targetPosition) return targetPosition;
+        if (ikLookAtWeight == 0 || lookAtPosition.position == targetPosition) return;
 
         Vector3 targetDirection = targetPosition - head.position;
-        Vector3 currentDirection = ikLookAtPosition - lastHeadPosition;
+        Vector3 currentDirection = lookAtPosition.position - head.position;
 
         Vector3 nextDirection = Vector3.RotateTowards(currentDirection, targetDirection, rotationSpeed * Time.deltaTime, 0);
 
-        return nextDirection + head.position;
+        lookAtPosition.position = nextDirection + head.position;
     }
 
     void OnAnimatorIK(int layerIndex)
     {
-        animator.SetLookAtPosition(ikLookAtPosition);
+        animator.SetLookAtPosition(lookAtPosition.position);
         animator.SetLookAtWeight(ikLookAtWeight);
     }
 }

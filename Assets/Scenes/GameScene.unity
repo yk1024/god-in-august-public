@@ -1919,6 +1919,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2669848144251451492, guid: d1f3feef1b0174612814c0a447a56b37, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3672904867173676104, guid: d1f3feef1b0174612814c0a447a56b37, type: 3}
       propertyPath: m_Name
       value: Heroine
