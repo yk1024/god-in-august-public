@@ -13,10 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_AMBIENCE = 278617630U;
-        static const AkUniqueID PLAY_BGM = 3126765036U;
         static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
-        static const AkUniqueID STOP_BGM = 1073466678U;
+        static const AkUniqueID PLAY_SPATIAL_SOUND = 313775518U;
+        static const AkUniqueID STOP_SPATIAL_SOUND = 4137953372U;
     } // namespace EVENTS
 
     namespace STATES

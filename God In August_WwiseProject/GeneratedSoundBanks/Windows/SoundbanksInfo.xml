@@ -55,7 +55,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{64534AC1-DBBC-B70F-C4DF-D800FF38CC85}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F336D573-0881-06B8-1E7C-CF19276FC07D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -321,24 +321,6 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="278617630" Name="Play_Ambience" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="201063146"/>
-						<MediaRef Id="516108938"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3126765036" Name="Play_BGM" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="61213708"/>
-						<MediaRef Id="74120617"/>
-						<MediaRef Id="90676810"/>
-						<MediaRef Id="193392232"/>
-						<MediaRef Id="679924021"/>
-						<MediaRef Id="684550026"/>
-						<MediaRef Id="832691718"/>
-						<MediaRef Id="855388387"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.24135911" DurationMax="1.9308729">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -443,7 +425,21 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1073466678" Name="Stop_BGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="313775518" Name="Play_Spatial_Sound" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="61213708"/>
+						<MediaRef Id="74120617"/>
+						<MediaRef Id="90676810"/>
+						<MediaRef Id="193392232"/>
+						<MediaRef Id="201063146"/>
+						<MediaRef Id="516108938"/>
+						<MediaRef Id="679924021"/>
+						<MediaRef Id="684550026"/>
+						<MediaRef Id="832691718"/>
+						<MediaRef Id="855388387"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4137953372" Name="Stop_Spatial_Sound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
@@ -480,5 +476,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{48E9F911-4FBB-B8D4-B044-BBE3C1E360A2}</FileHash>
+	<FileHash>{E4392422-DEAD-CA6D-B8B9-ACC64BC14513}</FileHash>
 </SoundBanksInfo>

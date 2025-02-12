@@ -1,8 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
-	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
-	1073466678	Stop_BGM			\Default Work Unit\Stop_BGM	
+	313775518	Play_Spatial_Sound			\Default Work Unit\Play_Spatial_Sound	
 	1602358412	Play_Footstep			\Default Work Unit\Play_Footstep	
-	3126765036	Play_BGM			\Default Work Unit\Play_BGM	
+	4137953372	Stop_Spatial_Sound			\Default Work Unit\Stop_Spatial_Sound	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1086842483	MoveSpeed			\Default Work Unit\MoveSpeed	
