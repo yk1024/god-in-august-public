@@ -55,7 +55,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{64534AC1-DBBC-B70F-C4DF-D800FF38CC85}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{170BF0B1-5C71-9E24-E07E-C4933BCB07D0}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -321,12 +321,6 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="278617630" Name="Play_Ambience" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="201063146"/>
-						<MediaRef Id="516108938"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3126765036" Name="Play_BGM" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="61213708"/>
@@ -443,7 +437,22 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="313775518" Name="Play_Spatial_Sound" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="61213708"/>
+						<MediaRef Id="74120617"/>
+						<MediaRef Id="90676810"/>
+						<MediaRef Id="193392232"/>
+						<MediaRef Id="201063146"/>
+						<MediaRef Id="516108938"/>
+						<MediaRef Id="679924021"/>
+						<MediaRef Id="684550026"/>
+						<MediaRef Id="832691718"/>
+						<MediaRef Id="855388387"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1073466678" Name="Stop_BGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4137953372" Name="Stop_Spatial_Sound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
@@ -480,5 +489,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{963BC003-C5FF-9FB8-9241-4EAAF27F7E4F}</FileHash>
+	<FileHash>{DA539008-8930-41D6-6D95-645E4F0DFB4F}</FileHash>
 </SoundBanksInfo>

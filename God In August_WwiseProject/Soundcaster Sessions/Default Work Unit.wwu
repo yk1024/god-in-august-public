@@ -36,7 +36,7 @@
 						<CurrentStateRef Name="Home" ID="{DB99C35B-773F-4FB5-9B8E-030750A420BC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Stop" ID="{897B8711-3C78-4C9B-A3F6-BAD539CF1248}"/>
+						<CurrentSwitchRef Name="Sprint" ID="{B7F3B446-65B2-43B2-967C-C3B50B8D5D89}"/>
 						<CurrentSwitchRef Name="Asphalt" ID="{12FDCD5F-FC29-487E-8711-AAD60A2C4AD2}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

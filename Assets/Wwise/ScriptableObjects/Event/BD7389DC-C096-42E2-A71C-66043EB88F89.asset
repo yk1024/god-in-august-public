@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1818add96a547b09572f6e08a49e99, type: 3}
   m_Name: BD7389DC-C096-42E2-A71C-66043EB88F89
   m_EditorClassIdentifier: 
-  objectName: Play_Ambience
-  id: 278617630
+  objectName: Play_Spatial_Sound
+  id: 313775518
   guid: BD7389DC-C096-42E2-A71C-66043EB88F89
