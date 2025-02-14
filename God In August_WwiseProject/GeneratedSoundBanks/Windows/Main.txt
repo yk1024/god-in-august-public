@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	313775518	Play_Spatial_Sound			\Default Work Unit\Play_Spatial_Sound	
+	661288100	Play_TreeRustling			\Default Work Unit\Play_TreeRustling	
 	1602358412	Play_Footstep			\Default Work Unit\Play_Footstep	
 	4137953372	Stop_Spatial_Sound			\Default Work Unit\Stop_Spatial_Sound	
 
@@ -29,6 +30,8 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1106591596	DirectionToAnomalyZ			\Default Work Unit\DirectionToAnomaly\DirectionToAnomalyZ	
 	1106591598	DirectionToAnomalyX			\Default Work Unit\DirectionToAnomaly\DirectionToAnomalyX	
 	1106591599	DirectionToAnomalyY			\Default Work Unit\DirectionToAnomaly\DirectionToAnomalyY	
+	1641895944	TreeZoneSize			\Default Work Unit\TreeZoneSize	
+	3158975812	WindStrength			\Default Work Unit\WindStrength	
 	3467476706	ProximityToAnomaly			\Default Work Unit\ProximityToAnomaly	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -95,6 +98,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1010937240	Asphalt Walk_9	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Asphalt Walk.9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt walk\Asphalt Walk_9		196816
 	1037439670	Asphalt run_8	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Asphalt run.8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt run\Asphalt run_8		65744
 	1038305340	Asphalt run_7	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Asphalt run.7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Asphalt\Asphalt run\Asphalt run_7		131280
+	1038510396	TreeRustling	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\NHU05078140_8DA53EC0.wem		\Actor-Mixer Hierarchy\Default Work Unit\TreeRustling		17358016
 	1042254113	Gravel walk 3	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Gravel walk 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Gravel\Gravel walk\Gravel walk 3		131280
 	1063050520	Dirt walk 6	Y:\God In August\God In August_WwiseProject\.cache\Windows\SFX\Dirt walk 6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep\Dirt\Dirt walk\Dirt walk 6		196816
 

@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
         static const AkUniqueID PLAY_SPATIAL_SOUND = 313775518U;
+        static const AkUniqueID PLAY_TREERUSTLING = 661288100U;
         static const AkUniqueID STOP_SPATIAL_SOUND = 4137953372U;
     } // namespace EVENTS
 
@@ -70,6 +71,8 @@ namespace AK
         static const AkUniqueID DIRECTIONTOANOMALYY = 1106591599U;
         static const AkUniqueID DIRECTIONTOANOMALYZ = 1106591596U;
         static const AkUniqueID PROXIMITYTOANOMALY = 3467476706U;
+        static const AkUniqueID TREEZONESIZE = 1641895944U;
+        static const AkUniqueID WINDSTRENGTH = 3158975812U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
