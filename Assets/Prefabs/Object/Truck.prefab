@@ -115,6 +115,14 @@ MonoBehaviour:
   frontTires:
   - {fileID: 6914301444810853900}
   - {fileID: 1763774278905601824}
+  playEngineEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 481643696171646e09f9c4416f646c49, type: 2}
+  speedParameter:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 68797c5e6bc834e21a9c27ae6013b408, type: 2}
 --- !u!195 &4723727080738967058
 NavMeshAgent:
   m_ObjectHideFlags: 0

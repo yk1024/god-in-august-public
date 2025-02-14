@@ -20,6 +20,10 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="DrivingSpeed" ID="{5162A99A-507D-40C2-A34D-488888D7C479}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="ProximityToAnomaly" ID="{1C48EF35-E988-4216-9E2F-E8D0E9681354}"/>
 							<Value>0</Value>
 						</RTPCValue>

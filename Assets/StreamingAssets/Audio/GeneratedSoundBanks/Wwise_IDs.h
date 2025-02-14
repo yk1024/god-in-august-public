@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ENGINE = 639345804U;
         static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
         static const AkUniqueID PLAY_SPATIAL_SOUND = 313775518U;
         static const AkUniqueID PLAY_TREERUSTLING = 661288100U;
@@ -70,6 +71,7 @@ namespace AK
         static const AkUniqueID DIRECTIONTOANOMALYX = 1106591598U;
         static const AkUniqueID DIRECTIONTOANOMALYY = 1106591599U;
         static const AkUniqueID DIRECTIONTOANOMALYZ = 1106591596U;
+        static const AkUniqueID DRIVINGSPEED = 3014603611U;
         static const AkUniqueID PROXIMITYTOANOMALY = 3467476706U;
         static const AkUniqueID TREEZONESIZE = 1641895944U;
         static const AkUniqueID WINDSTRENGTH = 3158975812U;
