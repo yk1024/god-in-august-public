@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EFDEA023-92C4-09BF-7C0F-2FD9029A7622}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8BC958E9-A05F-705A-D7BE-5A8880BFDC4A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -25,6 +25,8 @@
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
 				<GameParameter Id="1106591598" Name="DirectionToAnomalyX"/>
 				<GameParameter Id="1106591599" Name="DirectionToAnomalyY"/>
+				<GameParameter Id="1641895944" Name="TreeZoneSize"/>
+				<GameParameter Id="3158975812" Name="WindStrength"/>
 				<GameParameter Id="3467476706" Name="ProximityToAnomaly"/>
 			</GameParameters>
 			<StateGroups>
@@ -55,7 +57,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F336D573-0881-06B8-1E7C-CF19276FC07D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{EE2733C5-B673-BF94-F1CD-FD048B97C716}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -311,6 +313,10 @@
 					<ShortName>Asphalt run.7.wav</ShortName>
 					<CachePath>SFX/Asphalt run.7_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1038510396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>NHU05078140.wav</ShortName>
+					<CachePath>SFX/NHU05078140_8DA53EC0.wem</CachePath>
+				</File>
 				<File Id="1042254113" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gravel walk 3.wav</ShortName>
 					<CachePath>SFX/Gravel walk 3_818F3B66.wem</CachePath>
@@ -439,12 +445,19 @@
 						<MediaRef Id="855388387"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="661288100" Name="Play_TreeRustling" MaxAttenuation="50" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1038510396"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4137953372" Name="Stop_Spatial_Sound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
 				<GameParameter Id="1106591598" Name="DirectionToAnomalyX"/>
 				<GameParameter Id="1106591599" Name="DirectionToAnomalyY"/>
+				<GameParameter Id="1641895944" Name="TreeZoneSize"/>
+				<GameParameter Id="3158975812" Name="WindStrength"/>
 				<GameParameter Id="3467476706" Name="ProximityToAnomaly"/>
 			</GameParameters>
 			<StateGroups>
@@ -476,5 +489,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6495FF6A-9BE0-50AA-9EA4-F05A372C6308}</FileHash>
+	<FileHash>{E6ED22D9-45C3-DE25-0F66-06925B69EA1E}</FileHash>
 </SoundBanksInfo>

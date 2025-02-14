@@ -28,6 +28,14 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="WindStrength" ID="{260F0067-1134-4D8A-9D83-EF02E0D07C30}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="TreeZoneSize" ID="{B5E7CB85-66C9-4E45-943A-2D2CBC5E49CC}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="DirectionToAnomalyZ" ID="{D0070F0A-24BA-4FCD-A031-21C587F7BF79}"/>
 							<Value>0</Value>
 						</RTPCValue>
