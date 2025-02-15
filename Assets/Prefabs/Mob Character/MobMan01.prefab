@@ -279,6 +279,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1728013695380148634, guid: 85dc21a0b5989493383cf2bd4d8e62c6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6204432758336612700}
+    - targetCorrespondingSourceObject: {fileID: -1728013695380148634, guid: 85dc21a0b5989493383cf2bd4d8e62c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8021522015363724816}
   m_SourcePrefab: {fileID: -3956505258223990651, guid: 85dc21a0b5989493383cf2bd4d8e62c6, type: 3}
 --- !u!4 &4345437429108503684 stripped
 Transform:
@@ -419,6 +422,28 @@ MonoBehaviour:
   anomalousRenderer: {fileID: 6701957329672445195}
   anomalousMaterial: {fileID: -876546973899608171, guid: ab3b73cce190042a7bf8ed2b30fd5747, type: 3}
   textMeshProUGUI: {fileID: 8401875890155914163}
+--- !u!114 &8021522015363724816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205527110040272804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5891ee1219a42489983ca8846011c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b43d19d3dcb4f4d48a7ff777bebb1c27, type: 2}
+  defaultGroundSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 244e41241c8a844dd8d849f6b7a21c12, type: 2}
 --- !u!137 &6701957329672445195 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7140606858727328969, guid: 85dc21a0b5989493383cf2bd4d8e62c6, type: 3}
