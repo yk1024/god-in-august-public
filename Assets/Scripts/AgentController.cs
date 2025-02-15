@@ -18,6 +18,8 @@ public class AgentController : MonoBehaviour
     private int navigationIndex = 0;
     private bool isStopping = false;
 
+    protected float speed;
+
     protected virtual void Start()
     {
         animator = GetComponent<Animator>();
@@ -31,7 +33,7 @@ public class AgentController : MonoBehaviour
             StartCoroutine(SetDestination());
         }
 
-        float speed = navMeshAgent.velocity.magnitude;
+        speed = navMeshAgent.velocity.magnitude;
         animator.SetFloat(Constants.SpeedAnimatorParameter, speed);
     }
 

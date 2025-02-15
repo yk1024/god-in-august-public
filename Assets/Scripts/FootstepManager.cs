@@ -10,7 +10,7 @@ public class FootstepManager : MonoBehaviour
 
     public AK.Wwise.Switch GroundSwitch { get; set; }
 
-    public void TriggerFootstepSound()
+    private void TriggerFootstepSound()
     {
         GroundSwitch = GetGroundSwitch();
         GroundSwitch.SetValue(gameObject);
@@ -29,5 +29,13 @@ public class FootstepManager : MonoBehaviour
         }
 
         return defaultGroundSwitch;
+    }
+
+    public void OnFootstep(AnimationEvent animationEvent)
+    {
+        if (animationEvent.animatorClipInfo.weight > 0.5f)
+        {
+            TriggerFootstepSound();
+        }
     }
 }

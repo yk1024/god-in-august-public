@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E9B95495-16CF-73F3-76A4-8FE0632813CF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AF0C8EA1-7BB7-6481-82FB-D42AF550282E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -26,6 +26,7 @@
 				<GameParameter Id="1106591598" Name="DirectionToAnomalyX"/>
 				<GameParameter Id="1106591599" Name="DirectionToAnomalyY"/>
 				<GameParameter Id="1641895944" Name="TreeZoneSize"/>
+				<GameParameter Id="3014603611" Name="DrivingSpeed"/>
 				<GameParameter Id="3158975812" Name="WindStrength"/>
 				<GameParameter Id="3467476706" Name="ProximityToAnomaly"/>
 			</GameParameters>
@@ -57,7 +58,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{EE2733C5-B673-BF94-F1CD-FD048B97C716}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0409FEF5-6A15-5F8C-A6B9-638ED844CA4E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -225,6 +226,10 @@
 					<ShortName>Gravel run 5.wav</ShortName>
 					<CachePath>SFX/Gravel run 5_818F3B66.wem</CachePath>
 				</File>
+				<File Id="663888226" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>07012018.wav</ShortName>
+					<CachePath>SFX/07012018_34B24F89.wem</CachePath>
+				</File>
 				<File Id="679924021" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Anomary_BGM.wav</ShortName>
 					<CachePath>SFX/Anomary_BGM_FBC78EF0.wem</CachePath>
@@ -327,7 +332,12 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0.24135911" DurationMax="1.9308729">
+				<Event Id="639345804" Name="Play_Engine" MaxAttenuation="50" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="663888226"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1602358412" Name="Play_Footstep" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.24135911" DurationMax="1.9308729">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2528658256" Id="2195636714" Default="true"/>
@@ -457,6 +467,7 @@
 				<GameParameter Id="1106591598" Name="DirectionToAnomalyX"/>
 				<GameParameter Id="1106591599" Name="DirectionToAnomalyY"/>
 				<GameParameter Id="1641895944" Name="TreeZoneSize"/>
+				<GameParameter Id="3014603611" Name="DrivingSpeed"/>
 				<GameParameter Id="3158975812" Name="WindStrength"/>
 				<GameParameter Id="3467476706" Name="ProximityToAnomaly"/>
 			</GameParameters>
@@ -489,5 +500,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FA73C046-85D5-3FBD-0DF1-4B8D1F29ADEF}</FileHash>
+	<FileHash>{6BDFDDA0-52CA-4B01-8CB2-D14BD0F33561}</FileHash>
 </SoundBanksInfo>

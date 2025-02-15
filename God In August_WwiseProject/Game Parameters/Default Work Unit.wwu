@@ -41,6 +41,7 @@
 						<Property Name="Max" Type="Real64" Value="1"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="DrivingSpeed" ID="{5162A99A-507D-40C2-A34D-488888D7C479}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
