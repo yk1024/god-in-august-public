@@ -58,7 +58,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0409FEF5-6A15-5F8C-A6B9-638ED844CA4E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{87344843-1043-C76E-6121-87DFFF3D5AB1}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -500,5 +500,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BA13B418-9A78-528B-A04A-8C47F9F89935}</FileHash>
+	<FileHash>{4E95A8A4-36D4-3825-8F4E-8ACC221C4615}</FileHash>
 </SoundBanksInfo>
