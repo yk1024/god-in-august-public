@@ -62,7 +62,7 @@
 							<Custom>
 								<Attenuation Name="Attenuation (Custom)" ID="{7A3CDF93-C694-48E3-B1DB-3E8F51DED88C}" ShortID="914409040">
 									<PropertyList>
-										<Property Name="RadiusMax" Type="Real64" Value="50"/>
+										<Property Name="RadiusMax" Type="Real64" Value="25"/>
 									</PropertyList>
 									<CurveUsageInfoList>
 										<VolumeDryUsage>
@@ -78,12 +78,13 @@
 															<Flags>5</Flags>
 														</Point>
 														<Point>
-															<XPos>5</XPos>
+															<XPos>2.5</XPos>
 															<YPos>-0</YPos>
 															<Flags>0</Flags>
+															<SegmentShape>Log2</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>50</XPos>
+															<XPos>25</XPos>
 															<YPos>-200</YPos>
 															<Flags>37</Flags>
 														</Point>
@@ -1645,6 +1646,13 @@
 					</GroupingInfo>
 				</SwitchContainer>
 				<BlendContainer Name="Ambience" ID="{92A5CA4A-5444-410D-AC71-42A8C1F876A3}" ShortID="658641856">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
@@ -1788,7 +1796,7 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-18</Value>
+								<Value>-24</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -2010,11 +2018,7 @@
 															<XPos>0</XPos>
 															<YPos>0</YPos>
 															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>5</XPos>
-															<YPos>0</YPos>
-															<Flags>0</Flags>
+															<SegmentShape>Log2</SegmentShape>
 														</Point>
 														<Point>
 															<XPos>50</XPos>
