@@ -6,9 +6,6 @@ public class MusicManager : MonoBehaviour
     [SerializeField, Header("Event")]
     private AK.Wwise.Event playBGMEvent;
 
-    [SerializeField]
-    private AK.Wwise.Event stopBGMEvent;
-
     [SerializeField, Header("Area State")]
     private AK.Wwise.State defaultAreaState;
 
@@ -74,11 +71,6 @@ public class MusicManager : MonoBehaviour
         }
 
         AreaState.SetValue();
-    }
-
-    public void FadeOut()
-    {
-        stopBGMEvent.Post(gameObject);
     }
 
     public void SetProximityToAnomaly(float proximity, Vector3 anomalyPosition)

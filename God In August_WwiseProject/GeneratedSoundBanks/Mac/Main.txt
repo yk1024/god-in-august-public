@@ -1,9 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
 	313775518	Play_Spatial_Sound			\Default Work Unit\Play_Spatial_Sound	
+	452547817	Stop_All			\Default Work Unit\Stop_All	
 	639345804	Play_Engine			\Default Work Unit\Play_Engine	
 	661288100	Play_TreeRustling			\Default Work Unit\Play_TreeRustling	
 	1602358412	Play_Footstep			\Default Work Unit\Play_Footstep	
-	4137953372	Stop_Spatial_Sound			\Default Work Unit\Stop_Spatial_Sound	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1086842483	MoveSpeed			\Default Work Unit\MoveSpeed	

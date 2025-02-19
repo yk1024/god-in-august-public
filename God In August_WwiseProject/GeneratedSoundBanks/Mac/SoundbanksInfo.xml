@@ -58,7 +58,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{31056BD8-9168-80CB-0D5D-29B816FDED99}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2415B38C-275D-8819-D672-E1ED5360994E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -460,7 +460,7 @@
 						<MediaRef Id="1038510396"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4137953372" Name="Stop_Spatial_Sound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
@@ -500,5 +500,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AE62C874-4C95-43C2-EC93-04B3FBC221B4}</FileHash>
+	<FileHash>{1B0896EC-F2A4-1AE0-7876-8D3CBBB3241C}</FileHash>
 </SoundBanksInfo>

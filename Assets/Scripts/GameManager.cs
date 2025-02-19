@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
 
     private GameState gameState;
 
+    [SerializeField, Header("Event")]
+    private AK.Wwise.Event stopAllEvent;
+
     void Start()
     {
         gameState = GameState.State ?? GameState.NewGame();
@@ -89,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator EndDay()
     {
-        FindObjectOfType<MusicManager>().FadeOut();
+        stopAllEvent.Post(gameObject);
         yield return overlayPanel.FadeOut(5);
         LoadNextDay();
     }

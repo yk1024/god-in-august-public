@@ -5503,6 +5503,10 @@ MonoBehaviour:
   duration: 3
   nextSceneName: EpilogueScene
   strangenessText: "\u3042\u308C...\uFF1F"
+  stopAllEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0a75065e1fb184b4aa3066812bed4089, type: 2}
 --- !u!1001 &410473609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19975,10 +19979,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 191202fe70f23480f902ae66f9d4ddce, type: 2}
-  stopBGMEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0a75065e1fb184b4aa3066812bed4089, type: 2}
   defaultAreaState:
     idInternal: 0
     valueGuidInternal: 
