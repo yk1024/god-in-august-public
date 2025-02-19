@@ -17,7 +17,7 @@ namespace AK
         static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
         static const AkUniqueID PLAY_SPATIAL_SOUND = 313775518U;
         static const AkUniqueID PLAY_TREERUSTLING = 661288100U;
-        static const AkUniqueID STOP_SPATIAL_SOUND = 4137953372U;
+        static const AkUniqueID STOP_ALL = 452547817U;
     } // namespace EVENTS
 
     namespace STATES
