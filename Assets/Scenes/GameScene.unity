@@ -5100,14 +5100,15 @@ MonoBehaviour:
   - {fileID: 675024519}
   - {fileID: 32219376}
   - {fileID: 1802793970}
-  probability: 0.66
-  duration: 3
+  probability: 0.75
+  duration: 4
   nextSceneName: EpilogueScene
   strangenessText: "\u3042\u308C...\uFF1F"
   stopAllEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 0a75065e1fb184b4aa3066812bed4089, type: 2}
+  <StartDate>k__BackingField: 12
 --- !u!1001 &410473609
 PrefabInstance:
   m_ObjectHideFlags: 0

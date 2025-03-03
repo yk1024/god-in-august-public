@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     [SerializeField, Header("Text Settings")]
     private string strangenessText;
 
+    [field: SerializeField, Header("Date Settings")]
+    public int StartDate { get; private set; }
+
     private OverlayPanel overlayPanel;
     private Dialogue dialogue;
 
@@ -37,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        gameState = GameState.State ?? GameState.NewGame();
+        gameState = GameState.State;
 
         playerInput = FindObjectOfType<PlayerInput>();
         overlayPanel = FindObjectOfType<OverlayPanel>();
@@ -122,7 +125,7 @@ public class GameManager : MonoBehaviour
         {
             sceneName = nextSceneName;
             Cursor.lockState = CursorLockMode.None;
-            GameState.State = null;
+            GameState.EndGame();
         }
         else
         {
