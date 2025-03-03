@@ -9,9 +9,20 @@ public class GameState
     public int OverallLoopIndex { get; set; } = 0;
     public List<PrayHistory> PrayHistory { get; } = new List<PrayHistory>();
 
-    public static GameState State;
+    private static GameState state;
 
-    public static GameState NewGame()
+    public static GameState State
+    {
+        private set => state = value;
+        get => state ?? NewGame();
+    }
+
+    public static void EndGame()
+    {
+        state = null;
+    }
+
+    private static GameState NewGame()
     {
         State = new GameState();
         return State;
