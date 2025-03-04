@@ -30113,7 +30113,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 238684633725115048, guid: 4afd2248902f34f348361837e8fe9d34, type: 3}
       propertyPath: m_Name
-      value: Keijiban
+      value: MessageBoard
       objectReference: {fileID: 0}
     - target: {fileID: 5484497258582168619, guid: 4afd2248902f34f348361837e8fe9d34, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30164,9 +30164,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7082378270764253899, guid: 4afd2248902f34f348361837e8fe9d34, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1834161206106895546, guid: 4afd2248902f34f348361837e8fe9d34, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 4afd2248902f34f348361837e8fe9d34, type: 3}
