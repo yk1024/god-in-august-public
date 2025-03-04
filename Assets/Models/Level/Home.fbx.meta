@@ -3,7 +3,202 @@ guid: 7e751732f3a80482080675cdf625dfef
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cloth
+    second: {fileID: 2100000, guid: ad973a010e97c4919a63f8a248dc5b2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kawara
+    second: {fileID: 2100000, guid: 23f86044d993d4125a5a192a5f15ad5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 17300a660c79645ab934d8431951aabe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: b67ef68b658cf45c984b538af78312b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 7fcce9f9e4b1c4fd6a7c421b3f7e131f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 97e1650db2c7d4d5c8a8a0486abfa432, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 303c76b7a06b848da977605a539ae4c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 406b19fb453034922872d4beacc0ba56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: ccdf2101390444d61936445ce695be79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: 589563e6e6d5142e1b6b8c81efaabb3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 3a8c9d54a8cc84e38b567b6eb265ef6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoji
+    second: {fileID: 2100000, guid: d9130ec4242c849018930e2a0ed48f77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sikkui_Blown
+    second: {fileID: 2100000, guid: f1eb2bd3e0273410a85008c917cff024, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sikkui_White
+    second: {fileID: 2100000, guid: ad07718e085ef4ed6a1e096fafc57aff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone00020
+    second: {fileID: 2100000, guid: ae88cc20f68cd48c589c3c1f121dc9ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone00020.001
+    second: {fileID: 2100000, guid: ac75ec6b6bd054b17a8a231beb25d231, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone0027
+    second: {fileID: 2100000, guid: a7a6a5bfe9653470ba6dd38cd7e0112a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tatami
+    second: {fileID: 2100000, guid: b1a2bac7b0f3247abb70a847f74e18e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood0034
+    second: {fileID: 2100000, guid: 0da413136f1334776a07da0e51444d57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodTras
+    second: {fileID: 2100000, guid: d8dfc1a8294e84973a4410e0dcaf31f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Pillar
+    second: {fileID: 2100000, guid: a053ffa8e8f3b4b6aafa7a5077ddd72a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window001
+    second: {fileID: 2100000, guid: 94c923199ced140499b33bbdfc5d8307, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: WoodTras
+    second: {fileID: 2800000, guid: ab6ae1aa599b14148abf354b67a493fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: metal_00017
+    second: {fileID: 2800000, guid: 67fb229f138a84564aaab96a3b0dbd96, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stone_00020
+    second: {fileID: 2800000, guid: 27e7eaa4f1fd74f29b7f91cc88759bba, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stone_00027
+    second: {fileID: 2800000, guid: 7a746e857e1c244d2a47692d3072ed6f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: texture2021032_44_TP_V4
+    second: {fileID: 2800000, guid: 86eeae43ec0f245dfb5069a4bbe8f703, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood-texture_00008
+    second: {fileID: 2800000, guid: 04425b6ab41bc4433888c3116540c765, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood-texture_00028
+    second: {fileID: 2800000, guid: d556a5db7633e4ba5a5339756f5099ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood-texture_00029
+    second: {fileID: 2800000, guid: d24bce853f8a94a40b10fd61f9057768, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood-texture_00034
+    second: {fileID: 2800000, guid: 60f8eb97865574932a049c644e426eb5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood-texture_00035
+    second: {fileID: 2800000, guid: 4ae112ab204e243bd8e19c8ee81acab0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "\u5C4B\u6839S012"
+    second: {fileID: 2800000, guid: d701c92a370b64c45b26641503166c19, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "\u5E03"
+    second: {fileID: 2800000, guid: c1efeb0bf21eb46288a5bf6c651dd372, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "\u6F06\u55B0_Blown"
+    second: {fileID: 2800000, guid: 646d40d861fa348f5b45c44a6b6e20b6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "\u6F06\u55B0_White"
+    second: {fileID: 2800000, guid: a52c7c7ca59d4426ebc6c60b02a6af02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "\u7384\u95A2\u30C8\u3099\u30A2"
+    second: {fileID: 2800000, guid: c7154fcad667e44189e7dad22e478f82, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "\u7573\uFF16\u7573"
+    second: {fileID: 2800000, guid: 62e8b17f5208f443d93b074028b192d9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "\u969C\u5B50"
+    second: {fileID: 2800000, guid: aebc1984d92914276a83e7a64c83a3c6, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
