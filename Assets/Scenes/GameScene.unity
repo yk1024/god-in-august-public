@@ -7107,11 +7107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a5c13748bf74fd4a741eb5b5b4b13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &678726302 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2723083551288423960, guid: e061c3c2929a4ff4ea6e1fcc179c3f99, type: 3}
-  m_PrefabInstance: {fileID: 546610073}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680326187
 PrefabInstance:
   m_ObjectHideFlags: 0
