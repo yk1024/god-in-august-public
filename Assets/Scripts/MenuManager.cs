@@ -33,6 +33,11 @@ public class MenuManager : MonoBehaviour
 
     private void OpenMenu(InputAction.CallbackContext context)
     {
+        OpenMenu();
+    }
+
+    public void OpenMenu()
+    {
         menuPanel.SetActive(true);
     }
 

@@ -15,6 +15,8 @@ public class UIPanel : MonoBehaviour
 
     public UnityEvent OnCancelCallback { get; } = new UnityEvent();
 
+    private CursorLockMode previousLockState;
+
     void Awake()
     {
         playerInput = FindObjectOfType<PlayerInput>();
@@ -25,6 +27,7 @@ public class UIPanel : MonoBehaviour
     {
         playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
         selectables.First((selectable) => selectable.gameObject.activeSelf).Select();
+        previousLockState = Cursor.lockState;
         Cursor.lockState = CursorLockMode.None;
         cancelAction.action.performed += OnCancel;
     }
@@ -38,7 +41,7 @@ public class UIPanel : MonoBehaviour
 
         cancelAction.action.performed -= OnCancel;
 
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = previousLockState;
     }
 
     public void OnCancel()
