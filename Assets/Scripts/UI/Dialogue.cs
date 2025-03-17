@@ -1,0 +1,36 @@
+using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace GodInAugust.UI
+{
+public class Dialogue : MonoBehaviour
+{
+    [SerializeField]
+    private TextMeshProUGUI textMeshProUGUI;
+
+    [SerializeField]
+    private InputActionReference toNextAction;
+
+    private const float TimePerCharacter = 0.1f;
+
+    public IEnumerator ShowText(params string[] text)
+    {
+        foreach (string sentence in text)
+        {
+            textMeshProUGUI.text = "";
+
+            foreach (char character in sentence)
+            {
+                textMeshProUGUI.text += character;
+                yield return new WaitForSeconds(TimePerCharacter);
+            }
+
+            textMeshProUGUI.text += "▼";
+
+            yield return new WaitUntil(() => toNextAction.action.IsPressed());
+        }
+    }
+}
+}
