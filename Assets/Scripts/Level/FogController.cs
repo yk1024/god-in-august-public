@@ -6,7 +6,7 @@ namespace GodInAugust.Level
 [AddComponentMenu("God In August/Level/Fog Controller")]
 public class FogController : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("フォグ表示用のFullScreenPassRendererFeature")]
     private FullScreenPassRendererFeature rendererFeature;
 
     private Fog fog;

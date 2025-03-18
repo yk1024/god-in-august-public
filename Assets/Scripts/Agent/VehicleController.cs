@@ -5,13 +5,13 @@ namespace GodInAugust.Agent
 [AddComponentMenu("God In August/Agent/Vehicle Controller")]
 public class VehicleController : AgentController
 {
-    [SerializeField]
+    [SerializeField, Tooltip("前輪")]
     private Transform[] frontTires;
 
-    [SerializeField]
+    [SerializeField, Tooltip("エンジン音再生Wwiseイベント")]
     private AK.Wwise.Event playEngineEvent;
 
-    [SerializeField]
+    [SerializeField, Tooltip("速度RTPC")]
     private AK.Wwise.RTPC speedParameter;
 
     protected override void Start()

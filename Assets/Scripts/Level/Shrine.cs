@@ -11,22 +11,22 @@ namespace GodInAugust.Level
 [AddComponentMenu("God In August/Level/Shrine")]
 public class Shrine : MonoBehaviour, IInteractable
 {
-    [SerializeField]
+    [SerializeField, Tooltip("祈りパネル")]
     private UIPanel prayPanel;
 
     private bool alreadyPrayed = false;
 
     private GameManager gameManager;
 
-    [field: SerializeField]
+    [field: SerializeField, Tooltip("インタラクトの対象位置")]
     public Transform TargetPoint { get; private set; }
 
     private PlayerController player;
 
-    [SerializeField]
+    [SerializeField, Tooltip("祈る立ち位置　")]
     private Transform prayPosition;
 
-    [SerializeField]
+    [SerializeField, Tooltip("祈るシーン用のカメラ")]
     private CinemachineVirtualCamera prayCamera;
 
     private CinemachineBrain cinemachineBrain;
@@ -34,7 +34,7 @@ public class Shrine : MonoBehaviour, IInteractable
     private OverlayPanel overlayPanel;
     private PlayerInput playerInput;
 
-    [SerializeField]
+    [SerializeField, Tooltip("祈りのシーン前後のフェード時間")]
     private float fadeTime;
 
     void Start()

@@ -8,10 +8,10 @@ namespace GodInAugust.UI
 [AddComponentMenu("God In August/UI/Dialogue")]
 public class Dialogue : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("ダイアログのテキスト")]
     private TextMeshProUGUI textMeshProUGUI;
 
-    [SerializeField]
+    [SerializeField, Tooltip("文字送りのアクション")]
     private InputActionReference toNextAction;
 
     private const float TimePerCharacter = 0.1f;

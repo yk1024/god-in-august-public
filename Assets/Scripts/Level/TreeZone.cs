@@ -10,16 +10,16 @@ public class TreeZone : MonoBehaviour
 
     private Collider treeZoneCollider;
 
-    [SerializeField]
+    [SerializeField, Tooltip("発音位置のトランスフォーム")]
     private Transform soundPosition;
 
-    [SerializeField]
+    [SerializeField, Tooltip("林の大きさ")]
     private float size;
 
-    [SerializeField]
+    [SerializeField, Tooltip("木のざわめき用のWwiseイベント")]
     private AK.Wwise.Event playEvent;
 
-    [SerializeField]
+    [SerializeField, Tooltip("林の大きさのRTPC")]
     private AK.Wwise.RTPC treeZoneSizeParameter;
 
     // Start is called before the first frame update

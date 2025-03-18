@@ -7,37 +7,37 @@ namespace GodInAugust.System
 [AddComponentMenu("God In August/System/Music Manager")]
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField, Header("Event")]
+    [SerializeField, Header("Event"), Tooltip("BGM再生のWwiseイベント")]
     private AK.Wwise.Event playBGMEvent;
 
-    [SerializeField, Header("Area State")]
+    [SerializeField, Header("Area State"), Tooltip("デフォルトのエリアのステート")]
     private AK.Wwise.State defaultAreaState;
 
     public AK.Wwise.State AreaState { get; set; }
 
-    private List<AK.Wwise.State> areaStates = new List<AK.Wwise.State>();
+    private readonly List<AK.Wwise.State> areaStates = new List<AK.Wwise.State>();
 
-    [SerializeField, Header("Proximity To Anomaly RTPC")]
+    [SerializeField, Header("Proximity To Anomaly RTPC"), Tooltip("異変からの近さのRTPC")]
     private AK.Wwise.RTPC proximityToAnomalyRTPC;
 
     public float ProximityToAnomaly { get; set; }
 
-    [SerializeField]
+    [SerializeField, Tooltip("異変の向きのX軸のRTPC")]
     private AK.Wwise.RTPC directionToAnomalyXRTPC;
 
-    [SerializeField]
+    [SerializeField, Tooltip("異変の向きのY軸のRTPC")]
     private AK.Wwise.RTPC directionToAnomalyYRTPC;
 
-    [SerializeField]
+    [SerializeField, Tooltip("異変の向きのZ軸のRTPC")]
     private AK.Wwise.RTPC directionToAnomalyZRTPC;
 
-    [SerializeField, Header("Move Speed Switch")]
+    [SerializeField, Header("Move Speed Switch"), Tooltip("停止のWwiseスイッチ")]
     private AK.Wwise.Switch stopSwitch;
 
-    [SerializeField]
+    [SerializeField, Tooltip("歩行のWwiseスイッチ")]
     private AK.Wwise.Switch walkSwitch;
 
-    [SerializeField]
+    [SerializeField, Tooltip("走行のWwiseスイッチ")]
     private AK.Wwise.Switch sprintSwitch;
 
     public AK.Wwise.Switch MoveSpeedSwitch { get; set; }

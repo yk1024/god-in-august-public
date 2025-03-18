@@ -6,13 +6,13 @@ namespace GodInAugust.Anomalies
 [AddComponentMenu("God In August/Anomalies/Anomalous Character")]
 public class AnomalousCharacter : Anomaly
 {
-    [SerializeField]
+    [SerializeField, Tooltip("異変で変更するレンダラー")]
     private Renderer anomalousRenderer;
 
-    [SerializeField]
+    [SerializeField, Tooltip("異変用マテリアル")]
     private Material anomalousMaterial;
 
-    [SerializeField]
+    [SerializeField, Tooltip("異変で変更するポップアップメッセージ")]
     private TextMeshProUGUI textMeshProUGUI;
 
     private const string AnomalousTextCharacters = "!#$%&'()-^¥@[;:],./=~|`{+*}<>?_";

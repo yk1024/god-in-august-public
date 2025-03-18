@@ -6,7 +6,7 @@ namespace GodInAugust.Level
 [AddComponentMenu("God In August/Level/Pop Up Message")]
 public class PopUpMessage : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("ポップアップするゲームオブジェクト")]
     private GameObject popUpObject;
 
     private GameObject mainCamera;

@@ -6,19 +6,19 @@ namespace GodInAugust.UI
 [AddComponentMenu("God In August/UI/Menu Manager")]
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("メニューを開くアクション")]
     private InputActionReference menuAction;
 
-    [SerializeField]
+    [SerializeField, Tooltip("メニューパネル")]
     private GameObject menuPanel;
 
-    [SerializeField]
+    [SerializeField, Tooltip("ゲームについてパネル")]
     private GameObject aboutGamePanel;
 
-    [SerializeField]
+    [SerializeField, Tooltip("操作説明パネル")]
     private GameObject controlPanel;
 
-    [SerializeField]
+    [SerializeField, Tooltip("クレジットパネル")]
     private GameObject creditPanel;
 
     private GameObject[] panels;

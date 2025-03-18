@@ -5,9 +5,7 @@ namespace GodInAugust.Level
 [AddComponentMenu("God In August/Level/Look At Target")]
 public class LookAtTarget : MonoBehaviour, ILookAtTarget
 {
-    public Transform TargetPoint { get => targetPoint; }
-
-    [SerializeField]
-    private Transform targetPoint;
+    [field: SerializeField, Tooltip("視対象の位置")]
+    public Transform TargetPoint { get; private set; }
 }
 }

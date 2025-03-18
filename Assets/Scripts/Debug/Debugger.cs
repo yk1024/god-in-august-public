@@ -13,7 +13,7 @@ public class Debugger : MonoBehaviour
     private FootstepManager footstepManager;
     private MusicManager musicManager;
 
-    [SerializeField]
+    [SerializeField, Tooltip("ステータス表示用のテキスト")]
     private TextMeshProUGUI textMeshProUGUI;
 
     void Start()

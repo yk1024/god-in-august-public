@@ -6,10 +6,10 @@ namespace GodInAugust.Agent
 [AddComponentMenu("God In August/Agent/Footstep Manager")]
 public class FootstepManager : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("足音のWwiseイベント")]
     private AK.Wwise.Event footstepEvent;
 
-    [SerializeField]
+    [SerializeField, Tooltip("デフォルトの地面のWwiseスイッチ")]
     private AK.Wwise.Switch defaultGroundSwitch;
 
     public AK.Wwise.Switch GroundSwitch { get; set; }
@@ -28,7 +28,7 @@ public class FootstepManager : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out GroundSurface groundSurface))
             {
-                return groundSurface.groundSwitch;
+                return groundSurface.GroundSwitch;
             }
         }
 

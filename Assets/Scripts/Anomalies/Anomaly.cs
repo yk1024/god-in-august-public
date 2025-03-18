@@ -7,13 +7,13 @@ namespace GodInAugust.Anomalies
 [AddComponentMenu("God In August/Anomalies/Anomaly")]
 public class Anomaly : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("ステージ全体で発生する異変かどうか")]
     private bool global;
 
-    [SerializeField, Min(0)]
+    [SerializeField, Min(0), Tooltip("異変が発生する半径")]
     private float radius;
 
-    [SerializeField, Min(0)]
+    [SerializeField, Min(0), Tooltip("異変に近づいた時に異変の音楽が流れ始める距離")]
     private float blendDistance;
 
     private PlayerController player;

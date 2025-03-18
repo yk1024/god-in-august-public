@@ -8,13 +8,13 @@ namespace GodInAugust.Agent
 [AddComponentMenu("God In August/Agent/Agent Controller")]
 public class AgentController : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("徘徊ポイント")]
     private Transform[] navigationPoints;
 
-    [SerializeField, Min(0)]
+    [SerializeField, Min(0), Tooltip("ポイント到達時に待機する時間（秒）")]
     private float stopDuration;
 
-    [SerializeField]
+    [SerializeField, Tooltip("徘徊ポイントからランダムで次のポイントを選択する")]
     private bool selectRandomly;
 
     protected Animator animator;

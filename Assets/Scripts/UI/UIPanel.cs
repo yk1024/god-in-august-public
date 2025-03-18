@@ -14,7 +14,7 @@ public class UIPanel : MonoBehaviour
     private PlayerInput playerInput;
     private IEnumerable<Selectable> selectables;
 
-    [SerializeField]
+    [SerializeField, Tooltip("キャンセルアクション")]
     private InputActionReference cancelAction;
 
     public UnityEvent OnCancelCallback { get; } = new UnityEvent();

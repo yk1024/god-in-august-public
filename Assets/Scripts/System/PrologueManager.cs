@@ -7,7 +7,7 @@ namespace GodInAugust.System
 [AddComponentMenu("God In August/System/Prologue Manager")]
 public class PrologueManager : MonoBehaviour
 {
-    [SerializeField, TextArea]
+    [SerializeField, TextArea, Tooltip("プロローグの文章")]
     private string[] prologueText;
 
     IEnumerator Start()

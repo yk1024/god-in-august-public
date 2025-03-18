@@ -11,7 +11,7 @@ namespace GodInAugust.Agent
 [AddComponentMenu("God In August/Agent/Player Controller")]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("インタラクトできる距離")]
     private float distance;
 
     private bool interacting;

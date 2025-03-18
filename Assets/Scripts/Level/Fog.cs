@@ -7,8 +7,11 @@ namespace GodInAugust.Level
 [VolumeComponentMenu("God In August/Level/Fog")]
 public class Fog : VolumeComponent, IPostProcessComponent
 {
-    public MinFloatParameter Intensity = new MinFloatParameter(0, 0);
-    public NoInterpColorParameter FogColor = new NoInterpColorParameter(Color.white);
+    [field: SerializeField, Tooltip("フォグの深さ")]
+    public MinFloatParameter Intensity { get; private set; } = new MinFloatParameter(0, 0);
+
+    [field: SerializeField, Tooltip("フォグの色")]
+    public NoInterpColorParameter FogColor { get; private set; } = new NoInterpColorParameter(Color.white);
 
     public bool IsActive() => Intensity.value != 0;
     public bool IsTileCompatible() => false;

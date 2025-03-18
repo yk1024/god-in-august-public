@@ -8,16 +8,16 @@ namespace GodInAugust.Agent
 [AddComponentMenu("God In August/Agent/Look At Handler")]
 public class LookAtHandler : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("視野角")]
     private float viewingAngle;
 
-    [SerializeField]
+    [SerializeField, Tooltip("首を動かす速度（ラジアン / 秒）")]
     private float rotationSpeed;
 
-    [SerializeField]
+    [SerializeField, Tooltip("反応速度（単位 / 秒）")]
     private float reactionSpeed;
 
-    [SerializeField]
+    [SerializeField, Tooltip("視対象のトランスフォーム")]
     private Transform lookAtPosition;
 
     private Dictionary<GameObject, ILookAtTarget> targets = new Dictionary<GameObject, ILookAtTarget>();
@@ -25,7 +25,7 @@ public class LookAtHandler : MonoBehaviour
     private Animator animator;
     private float ikLookAtWeight = 0;
 
-    [SerializeField]
+    [SerializeField, Tooltip("一時的に見るのをやめる。（アニメーション用）")]
     private bool suspended = false;
 
     void Start()

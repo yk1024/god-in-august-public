@@ -10,22 +10,22 @@ namespace GodInAugust.System
 [AddComponentMenu("God In August/System/Game Manager")]
 public class GameManager : MonoBehaviour
 {
-    [SerializeField, Header("Anomaly Settings")]
+    [SerializeField, Header("Anomaly Settings"), Tooltip("発生する異変")]
     private Anomaly[] anomalies;
 
-    [SerializeField, Range(0, 1)]
+    [SerializeField, Range(0, 1), Tooltip("異変発生確率")]
     private float probability;
 
-    [SerializeField, Header("Ending Settings")]
+    [SerializeField, Header("Ending Settings"), Tooltip("異変が発生する日数")]
     private int duration;
 
-    [SerializeField]
+    [SerializeField, Tooltip("次のシーン名")]
     private string nextSceneName;
 
-    [SerializeField, Header("Text Settings")]
+    [SerializeField, Header("Text Settings"), Tooltip("初めて日付が巻き戻った時のメッセージ")]
     private string strangenessText;
 
-    [field: SerializeField, Header("Date Settings")]
+    [field: SerializeField, Header("Date Settings"), Tooltip("初日の日付")]
     public int StartDate { get; private set; }
 
     private OverlayPanel overlayPanel;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private GameState gameState;
 
-    [SerializeField, Header("Event")]
+    [SerializeField, Header("Event"), Tooltip("全てのサウンドを止めるWwiseイベント")]
     private AK.Wwise.Event stopAllEvent;
 
     void Start()

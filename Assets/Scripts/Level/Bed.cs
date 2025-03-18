@@ -6,12 +6,12 @@ namespace GodInAugust.Level
 [AddComponentMenu("God In August/Level/Bed")]
 public class Bed : MonoBehaviour, IInteractable
 {
-    [SerializeField]
+    [SerializeField, Tooltip("確認パネル")]
     private GameObject confirmationPanel;
 
     private GameManager gameManager;
 
-    [field: SerializeField]
+    [field: SerializeField, Tooltip("インタラクトの対象位置")]
     public Transform TargetPoint { get; private set; }
 
     public bool Available { get; set; } = true;

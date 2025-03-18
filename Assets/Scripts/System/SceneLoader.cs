@@ -6,7 +6,7 @@ namespace GodInAugust.System
 [AddComponentMenu("God In August/System/Scene Loader")]
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("読み込むシーン名")]
     private string sceneName;
 
     public void LoadScene()

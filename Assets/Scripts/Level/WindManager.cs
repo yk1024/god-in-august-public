@@ -7,7 +7,7 @@ public class WindManager : MonoBehaviour
 {
     private WindZone windZone;
 
-    [SerializeField]
+    [SerializeField, Tooltip("風の強さのRTPC")]
     private AK.Wwise.RTPC windStrengthParameter;
 
     // Start is called before the first frame update
