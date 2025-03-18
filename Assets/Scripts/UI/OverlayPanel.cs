@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace GodInAugust.UI
 {
+[AddComponentMenu("God In August/UI/Overlay Panel")]
 public class OverlayPanel : MonoBehaviour
 {
     private Animator animator;

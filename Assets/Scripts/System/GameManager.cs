@@ -7,6 +7,7 @@ using GodInAugust.UI;
 
 namespace GodInAugust.System
 {
+[AddComponentMenu("God In August/System/Game Manager")]
 public class GameManager : MonoBehaviour
 {
     [SerializeField, Header("Anomaly Settings")]

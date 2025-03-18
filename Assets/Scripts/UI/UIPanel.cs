@@ -8,6 +8,7 @@ using GodInAugust.System;
 
 namespace GodInAugust.UI
 {
+[AddComponentMenu("God In August/UI/UI Panel")]
 public class UIPanel : MonoBehaviour
 {
     private PlayerInput playerInput;

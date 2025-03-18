@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace GodInAugust.Level
 {
+[AddComponentMenu("God In August/Level/Wind Manager")]
 public class WindManager : MonoBehaviour
 {
     private WindZone windZone;

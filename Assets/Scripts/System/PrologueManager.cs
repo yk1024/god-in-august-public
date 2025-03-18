@@ -4,6 +4,7 @@ using GodInAugust.UI;
 
 namespace GodInAugust.System
 {
+[AddComponentMenu("God In August/System/Prologue Manager")]
 public class PrologueManager : MonoBehaviour
 {
     [SerializeField, TextArea]

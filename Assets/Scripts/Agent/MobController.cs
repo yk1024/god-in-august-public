@@ -3,6 +3,7 @@ using GodInAugust.System;
 
 namespace GodInAugust.Agent
 {
+[AddComponentMenu("God In August/Agent/Mob Controller")]
 public class MobController : AgentController
 {
     private LookAtHandler lookAtHandler;

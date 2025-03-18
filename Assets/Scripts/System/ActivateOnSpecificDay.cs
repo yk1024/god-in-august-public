@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace GodInAugust.System
 {
+[AddComponentMenu("God In August/System/Activate On Specific Day")]
 public class ActivateOnSpecificDay : MonoBehaviour
 {
     [SerializeField]

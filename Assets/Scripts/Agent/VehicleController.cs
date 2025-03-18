@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace GodInAugust.Agent
 {
+[AddComponentMenu("God In August/Agent/Vehicle Controller")]
 public class VehicleController : AgentController
 {
     [SerializeField]

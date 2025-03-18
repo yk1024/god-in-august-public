@@ -5,6 +5,7 @@ using GodInAugust.Agent;
 
 namespace GodInAugust.Debug
 {
+[AddComponentMenu("God In August/Debug/Debugger")]
 public class Debugger : MonoBehaviour
 {
     private GameManager gameManager;

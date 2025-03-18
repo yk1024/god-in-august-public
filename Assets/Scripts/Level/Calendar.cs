@@ -4,6 +4,7 @@ using GodInAugust.System;
 
 namespace GodInAugust.Level
 {
+[AddComponentMenu("God In August/Level/Calendar")]
 public class Calendar : MonoBehaviour
 {
     [SerializeField]

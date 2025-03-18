@@ -4,6 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 namespace GodInAugust.Level
 {
+[VolumeComponentMenu("God In August/Level/Fog")]
 public class Fog : VolumeComponent, IPostProcessComponent
 {
     public MinFloatParameter Intensity = new MinFloatParameter(0, 0);

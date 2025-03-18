@@ -3,6 +3,7 @@ using GodInAugust.Level;
 
 namespace GodInAugust.Agent
 {
+[AddComponentMenu("God In August/Agent/Footstep Manager")]
 public class FootstepManager : MonoBehaviour
 {
     [SerializeField]

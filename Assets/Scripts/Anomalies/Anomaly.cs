@@ -4,6 +4,7 @@ using GodInAugust.System;
 
 namespace GodInAugust.Anomalies
 {
+[AddComponentMenu("God In August/Anomalies/Anomaly")]
 public class Anomaly : MonoBehaviour
 {
     [SerializeField]

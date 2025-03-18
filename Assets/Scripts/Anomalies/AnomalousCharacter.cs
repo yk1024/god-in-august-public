@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace GodInAugust.Anomalies
 {
+[AddComponentMenu("God In August/Anomalies/Anomalous Character")]
 public class AnomalousCharacter : Anomaly
 {
     [SerializeField]

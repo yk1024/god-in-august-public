@@ -3,6 +3,7 @@ using GodInAugust.System;
 
 namespace GodInAugust.Level
 {
+[AddComponentMenu("God In August/Level/Bed")]
 public class Bed : MonoBehaviour, IInteractable
 {
     [SerializeField]

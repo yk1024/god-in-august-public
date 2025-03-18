@@ -8,6 +8,7 @@ using GodInAugust.Level;
 
 namespace GodInAugust.Agent
 {
+[AddComponentMenu("God In August/Agent/Player Controller")]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]

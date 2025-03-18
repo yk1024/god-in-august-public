@@ -5,6 +5,7 @@ using GodInAugust.System;
 
 namespace GodInAugust.Agent
 {
+[AddComponentMenu("God In August/Agent/Agent Controller")]
 public class AgentController : MonoBehaviour
 {
     [SerializeField]

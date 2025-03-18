@@ -4,6 +4,7 @@ using GodInAugust.Agent;
 
 namespace GodInAugust.System
 {
+[AddComponentMenu("God In August/System/Music Manager")]
 public class MusicManager : MonoBehaviour
 {
     [SerializeField, Header("Event")]

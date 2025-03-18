@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace GodInAugust.UI
 {
+[AddComponentMenu("God In August/UI/Dialogue")]
 public class Dialogue : MonoBehaviour
 {
     [SerializeField]

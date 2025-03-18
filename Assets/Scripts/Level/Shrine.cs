@@ -8,6 +8,7 @@ using GodInAugust.Agent;
 
 namespace GodInAugust.Level
 {
+[AddComponentMenu("God In August/Level/Shrine")]
 public class Shrine : MonoBehaviour, IInteractable
 {
     [SerializeField]

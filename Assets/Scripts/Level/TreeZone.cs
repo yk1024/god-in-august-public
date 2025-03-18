@@ -3,6 +3,7 @@ using GodInAugust.Agent;
 
 namespace GodInAugust.Level
 {
+[AddComponentMenu("God In August/Level/Tree Zone")]
 public class TreeZone : MonoBehaviour
 {
     private PlayerController player;

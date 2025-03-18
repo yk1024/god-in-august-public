@@ -3,6 +3,7 @@ using UnityEngine.Rendering;
 
 namespace GodInAugust.Level
 {
+[AddComponentMenu("God In August/Level/Fog Controller")]
 public class FogController : MonoBehaviour
 {
     [SerializeField]

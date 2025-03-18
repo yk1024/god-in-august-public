@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace GodInAugust.System
 {
+[AddComponentMenu("God In August/System/Scene Loader")]
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField]

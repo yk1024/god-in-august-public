@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace GodInAugust.UI
 {
+[AddComponentMenu("God In August/UI/Menu Manager")]
 public class MenuManager : MonoBehaviour
 {
     [SerializeField]

@@ -3,6 +3,7 @@ using GodInAugust.System;
 
 namespace GodInAugust.Level
 {
+[AddComponentMenu("God In August/Level/Area")]
 public class Area : MonoBehaviour
 {
     [SerializeField]

@@ -5,6 +5,7 @@ using GodInAugust.Level;
 
 namespace GodInAugust.Agent
 {
+[AddComponentMenu("God In August/Agent/Look At Handler")]
 public class LookAtHandler : MonoBehaviour
 {
     [SerializeField]

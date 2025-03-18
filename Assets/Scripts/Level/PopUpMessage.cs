@@ -3,6 +3,7 @@ using GodInAugust.System;
 
 namespace GodInAugust.Level
 {
+[AddComponentMenu("God In August/Level/Pop Up Message")]
 public class PopUpMessage : MonoBehaviour
 {
     [SerializeField]
