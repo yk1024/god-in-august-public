@@ -23,11 +23,5 @@ public class MobController : AgentController
 
         lookAtHandler.LookAtFirstTarget();
     }
-
-    // アニメーションコールバック用
-    public void OnFootstep(AnimationEvent animationEvent) { }
-
-    // アニメーションコールバック用
-    public void OnLand(AnimationEvent animationEvent) { }
 }
 }

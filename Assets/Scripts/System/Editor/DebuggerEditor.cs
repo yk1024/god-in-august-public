@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace GodInAugust.Debug
+namespace GodInAugust.System
 {
 [CustomEditor(typeof(Debugger))]
 public class DebuggerEditor : Editor

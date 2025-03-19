@@ -22,7 +22,6 @@ public class TreeZone : MonoBehaviour
     [SerializeField, Tooltip("林の大きさのRTPC")]
     private AK.Wwise.RTPC treeZoneSizeParameter;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -31,7 +30,6 @@ public class TreeZone : MonoBehaviour
         playEvent.Post(soundPosition.gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 position = treeZoneCollider.ClosestPoint(player.transform.position);

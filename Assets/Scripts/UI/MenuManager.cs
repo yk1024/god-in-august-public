@@ -50,7 +50,6 @@ public class MenuManager : MonoBehaviour
         panel.SetActive(true);
     }
 
-
     private void CloseAllPanels()
     {
         foreach (var p in panels) { p.SetActive(false); }

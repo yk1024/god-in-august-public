@@ -1,9 +1,8 @@
 using TMPro;
 using UnityEngine;
-using GodInAugust.System;
 using GodInAugust.Agent;
 
-namespace GodInAugust.Debug
+namespace GodInAugust.System
 {
 [AddComponentMenu("God In August/Debug/Debugger")]
 public class Debugger : MonoBehaviour
