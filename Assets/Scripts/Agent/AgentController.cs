@@ -5,6 +5,9 @@ using GodInAugust.System;
 
 namespace GodInAugust.Agent
 {
+/// <summary>
+/// 乗り物などの動くものを操作するためのコンポーネント
+/// </summary>
 [AddComponentMenu("God In August/Agent/Agent Controller")]
 public class AgentController : MonoBehaviour
 {
@@ -17,12 +20,31 @@ public class AgentController : MonoBehaviour
     [SerializeField, Tooltip("徘徊ポイントからランダムで次のポイントを選択する")]
     private bool selectRandomly;
 
+    /// <summary>
+    /// 同じオブジェクトに付与されているアニメーター
+    /// Start時に取得される。
+    /// </summary>
     protected Animator animator;
+
+    /// <summary>
+    /// 同じオブジェクトに付与されているナビメッシュエージェント
+    /// Start時に取得される。
+    /// </summary>
     protected NavMeshAgent navMeshAgent;
+
+    // 現在何番目の徘徊ポイントを目指しているか
     private int navigationIndex = 0;
+
+    // 現在徘徊ポイントに到達して待機しているかどうか。
     private bool isStopping = false;
 
+    /// <summary>
+    /// 現在のナビメッシュエージェントの速度
+    /// </summary>
     protected float speed;
+
+    // 速度のアニメーションパラメータ名
+    private const string SpeedAnimatorParameter = "Speed";
 
     protected virtual void Start()
     {
@@ -32,15 +54,18 @@ public class AgentController : MonoBehaviour
 
     protected virtual void Update()
     {
+        // 待機中であるか、徘徊ポイントが0個の時は処理を飛ばす。
         if (!isStopping && navigationPoints.Length != 0)
         {
             StartCoroutine(SetDestination());
         }
 
         speed = navMeshAgent.velocity.magnitude;
-        animator.SetFloat(Constants.SpeedAnimatorParameter, speed);
+        animator.SetFloat(SpeedAnimatorParameter, speed);
     }
 
+    // 次のポイントを決めるメソッド
+    // 待機する場合にはWaitForSecondsをyield returnする。
     private IEnumerator SetDestination()
     {
         if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.5f)

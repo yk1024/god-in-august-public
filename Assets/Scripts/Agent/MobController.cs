@@ -3,10 +3,18 @@ using GodInAugust.System;
 
 namespace GodInAugust.Agent
 {
+/// <summary>
+/// NPCキャラクターを動かすためのコンポーネント
+/// </summary>
 [AddComponentMenu("God In August/Agent/Mob Controller")]
 public class MobController : AgentController
 {
+    // 同じオブジェクトに付されたLookAtHandler
     private LookAtHandler lookAtHandler;
+
+    // モーションスピードのアニメーションパラメータ名
+    private const string MotionSpeedAnimatorParameter = "MotionSpeed";
+
 
     protected override void Start()
     {
@@ -14,7 +22,7 @@ public class MobController : AgentController
 
         lookAtHandler = GetComponent<LookAtHandler>();
 
-        animator.SetFloat(Constants.MotionSpeedAnimatorParameter, 1);
+        animator.SetFloat(MotionSpeedAnimatorParameter, 1);
     }
 
     protected override void Update()

@@ -3,11 +3,16 @@ using GodInAugust.Agent;
 
 namespace GodInAugust.Level
 {
+/// <summary>
+/// 林の木のざわめきを実装するコンポーネント
+/// </summary>
 [AddComponentMenu("God In August/Level/Tree Zone")]
 public class TreeZone : MonoBehaviour
 {
+    // シーン上のプレイヤー
     private PlayerController player;
 
+    // 同じオブジェクトに付された、林の範囲を表すコライダー
     private Collider treeZoneCollider;
 
     [SerializeField, Tooltip("発音位置のトランスフォーム")]
@@ -22,7 +27,7 @@ public class TreeZone : MonoBehaviour
     [SerializeField, Tooltip("林の大きさのRTPC")]
     private AK.Wwise.RTPC treeZoneSizeParameter;
 
-    void Start()
+    private void Start()
     {
         player = FindObjectOfType<PlayerController>();
         treeZoneCollider = GetComponent<Collider>();
@@ -30,8 +35,9 @@ public class TreeZone : MonoBehaviour
         playEvent.Post(soundPosition.gameObject);
     }
 
-    void Update()
+    private void Update()
     {
+        // プレイヤーの位置に最も近い林内のポイントを取得して、発音位置をそこに指定する。
         Vector3 position = treeZoneCollider.ClosestPoint(player.transform.position);
         soundPosition.position = position;
     }

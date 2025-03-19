@@ -2,6 +2,10 @@ using UnityEngine;
 
 namespace GodInAugust.Anomalies
 {
+/// <summary>
+/// 空の異変を発生させるコンポーネント
+/// Skyboxのマテリアルを変化させられる。
+/// </summary>
 [AddComponentMenu("God In August/Anomalies/Anomalous Sky")]
 public class AnomalousSky : Anomaly
 {
@@ -12,6 +16,7 @@ public class AnomalousSky : Anomaly
     {
         base.Start();
 
+        // Skyboxのマテリアルを指定したものに変化させる。
         RenderSettings.skybox = skyboxMaterial;
     }
 }

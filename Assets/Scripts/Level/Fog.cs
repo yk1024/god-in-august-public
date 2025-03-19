@@ -4,6 +4,10 @@ using UnityEngine.Rendering.Universal;
 
 namespace GodInAugust.Level
 {
+/// <summary>
+/// フォグの設定を行うVolumeComponent
+/// フォグの濃度と色を設定できる。
+/// </summary>
 [VolumeComponentMenu("God In August/Level/Fog")]
 public class Fog : VolumeComponent, IPostProcessComponent
 {
