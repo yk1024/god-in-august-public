@@ -1064,6 +1064,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1728013695380148634, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7483682138977981911}
+    - targetCorrespondingSourceObject: {fileID: -1728013695380148634, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1532737914203245041}
   m_SourcePrefab: {fileID: -3956505258223990651, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}
 --- !u!1 &1064169605458120357 stripped
 GameObject:
@@ -1142,7 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441512482dd33499fb3f35b793048ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPoint: {fileID: 7247662653599516037}
+  <TargetPoint>k__BackingField: {fileID: 7247662653599516037}
 --- !u!114 &7960022004885390420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,6 +1184,28 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1532737914203245041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064169605458120357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5891ee1219a42489983ca8846011c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b43d19d3dcb4f4d48a7ff777bebb1c27, type: 2}
+  defaultGroundSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f0225f27d10f54ab39a19f2f3bcbc5e0, type: 2}
 --- !u!4 &2402905917638683827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5159078012444724336, guid: 53159003c32534ffe96a24ea2b2627f4, type: 3}

@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2391cf3bdba814050b3105c3984bd02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSwitch:
+  <GroundSwitch>k__BackingField:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2391cf3bdba814050b3105c3984bd02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSwitch:
+  <GroundSwitch>k__BackingField:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0

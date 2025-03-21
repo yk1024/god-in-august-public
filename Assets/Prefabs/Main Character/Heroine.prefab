@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441512482dd33499fb3f35b793048ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPoint: {fileID: 6388542794591633256}
+  <TargetPoint>k__BackingField: {fileID: 6388542794591633256}
 --- !u!114 &5341158884224332795
 MonoBehaviour:
   m_ObjectHideFlags: 0
