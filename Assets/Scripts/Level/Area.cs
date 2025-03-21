@@ -12,20 +12,12 @@ public class Area : MonoBehaviour
     [SerializeField, Tooltip("エリアのWwiseステート")]
     private AK.Wwise.State AreaState;
 
-    // シーン上のMusicManager
-    private MusicManager musicManager;
-
-    private void Start()
-    {
-        musicManager = FindObjectOfType<MusicManager>();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         // プレイヤーと接触した時にエリアを追加する。
         if (other.CompareTag(Constants.PlayerTag))
         {
-            musicManager.AddAreaState(AreaState);
+            MusicManager.Instance.AddAreaState(AreaState);
         }
     }
 
@@ -34,7 +26,7 @@ public class Area : MonoBehaviour
         // プレイヤーから離れた時にエリアを削除する。
         if (other.CompareTag(Constants.PlayerTag))
         {
-            musicManager.RemoveAreaState(AreaState);
+            MusicManager.Instance.RemoveAreaState(AreaState);
         }
     }
 }

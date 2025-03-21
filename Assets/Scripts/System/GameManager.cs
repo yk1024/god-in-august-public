@@ -11,7 +11,7 @@ namespace GodInAugust.System
 /// ゲームプレイ全体を制御するコンポーネント
 /// </summary>
 [AddComponentMenu("God In August/System/Game Manager")]
-public class GameManager : MonoBehaviour
+public class GameManager : SingletonBehaviour<GameManager>
 {
     [SerializeField, Header("Anomaly Settings"), Tooltip("発生する異変")]
     private Anomaly[] anomalies;
@@ -31,14 +31,8 @@ public class GameManager : MonoBehaviour
     [field: SerializeField, Header("Date Settings"), Tooltip("初日の日付")]
     public int StartDate { get; private set; }
 
-    // フェードで使用するシーン上のパネル
-    private OverlayPanel overlayPanel;
-
-    // 会話文を表示するためのシーン上のDialogue
-    private Dialogue dialogue;
-
-    // シーン上のPlayerInput
-    private PlayerInput playerInput;
+    // メインカメラタグ
+    private const string MainCameraTag = "MainCamera";
 
     /// <summary>
     /// その日行った祈りの種類
@@ -64,10 +58,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameState = GameState.State;
-
-        playerInput = FindObjectOfType<PlayerInput>();
-        overlayPanel = FindObjectOfType<OverlayPanel>();
-        dialogue = FindObjectOfType<Dialogue>(true);
 
         // 一日を始めるための処理を実行
         StartCoroutine(StartDay());
@@ -115,10 +105,13 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartDay()
     {
         // まずフェードインする
-        yield return overlayPanel.FadeIn(5);
+        yield return OverlayPanel.Instance.FadeIn(5);
 
         if (gameState.LoopIndex == 1 && gameState.PrayHistory[^1].IsLoop())
         {
+            PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
+            Dialogue dialogue = FindObjectOfType<Dialogue>(true);
+
             // ループ回数が1で前日にループしている（＝初めてループした）時、違和感を感じるメッセージを表示する。
             playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
             dialogue.gameObject.SetActive(true);
@@ -138,7 +131,7 @@ public class GameManager : MonoBehaviour
         stopAllEvent.Post(gameObject);
 
         // フェードアウトする。
-        yield return overlayPanel.FadeOut(5);
+        yield return OverlayPanel.Instance.FadeOut(5);
 
         // 次の日を読み込む。
         LoadNextDay();

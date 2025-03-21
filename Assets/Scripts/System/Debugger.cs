@@ -13,29 +13,22 @@ public class Debugger : MonoBehaviour
     // シーン上のゲームマネージャー
     private GameManager gameManager;
 
-    // シーン上のプレイヤー
-    private PlayerController player;
-
     // シーン上のFootstepManager
     private FootstepManager footstepManager;
-
-    // シーン上のMusicManager
-    private MusicManager musicManager;
 
     [SerializeField, Tooltip("ステータス表示用のテキスト")]
     private TextMeshProUGUI textMeshProUGUI;
 
     private void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
-        player = FindObjectOfType<PlayerController>();
-        footstepManager = player.GetComponentInChildren<FootstepManager>();
-        musicManager = FindObjectOfType<MusicManager>();
+        gameManager = GameManager.Instance;
+        footstepManager = PlayerController.Instance.GetComponentInChildren<FootstepManager>();
     }
 
     private void Update()
     {
         GameState gameState = GameState.State;
+        MusicManager musicManager = MusicManager.Instance;
 
         // 現在の各種ステータスを表示する。
         string text =

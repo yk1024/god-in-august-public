@@ -22,10 +22,8 @@ public class AnomalousCharacter : Anomaly
     // ランダムな文字列を生成するために使える文字
     private const string AnomalousTextCharacters = "!#$%&'()-^¥@[;:],./=~|`{+*}<>?_";
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
-
         Material[] materials = anomalousRenderer.materials;
 
         for (int i = 0; i < materials.Length; i++)

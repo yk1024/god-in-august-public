@@ -9,9 +9,6 @@ namespace GodInAugust.Level
 [AddComponentMenu("God In August/Level/Tree Zone")]
 public class TreeZone : MonoBehaviour
 {
-    // シーン上のプレイヤー
-    private PlayerController player;
-
     // 同じオブジェクトに付された、林の範囲を表すコライダー
     private Collider treeZoneCollider;
 
@@ -29,7 +26,6 @@ public class TreeZone : MonoBehaviour
 
     private void Start()
     {
-        player = FindObjectOfType<PlayerController>();
         treeZoneCollider = GetComponent<Collider>();
         treeZoneSizeParameter.SetValue(soundPosition.gameObject, size);
         playEvent.Post(soundPosition.gameObject);
@@ -38,7 +34,7 @@ public class TreeZone : MonoBehaviour
     private void Update()
     {
         // プレイヤーの位置に最も近い林内のポイントを取得して、発音位置をそこに指定する。
-        Vector3 position = treeZoneCollider.ClosestPoint(player.transform.position);
+        Vector3 position = treeZoneCollider.ClosestPoint(PlayerController.Instance.transform.position);
         soundPosition.position = position;
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using GodInAugust.System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -9,7 +10,7 @@ namespace GodInAugust.UI
 /// 画面のフェードイン・フェードアウトに使うための、画面を全体を覆うパネル用のコンポーネント
 /// </summary>
 [AddComponentMenu("God In August/UI/Overlay Panel")]
-public class OverlayPanel : MonoBehaviour
+public class OverlayPanel : SingletonBehaviour<OverlayPanel>
 {
     // 同じゲームオブジェクトに付されたアニメーター
     // フェードイン・フェードアウトをアニメーションで行う。
@@ -27,14 +28,11 @@ public class OverlayPanel : MonoBehaviour
     // アニメーションが終わったことを検知するために使うUnityEvent
     private readonly UnityEvent onAnimationEnd = new UnityEvent();
 
-    // シーン上になるPlayerInput
-    // フェード中に入力を非アクティブにするために使う。
-    private PlayerInput playerInput;
-
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         animator = GetComponent<Animator>();
-        playerInput = FindObjectOfType<PlayerInput>();
     }
 
     /// <summary>
@@ -60,6 +58,7 @@ public class OverlayPanel : MonoBehaviour
     // フェードイン・アウトする処理
     private IEnumerator Animate(string trigger, float transitionSeconds)
     {
+        PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
         // フェード中は入力を受け付けない
         playerInput.DeactivateInput();
 

@@ -7,13 +7,10 @@ namespace GodInAugust.Level
 /// 布団のコンポーネント
 /// </summary>
 [AddComponentMenu("God In August/Level/Bed")]
-public class Bed : MonoBehaviour, IInteractable
+public class Bed : SingletonBehaviour<Bed>, IInteractable
 {
     [SerializeField, Tooltip("確認パネル")]
     private GameObject confirmationPanel;
-
-    // シーン上のゲームマネージャー
-    private GameManager gameManager;
 
     [field: SerializeField, Tooltip("インタラクトの対象位置")]
     public Transform TargetPoint { get; private set; }
@@ -23,7 +20,6 @@ public class Bed : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
         if (GameState.State.DateIndex == 0) Available = false;
     }
 
@@ -41,7 +37,7 @@ public class Bed : MonoBehaviour, IInteractable
     public void Sleep()
     {
         confirmationPanel.SetActive(false);
-        StartCoroutine(gameManager.EndDay());
+        StartCoroutine(GameManager.Instance.EndDay());
     }
 }
 }

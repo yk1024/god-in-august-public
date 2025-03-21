@@ -19,10 +19,5 @@ public static class Constants
     /// プレイヤータグ
     /// </summary>
     public const string PlayerTag = "Player";
-
-    /// <summary>
-    /// メインカメラタグ
-    /// </summary>
-    public const string MainCameraTag = "MainCamera";
 }
 }

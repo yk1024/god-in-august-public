@@ -12,20 +12,12 @@ public class PopUpMessage : MonoBehaviour
     [SerializeField, Tooltip("ポップアップするゲームオブジェクト")]
     private GameObject popUpObject;
 
-    // シーン上のメインカメラ
-    private GameObject mainCamera;
-
-    private void Start()
-    {
-        mainCamera = GameObject.FindWithTag(Constants.MainCameraTag);
-    }
-
     private void Update()
     {
         if (popUpObject.activeInHierarchy)
         {
             // ポップアップしているとき、ポップアップしているオブジェクトが常にカメラと同じ方向を向いているようにする。
-            popUpObject.transform.forward = mainCamera.transform.forward;
+            popUpObject.transform.forward = Camera.main.transform.forward;
         }
     }
 

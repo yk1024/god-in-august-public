@@ -12,10 +12,8 @@ public class AnomalousSky : Anomaly
     [SerializeField, Tooltip("異変用マテリアル")]
     private Material skyboxMaterial;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
-
         // Skyboxのマテリアルを指定したものに変化させる。
         RenderSettings.skybox = skyboxMaterial;
     }

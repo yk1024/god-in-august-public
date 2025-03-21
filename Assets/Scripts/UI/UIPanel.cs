@@ -14,9 +14,6 @@ namespace GodInAugust.UI
 [AddComponentMenu("God In August/UI/UI Panel")]
 public class UIPanel : MonoBehaviour
 {
-    // シーン上のPlayerInput
-    private PlayerInput playerInput;
-
     // ヒエラルキー上で子孫のSelectableのコレクション
     private IEnumerable<Selectable> selectables;
 
@@ -33,13 +30,13 @@ public class UIPanel : MonoBehaviour
 
     private void Awake()
     {
-        playerInput = FindObjectOfType<PlayerInput>();
         selectables = GetComponentsInChildren<Selectable>(true);
     }
 
     private void OnEnable()
     {
         // アクションマップをUIに変更する。
+        PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
         playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
 
         // 選択可能な子孫のうち最初のものを選択しておく。
@@ -55,6 +52,8 @@ public class UIPanel : MonoBehaviour
 
     private void OnDisable()
     {
+        PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
+
         if (playerInput != null)
         {
             // アクションマップをPlayerに変更する。

@@ -15,11 +15,10 @@ public class Calendar : MonoBehaviour
 
     private void Start()
     {
-        GameManager gameManager = FindObjectOfType<GameManager>();
         GameState gameState = GameState.State;
 
         // GameManagerで指定されている最初の日付と現在の日付のインデックスを加算して、現在の日付を計算
-        dateText.SetText((gameManager.StartDate + gameState.DateIndex).ToString());
+        dateText.SetText((GameManager.Instance.StartDate + gameState.DateIndex).ToString());
     }
 }
 }

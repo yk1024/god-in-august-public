@@ -12,7 +12,7 @@ namespace GodInAugust.Agent
 /// 操作可能キャラクターをコントロールするコンポーネント
 /// </summary>
 [AddComponentMenu("God In August/Agent/Player Controller")]
-public class PlayerController : MonoBehaviour
+public class PlayerController : SingletonBehaviour<PlayerController>
 {
     [SerializeField, Tooltip("インタラクトできる距離")]
     private float distance;
@@ -25,9 +25,6 @@ public class PlayerController : MonoBehaviour
 
     // 同じオブジェクトに付されたStarterAssetsInputs
     private StarterAssetsInputs starterAssetsInputs;
-
-    // シーン内に存在するMusicManager
-    private MusicManager musicManager;
 
     // 同じオブジェクトに付されたアニメーター
     private Animator animator;
@@ -42,7 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         lookAt = GetComponent<LookAtHandler>();
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
-        musicManager = FindObjectOfType<MusicManager>();
         animator = GetComponent<Animator>();
     }
 
@@ -57,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
         // 移動速度の状態を取得して、インタラクティブミュージックに反映させる。
         MoveSpeed moveSpeed = GetMoveSpeed();
-        musicManager.SetMoveSpeed(moveSpeed);
+        MusicManager.Instance.SetMoveSpeed(moveSpeed);
     }
 
     /// <summary>

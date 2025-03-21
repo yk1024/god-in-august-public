@@ -20,18 +20,6 @@ public class Anomaly : MonoBehaviour
     [SerializeField, Min(0), Tooltip("異変に近づいた時に異変の音楽が流れ始める距離")]
     private float blendDistance;
 
-    // シーン上のプレイヤー
-    private PlayerController player;
-
-    // シーン上のMusicManager
-    private MusicManager musicManager;
-
-    protected virtual void Start()
-    {
-        player = FindObjectOfType<PlayerController>();
-        musicManager = FindObjectOfType<MusicManager>();
-    }
-
     protected virtual void Update()
     {
         float proximityToAnomaly;
@@ -44,7 +32,7 @@ public class Anomaly : MonoBehaviour
         else
         {
             // プレイヤーから異変への方向と距離を計算
-            Vector3 direction = player.transform.position - transform.position;
+            Vector3 direction = PlayerController.Instance.transform.position - transform.position;
             float distance = direction.magnitude;
 
             // 異変への近さは、
@@ -54,7 +42,7 @@ public class Anomaly : MonoBehaviour
             proximityToAnomaly = Mathf.Clamp01(((radius - distance) / blendDistance) + 1);
         }
 
-        musicManager.SetProximityToAnomaly(proximityToAnomaly, transform.position);
+        MusicManager.Instance.SetProximityToAnomaly(proximityToAnomaly, transform.position);
     }
 
     /// <summary>

@@ -8,7 +8,7 @@ namespace GodInAugust.System
 /// BGMを制御するコンポーネント
 /// </summary>
 [AddComponentMenu("God In August/System/Music Manager")]
-public class MusicManager : MonoBehaviour
+public class MusicManager : SingletonBehaviour<MusicManager>
 {
     [SerializeField, Header("Event"), Tooltip("BGM再生のWwiseイベント")]
     private AK.Wwise.Event playBGMEvent;
@@ -56,14 +56,10 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     public AK.Wwise.Switch MoveSpeedSwitch { get; set; }
 
-    // シーン上のメインカメラ
-    private GameObject mainCamera;
-
     private void Start()
     {
         defaultAreaState.SetValue();
         playBGMEvent.Post(gameObject);
-        mainCamera = GameObject.FindWithTag(Constants.MainCameraTag);
     }
 
     /// <summary>
@@ -113,6 +109,7 @@ public class MusicManager : MonoBehaviour
         ProximityToAnomaly = proximity;
 
         // カメラから見た異変の相対的な方向を計算
+        Camera mainCamera = Camera.main;
         Vector3 direction = mainCamera.transform.InverseTransformDirection(anomalyPosition - mainCamera.transform.position);
 
         // 異変への近さに対応するように、ベクトルの大きさを変更
