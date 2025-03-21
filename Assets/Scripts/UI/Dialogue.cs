@@ -1,4 +1,5 @@
 using System.Collections;
+using GodInAugust.System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,7 +10,7 @@ namespace GodInAugust.UI
 /// 会話文などの文章を表示するためのコンポーネント
 /// </summary>
 [AddComponentMenu("God In August/UI/Dialogue")]
-public class Dialogue : MonoBehaviour
+public class Dialogue : SingletonBehaviour<Dialogue>
 {
     [SerializeField, Tooltip("ダイアログのテキスト")]
     private TextMeshProUGUI textMeshProUGUI;
@@ -27,6 +28,14 @@ public class Dialogue : MonoBehaviour
     /// <returns>すべての文を読み終えるまで待つためのIEnumerator</returns>
     public IEnumerator ShowText(params string[] text)
     {
+        PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
+        string previousActionMap = playerInput.currentActionMap.name;
+        bool previouslyActive = gameObject.activeSelf;
+
+        // アクションマップを設定し、アクティブにする。
+        playerInput.SwitchCurrentActionMap(toNextAction.action.actionMap.name);
+        gameObject.SetActive(true);
+
         foreach (string sentence in text)
         {
             // まずダイアログの文字を消す。
@@ -47,6 +56,10 @@ public class Dialogue : MonoBehaviour
             // 次の文に進めるための入力をプレイヤーが行うまで待つ。
             yield return new WaitUntil(() => toNextAction.action.IsPressed());
         }
+
+        // 元のアクションマップに戻し、アクティブの状態も戻す。
+        playerInput.SwitchCurrentActionMap(previousActionMap);
+        gameObject.SetActive(previouslyActive);
     }
 }
 }

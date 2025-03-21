@@ -5104,6 +5104,9 @@ MonoBehaviour:
   probability: 0.75
   duration: 4
   nextSceneName: EpilogueScene
+  tutorialText:
+  - "\u4ECA\u65E5\u304B\u3089\u304A\u3070\u3042\u3061\u3083\u3093\u3061\u3060\u3002"
+  - "\u8272\u3005\u6563\u7B56\u3057\u3066\u307F\u3088\u3046\u304B\u306A\u3002"
   strangenessText: "\u3042\u308C...\uFF1F"
   <StartDate>k__BackingField: 12
   stopAllEvent:

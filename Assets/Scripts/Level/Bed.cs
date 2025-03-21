@@ -1,5 +1,6 @@
 using UnityEngine;
 using GodInAugust.System;
+using GodInAugust.UI;
 
 namespace GodInAugust.Level
 {
@@ -15,17 +16,17 @@ public class Bed : SingletonBehaviour<Bed>, IInteractable
     [field: SerializeField, Tooltip("インタラクトの対象位置")]
     public Transform TargetPoint { get; private set; }
 
-    // 現在利用可能かどうか。初日は祈るまで利用できない。
-    public bool Available { get; set; } = true;
-
-    private void Start()
-    {
-        if (GameState.State.DateIndex == 0) Available = false;
-    }
+    [SerializeField, Tooltip("初日の祈り前に寝ようとすると表示されるメッセージ"), TextArea]
+    private string[] tutorialText;
 
     public void Interact()
     {
-        if (Available)
+        if (GameState.State.DateIndex == 0 && GameManager.Instance.PrayType == PrayType.None)
+        {
+            // 初日は祈るまで、寝れない。代わりのメッセージを表示する。
+            StartCoroutine(Dialogue.Instance.ShowText(tutorialText));
+        }
+        else
         {
             confirmationPanel.SetActive(true);
         }
