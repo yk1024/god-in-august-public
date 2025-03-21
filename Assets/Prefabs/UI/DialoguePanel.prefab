@@ -91,6 +91,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshProUGUI: {fileID: 64805387173241880}
   toNextAction: {fileID: 3881446545790432586, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  nextCharacterEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0a28a5a16cd0148aeb857e1d0acbf604, type: 2}
+  nextTextEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e1fe7519eb1874a2ba66566ade31382c, type: 2}
 --- !u!1 &8137189620673939748
 GameObject:
   m_ObjectHideFlags: 0
