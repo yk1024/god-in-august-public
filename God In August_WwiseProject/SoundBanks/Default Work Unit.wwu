@@ -8,6 +8,8 @@
 						<ObjectRef Name="Play_Spatial_Sound" ID="{BD7389DC-C096-42E2-A71C-66043EB88F89}" WorkUnitID="{D7383C39-238C-4417-BF00-545DDCA947F6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TreeRustling" ID="{E387614F-FB52-4726-A9A1-4999E05AC39A}" WorkUnitID="{D7383C39-238C-4417-BF00-545DDCA947F6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Engine" ID="{DD273A22-21E8-48FA-81E7-37A2DB125B58}" WorkUnitID="{D7383C39-238C-4417-BF00-545DDCA947F6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_NextCharacterSound" ID="{D5431629-8EAB-4A9E-AFE5-821B66E7CC61}" WorkUnitID="{D7383C39-238C-4417-BF00-545DDCA947F6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_NextTextSound" ID="{EB969FC4-E2F9-4B05-AD66-64129B14B2B5}" WorkUnitID="{D7383C39-238C-4417-BF00-545DDCA947F6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_All" ID="{72873458-FED0-4E08-943B-F6CB831D09E5}" WorkUnitID="{D7383C39-238C-4417-BF00-545DDCA947F6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footstep" ID="{75B68DFD-DBCA-4E4F-B036-DC373F651BDD}" WorkUnitID="{D7383C39-238C-4417-BF00-545DDCA947F6}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

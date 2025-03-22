@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using GodInAugust.System;
 
 namespace GodInAugust.UI
 {
@@ -28,6 +27,9 @@ public class UIPanel : MonoBehaviour
     // パネルを開く前のCursorLockModeを保持しておくためのフィールド
     private CursorLockMode previousLockState;
 
+    // パネルを開く前のアクションマップを保持しておくためのフィールド
+    private string previousActionMap;
+
     private void Awake()
     {
         selectables = GetComponentsInChildren<Selectable>(true);
@@ -35,9 +37,10 @@ public class UIPanel : MonoBehaviour
 
     private void OnEnable()
     {
-        // アクションマップをUIに変更する。
+        // 現在のアクションマップを保管した上で変更する。
         PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
-        playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
+        previousActionMap = playerInput.currentActionMap.name;
+        playerInput.SwitchCurrentActionMap(cancelAction.action.actionMap.name);
 
         // 選択可能な子孫のうち最初のものを選択しておく。
         selectables.First((selectable) => selectable.gameObject.activeSelf).Select();
@@ -56,8 +59,8 @@ public class UIPanel : MonoBehaviour
 
         if (playerInput != null)
         {
-            // アクションマップをPlayerに変更する。
-            playerInput.SwitchCurrentActionMap(Constants.PlayerActionMap);
+            // アクションマップを元に戻す。
+            playerInput.SwitchCurrentActionMap(previousActionMap);
         }
 
         // キャンセル処理を外しておく。

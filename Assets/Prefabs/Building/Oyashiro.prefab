@@ -4587,8 +4587,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2371590601527959917}
-        m_TargetAssemblyTypeName: Shrine, Assembly-CSharp
-        m_MethodName: FirstPray
+        m_TargetAssemblyTypeName: GodInAugust.Level.Shrine, Assembly-CSharp
+        m_MethodName: PrayForGratitude
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9724,6 +9724,10 @@ MonoBehaviour:
   prayPosition: {fileID: 2930907829652583152}
   prayCamera: {fileID: 2444582643586251437}
   fadeTime: 0.5
+  tutorialText:
+  - "\u306A\u3093\u304B\u3061\u3087\u3063\u3068\u3060\u3051\u3044\u3044\u3053\u3068\u3057\u305F\u6C17\u5206\u3060\u3002"
+  - "\u305F\u304F\u3055\u3093\u6B69\u304D\u56DE\u3063\u3066\u75B2\u308C\u305F\u3057\u3001\u4ECA\u65E5\u306F\u3082\u3046\u5E30\u3063\u3066\u5BDD\u3088\u3046\u3002"
+  - "\u307E\u305F\u660E\u65E5\u3082\u3053\u3088\u3046\u304B\u306A\u3002"
 --- !u!65 &1364696748857002998
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using GodInAugust.Anomalies;
 using GodInAugust.UI;
@@ -25,14 +24,14 @@ public class GameManager : SingletonBehaviour<GameManager>
     [SerializeField, Tooltip("次のシーン名")]
     private string nextSceneName;
 
-    [SerializeField, Header("Text Settings"), Tooltip("初めて日付が巻き戻った時のメッセージ")]
+    [SerializeField, Header("Text Settings"), Tooltip("初日に目覚めた時のメッセージ"), TextArea]
+    private string[] tutorialText;
+
+    [SerializeField, Tooltip("初めて日付が巻き戻った時のメッセージ"), TextArea]
     private string strangenessText;
 
     [field: SerializeField, Header("Date Settings"), Tooltip("初日の日付")]
     public int StartDate { get; private set; }
-
-    // メインカメラタグ
-    private const string MainCameraTag = "MainCamera";
 
     /// <summary>
     /// その日行った祈りの種類
@@ -107,17 +106,15 @@ public class GameManager : SingletonBehaviour<GameManager>
         // まずフェードインする
         yield return OverlayPanel.Instance.FadeIn(5);
 
-        if (gameState.LoopIndex == 1 && gameState.PrayHistory[^1].IsLoop())
+        if (gameState.DateIndex == 0)
         {
-            PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
-            Dialogue dialogue = FindObjectOfType<Dialogue>(true);
-
+            // 初日はチュートリアル用のメッセージを表示する。
+            yield return Dialogue.Instance.ShowText(tutorialText);
+        }
+        else if (gameState.LoopIndex == 1 && gameState.PrayHistory[^1].IsLoop())
+        {
             // ループ回数が1で前日にループしている（＝初めてループした）時、違和感を感じるメッセージを表示する。
-            playerInput.SwitchCurrentActionMap(Constants.UIActionMap);
-            dialogue.gameObject.SetActive(true);
-            yield return dialogue.ShowText(strangenessText);
-            playerInput.SwitchCurrentActionMap(Constants.PlayerActionMap);
-            dialogue.gameObject.SetActive(false);
+            yield return Dialogue.Instance.ShowText(strangenessText);
         }
     }
 

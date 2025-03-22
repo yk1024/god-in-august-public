@@ -35,6 +35,9 @@ public class Shrine : MonoBehaviour, IInteractable
     [SerializeField, Tooltip("祈りのシーン前後のフェード時間")]
     private float fadeTime;
 
+    [SerializeField, Tooltip("初日の祈り後のメッセージ"), TextArea]
+    private string[] tutorialText;
+
     private void Start()
     {
         prayPanel.OnCancelCallback.AddListener(Cancel);
@@ -81,6 +84,12 @@ public class Shrine : MonoBehaviour, IInteractable
         playerInput.ActivateInput();
 
         yield return EndInteraction();
+
+        if (GameState.State.DateIndex == 0)
+        {
+            // 初日の場合は、メッセージを表示する。
+            yield return Dialogue.Instance.ShowText(tutorialText);
+        }
     }
 
     /// <summary>
@@ -97,15 +106,6 @@ public class Shrine : MonoBehaviour, IInteractable
     public void PrayForWish()
     {
         StartCoroutine(Pray(PrayType.Wish));
-    }
-
-    /// <summary>
-    /// 初日の祈り。初日は感謝のみ。
-    /// </summary>
-    public void FirstPray()
-    {
-        PrayForGratitude();
-        Bed.Instance.Available = true;
     }
 
     // 祈りがキャンセルされた時のメソッド

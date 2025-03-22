@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID PLAY_ENGINE = 639345804U;
         static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
+        static const AkUniqueID PLAY_NEXTCHARACTERSOUND = 2702864411U;
+        static const AkUniqueID PLAY_NEXTTEXTSOUND = 2704269105U;
         static const AkUniqueID PLAY_SPATIAL_SOUND = 313775518U;
         static const AkUniqueID PLAY_TREERUSTLING = 661288100U;
         static const AkUniqueID STOP_ALL = 452547817U;
@@ -85,7 +87,10 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AF0C8EA1-7BB7-6481-82FB-D42AF550282E}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{40BC542B-E91F-E95D-9782-B192D6F2CE70}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,7 +19,10 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="1229948536" Name="Environment"/>
+				<Bus Id="1551306167" Name="UI"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
@@ -58,7 +61,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2415B38C-275D-8819-D672-E1ED5360994E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1F939CB7-F8C5-E541-C3D3-8AFD9C24EC7A}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -202,6 +205,10 @@
 					<ShortName>Asphalt Walk.4.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.4_818F3B66.wem</CachePath>
 				</File>
+				<File Id="577316467" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>NextTextSound.wav</ShortName>
+					<CachePath>SFX/NextTextSound_818F3B66.wem</CachePath>
+				</File>
 				<File Id="588760276" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.2.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.2_818F3B66.wem</CachePath>
@@ -257,6 +264,10 @@
 				<File Id="794473109" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 10.wav</ShortName>
 					<CachePath>SFX/Dirt walk 10_818F3B66.wem</CachePath>
+				</File>
+				<File Id="799135290" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>NextCharacterSound.wav</ShortName>
+					<CachePath>SFX/NextCharacterSound_818F3B66.wem</CachePath>
 				</File>
 				<File Id="824705841" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.8.wav</ShortName>
@@ -441,6 +452,16 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2702864411" Name="Play_NextCharacterSound" DurationType="OneShot" DurationMin="1.4860771" DurationMax="1.4860771">
+					<MediaRefs>
+						<MediaRef Id="799135290"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2704269105" Name="Play_NextTextSound" DurationType="OneShot" DurationMin="1.4860771" DurationMax="1.4860771">
+					<MediaRefs>
+						<MediaRef Id="577316467"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="313775518" Name="Play_Spatial_Sound" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="61213708"/>
@@ -500,5 +521,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EBD56F38-2225-3FDF-9841-F5ACD91149EC}</FileHash>
+	<FileHash>{FD59B634-C19C-AE23-4605-D7B989D1BD70}</FileHash>
 </SoundBanksInfo>
