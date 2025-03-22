@@ -67,21 +67,10 @@ public class OverlayPanel : SingletonBehaviour<OverlayPanel>
         animator.SetTrigger(trigger);
 
         // アニメーションが終わるまで待つ。
-        yield return WaitForAnimationEnd();
+        yield return Utilities.WaitForEvent(onAnimationEnd);
 
         // フェードが終了したら入力を受け付ける。
         playerInput.ActivateInput();
-    }
-
-    // アニメーションが終わるまで待つ仕組み
-    // コールバックを利用してUnityEventに追加しておくことで、イベントが発行されたのを検知して、それまで待つ。
-    private IEnumerator WaitForAnimationEnd()
-    {
-        bool triggered = false;
-        void callback() => triggered = true;
-        onAnimationEnd.AddListener(callback);
-        yield return new WaitUntil(() => triggered);
-        onAnimationEnd.RemoveListener(callback);
     }
 
     /// <summary>

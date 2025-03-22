@@ -102,18 +102,7 @@ public class PlayerController : SingletonBehaviour<PlayerController>
     public IEnumerator Pray()
     {
         animator.SetTrigger(PrayAnimatorTrigger);
-        yield return WaitForAnimationEnd();
-    }
-
-    // アニメーションが終わるまで待つためのメソッド
-    // コールバックを用意して、UnityEventに追加しておくことで、UnityEventが発行されたことを検知し、それまで待つ。
-    private IEnumerator WaitForAnimationEnd()
-    {
-        bool triggered = false;
-        void callback() => triggered = true;
-        onAnimationEnd.AddListener(callback);
-        yield return new WaitUntil(() => triggered);
-        onAnimationEnd.RemoveListener(callback);
+        yield return Utilities.WaitForEvent(onAnimationEnd);
     }
 
     /// <summary>
