@@ -68,7 +68,6 @@
 						<MusicSegment Name="BGM" ID="{C23CBB10-71B7-44B4-A97E-919DBA2C2234}" ShortID="226828809">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="105725.372725452"/>
-								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Tempo" Type="Real64" Value="144"/>
 							</PropertyList>
 							<ReferenceList>
@@ -83,7 +82,6 @@
 								<MusicTrack Name="Melody" ID="{80D08374-0DD0-456A-B9BB-2D08DE785286}" ShortID="967706119">
 									<PropertyList>
 										<Property Name="MusicTrackType" Type="int16" Value="3"/>
-										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-6</Value>
@@ -427,7 +425,6 @@
 								<MusicTrack Name="Rhythm" ID="{B121FA69-248B-416F-B37D-DB889371E460}" ShortID="133464678">
 									<PropertyList>
 										<Property Name="MusicTrackType" Type="int16" Value="3"/>
-										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-2</Value>
@@ -595,7 +592,6 @@
 								<MusicTrack Name="Anomaly" ID="{E40F2B1C-B8CB-4156-A339-9F67A59E1E64}" ShortID="400735925">
 									<PropertyList>
 										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 									</PropertyList>

@@ -11,22 +11,25 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="UI" ID="{EA89A04A-980D-401E-B019-B8461329C1D2}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="Environment" ID="{D3B74405-5870-40EF-AD81-44A7FA759561}"/>
 									<DuckingParam>
-										<Volume>-30</Volume>
-										<FadeInTime>1</FadeInTime>
-										<FadeOutTime>1</FadeOutTime>
+										<Volume>-6</Volume>
+										<FadeInTime>2</FadeInTime>
+										<FadeOutTime>0.100000001490116</FadeOutTime>
 										<FadeCurve>FadeLinear</FadeCurve>
 									</DuckingParam>
 								</DuckItem>
 								<DuckItem>
 									<BusRef Name="Music" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}"/>
 									<DuckingParam>
-										<Volume>-30</Volume>
-										<FadeInTime>1</FadeInTime>
-										<FadeOutTime>1</FadeOutTime>
+										<Volume>-6</Volume>
+										<FadeInTime>2</FadeInTime>
+										<FadeOutTime>0.100000001490116</FadeOutTime>
 										<FadeCurve>FadeLinear</FadeCurve>
 									</DuckingParam>
 								</DuckItem>
