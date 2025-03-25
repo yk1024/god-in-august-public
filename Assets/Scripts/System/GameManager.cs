@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using GodInAugust.Anomalies;
@@ -13,7 +14,7 @@ namespace GodInAugust.System
 public class GameManager : SingletonBehaviour<GameManager>
 {
     [SerializeField, Header("Anomaly Settings"), Tooltip("発生する異変")]
-    private Anomaly[] anomalies;
+    private List<Anomaly> anomalies;
 
     [SerializeField, Range(0, 1), Tooltip("異変発生確率")]
     private float probability;
@@ -94,7 +95,8 @@ public class GameManager : SingletonBehaviour<GameManager>
         if (AnomalyExists)
         {
             // 異変が発生する場合、異変リストからランダムに取得する。
-            int i = Random.Range(0, anomalies.Length);
+            anomalies.RemoveAll((anomaly) => anomaly == null);
+            int i = Random.Range(0, anomalies.Count);
             Anomaly = anomalies[i];
             Anomaly.OnOccur();
         }

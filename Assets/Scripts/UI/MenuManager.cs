@@ -24,13 +24,16 @@ public class MenuManager : MonoBehaviour
     [SerializeField, Tooltip("クレジットパネル")]
     private GameObject creditPanel;
 
+    [SerializeField, Tooltip("ゲームをやめるパネル")]
+    private GameObject quitPanel;
+
     // すべてのパネルを配列にしておいて、まとめて操作しやすくする。
     private GameObject[] panels;
 
     private void Awake()
     {
         menuAction.action.performed += OpenMenu;
-        panels = new GameObject[] { menuPanel, aboutGamePanel, controlPanel, creditPanel };
+        panels = new GameObject[] { menuPanel, aboutGamePanel, controlPanel, creditPanel, quitPanel };
     }
 
     private void OnDestroy()
@@ -67,6 +70,15 @@ public class MenuManager : MonoBehaviour
     {
         // すべてのパネルを閉じる
         foreach (var p in panels) { p.SetActive(false); }
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
 }
