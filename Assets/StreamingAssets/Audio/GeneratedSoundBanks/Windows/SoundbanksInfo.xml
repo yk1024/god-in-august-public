@@ -61,7 +61,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1F939CB7-F8C5-E541-C3D3-8AFD9C24EC7A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BD81319B-7FC3-32AC-ABDE-A7BE2B754B4E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -268,6 +268,10 @@
 				<File Id="799135290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>NextCharacterSound.wav</ShortName>
 					<CachePath>SFX/NextCharacterSound_818F3B66.wem</CachePath>
+				</File>
+				<File Id="804722814" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TitleBGM_BPM132.wav</ShortName>
+					<CachePath>SFX/TitleBGM_BPM132_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="824705841" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.8.wav</ShortName>
@@ -476,12 +480,18 @@
 						<MediaRef Id="855388387"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3396612446" Name="Play_TitleBGM" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="804722814"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="661288100" Name="Play_TreeRustling" MaxAttenuation="50" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1038510396"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3671162836" Name="Stop_TitleBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
@@ -521,5 +531,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D6601E77-751D-CDD4-2AA8-E757DF8DB24E}</FileHash>
+	<FileHash>{1337E61E-D75E-6169-7832-1897B425CCEA}</FileHash>
 </SoundBanksInfo>

@@ -18,8 +18,10 @@ namespace AK
         static const AkUniqueID PLAY_NEXTCHARACTERSOUND = 2702864411U;
         static const AkUniqueID PLAY_NEXTTEXTSOUND = 2704269105U;
         static const AkUniqueID PLAY_SPATIAL_SOUND = 313775518U;
+        static const AkUniqueID PLAY_TITLEBGM = 3396612446U;
         static const AkUniqueID PLAY_TREERUSTLING = 661288100U;
         static const AkUniqueID STOP_ALL = 452547817U;
+        static const AkUniqueID STOP_TITLEBGM = 3671162836U;
     } // namespace EVENTS
 
     namespace STATES
