@@ -72,6 +72,9 @@ public class MenuManager : MonoBehaviour
         foreach (var p in panels) { p.SetActive(false); }
     }
 
+    /// <summary>
+    /// ゲームを終了するメソッド
+    /// </summary>
     public void QuitGame()
     {
 #if UNITY_EDITOR
