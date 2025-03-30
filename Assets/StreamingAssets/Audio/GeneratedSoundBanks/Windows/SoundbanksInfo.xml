@@ -62,7 +62,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{779E58C5-97C4-2858-CB12-D218C2EA5B79}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E16E064A-153F-F6C0-F4B3-AF9532CD7155}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -134,6 +134,10 @@
 					<ShortName>Dirt walk 9.wav</ShortName>
 					<CachePath>SFX/Dirt walk 9_818F3B66.wem</CachePath>
 				</File>
+				<File Id="222929705" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jingle_Pray(Wish)_250330.wav</ShortName>
+					<CachePath>SFX/Jingle_Pray(Wish)_250330_5CB672E9.wem</CachePath>
+				</File>
 				<File Id="225504356" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 5.wav</ShortName>
 					<CachePath>SFX/Dirt walk 5_818F3B66.wem</CachePath>
@@ -161,6 +165,10 @@
 				<File Id="361337595" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gravel walk 7.wav</ShortName>
 					<CachePath>SFX/Gravel walk 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="393559864" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jingle_Pray(Gratitude)_250330.wav</ShortName>
+					<CachePath>SFX/Jingle_Pray(Gratitude)_250330_5CB672E9.wem</CachePath>
 				</File>
 				<File Id="399830354" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 3.wav</ShortName>
@@ -502,6 +510,16 @@
 						<MediaRef Id="577316467"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1381261672" Name="Play_PrayForGratitude" DurationType="OneShot" DurationMin="9" DurationMax="9">
+					<MediaRefs>
+						<MediaRef Id="393559864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1164057410" Name="Play_PrayForWish" DurationType="OneShot" DurationMin="9" DurationMax="9">
+					<MediaRefs>
+						<MediaRef Id="222929705"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1042987450" Name="Play_Select" DurationType="OneShot" DurationMin="4.06145" DurationMax="4.06145">
 					<MediaRefs>
 						<MediaRef Id="616998283"/>
@@ -577,5 +595,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C62185F0-CA10-10DF-0327-F99538617C96}</FileHash>
+	<FileHash>{9928651C-151B-0A9A-4AC7-417235349BD4}</FileHash>
 </SoundBanksInfo>

@@ -164,6 +164,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_PrayForWish" ID="{F5B6BF47-3879-46C1-90EC-6CFE8A40521D}">
+							<ChildrenList>
+								<Action Name="" ID="{2456B047-8CA7-4881-9293-FDC1BC3A7A2E}" ShortID="76505935">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PrayForWish" ID="{680C2EB7-FD32-47B3-80E7-2B195C122C97}" WorkUnitID="{24B12B6B-25E2-4E4E-A0A1-5426AC22758D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PrayForGratitude" ID="{650476F8-5644-4B39-BDB0-F8369C35F479}">
+							<ChildrenList>
+								<Action Name="" ID="{D711B439-0C8E-4389-A5DF-386549313C9F}" ShortID="671129506">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PrayForGratitude" ID="{C9742405-1077-4812-B7FF-995CFA25C866}" WorkUnitID="{24B12B6B-25E2-4E4E-A0A1-5426AC22758D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="BGM" ID="{B1006291-5EF8-40F6-9C9A-AFFCD767526F}" ShortID="333139598">

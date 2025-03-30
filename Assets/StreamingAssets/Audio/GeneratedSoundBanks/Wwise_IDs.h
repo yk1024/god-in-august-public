@@ -20,6 +20,8 @@ namespace AK
         static const AkUniqueID PLAY_GAMESTART = 1497459184U;
         static const AkUniqueID PLAY_NEXTCHARACTERSOUND = 2702864411U;
         static const AkUniqueID PLAY_NEXTTEXTSOUND = 2704269105U;
+        static const AkUniqueID PLAY_PRAYFORGRATITUDE = 1381261672U;
+        static const AkUniqueID PLAY_PRAYFORWISH = 1164057410U;
         static const AkUniqueID PLAY_SELECT = 1042987450U;
         static const AkUniqueID PLAY_SLEEP = 3734418179U;
         static const AkUniqueID PLAY_SPATIAL_SOUND = 313775518U;

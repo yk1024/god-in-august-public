@@ -38,6 +38,12 @@ public class Shrine : MonoBehaviour, IInteractable
     [SerializeField, Tooltip("初日の祈り後のメッセージ"), TextArea]
     private string[] tutorialText;
 
+    [SerializeField, Tooltip("感謝の際のジングルのイベント")]
+    private AK.Wwise.Event prayForGratitudeJingle;
+
+    [SerializeField, Tooltip("お願いの際のジングルのイベント")]
+    private AK.Wwise.Event prayForWishJingle;
+
     private void Start()
     {
         prayPanel.OnCancelCallback.AddListener(Cancel);
@@ -70,7 +76,7 @@ public class Shrine : MonoBehaviour, IInteractable
     }
 
     // 祈るコマンド
-    private IEnumerator Pray(PrayType prayType)
+    private IEnumerator Pray(PrayType prayType, AK.Wwise.Event jingleEvent)
     {
         GameManager gameManager = GameManager.Instance;
         gameManager.PrayType = prayType;
@@ -80,7 +86,15 @@ public class Shrine : MonoBehaviour, IInteractable
         // 祈り中は入力を受け付けない。
         PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
         playerInput.DeactivateInput();
-        yield return PlayerController.Instance.Pray();
+        yield return PlayerController.Instance.StartPray();
+
+        // ジングルを再生して、再生終了するまで待つ。
+        bool jingleEnded = false;
+        jingleEvent.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, WaitForEndOfJingle);
+        yield return new WaitUntil(() => jingleEnded);
+
+        // ジングルが終了したら、祈りを終えて入力を受け付ける。
+        yield return PlayerController.Instance.EndPray();
         playerInput.ActivateInput();
 
         yield return EndInteraction();
@@ -90,6 +104,11 @@ public class Shrine : MonoBehaviour, IInteractable
             // 初日の場合は、メッセージを表示する。
             yield return Dialogue.Instance.ShowText(tutorialText);
         }
+
+        void WaitForEndOfJingle(object cookie, AkCallbackType type, AkCallbackInfo callbackInfo)
+        {
+            jingleEnded = true;
+        }
     }
 
     /// <summary>
@@ -97,7 +116,7 @@ public class Shrine : MonoBehaviour, IInteractable
     /// </summary>
     public void PrayForGratitude()
     {
-        StartCoroutine(Pray(PrayType.Gratitude));
+        StartCoroutine(Pray(PrayType.Gratitude, prayForGratitudeJingle));
     }
 
     /// <summary>
@@ -105,7 +124,7 @@ public class Shrine : MonoBehaviour, IInteractable
     /// </summary>
     public void PrayForWish()
     {
-        StartCoroutine(Pray(PrayType.Wish));
+        StartCoroutine(Pray(PrayType.Wish, prayForWishJingle));
     }
 
     // 祈りがキャンセルされた時のメソッド

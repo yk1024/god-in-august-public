@@ -2528,6 +2528,74 @@
 								<ActiveSource Name="Jingle_Sleep_250330" ID="{698E01E7-C76F-4AE0-B248-26784795CCCB}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="PrayForGratitude" ID="{C9742405-1077-4812-B7FF-995CFA25C866}" ShortID="1007874274">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jingle_Pray(Gratitude)_250330" ID="{12242FCD-FE31-41D2-A87B-46AC72317D1B}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="9"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Jingle_Pray(Gratitude)_250330.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="393559864"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Jingle_Pray(Gratitude)_250330" ID="{12242FCD-FE31-41D2-A87B-46AC72317D1B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PrayForWish" ID="{680C2EB7-FD32-47B3-80E7-2B195C122C97}" ShortID="511979565">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jingle_Pray(Wish)_250330" ID="{17A1388B-180C-4011-91EE-537B924AD062}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="9"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Jingle_Pray(Wish)_250330.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="222929705"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Jingle_Pray(Wish)_250330" ID="{17A1388B-180C-4011-91EE-537B924AD062}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
