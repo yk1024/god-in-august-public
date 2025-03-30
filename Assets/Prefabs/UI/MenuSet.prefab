@@ -188,7 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e5d3b7204b48e4e9f045781498925a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuAction: {fileID: 6282996109314821291, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
   menuPanel: {fileID: 1462462252151582771}
   aboutGamePanel: {fileID: 1876950488499909955}
   controlPanel: {fileID: 1027596173338763352}
@@ -206,6 +205,7 @@ GameObject:
   - component: {fileID: 7838679721355668158}
   - component: {fileID: 186557368554987048}
   - component: {fileID: 1926986689637888604}
+  - component: {fileID: 7339422940661596536}
   m_Layer: 5
   m_Name: ToControl
   m_TagString: Untagged
@@ -327,6 +327,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7339422940661596536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919282188455234368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d8c6f7ece1bb648f5854177ed4c5a89b, type: 2}
 --- !u!1 &3961405268202880195
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +623,7 @@ GameObject:
   - component: {fileID: 6689924861785632082}
   - component: {fileID: 6463991934243013755}
   - component: {fileID: 8692653608125780957}
+  - component: {fileID: 8050697573313980743}
   m_Layer: 5
   m_Name: ToQuit
   m_TagString: Untagged
@@ -728,6 +745,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8050697573313980743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570671892082169640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d8c6f7ece1bb648f5854177ed4c5a89b, type: 2}
 --- !u!1 &4785512309454016433
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +907,7 @@ GameObject:
   - component: {fileID: 3159681094287743482}
   - component: {fileID: 6092194843049922775}
   - component: {fileID: 8234149595725284053}
+  - component: {fileID: 8888368484856240124}
   m_Layer: 5
   m_Name: ToCredit
   m_TagString: Untagged
@@ -995,6 +1029,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8888368484856240124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5249671273105539613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d8c6f7ece1bb648f5854177ed4c5a89b, type: 2}
 --- !u!1 &5315112243866154267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1191,7 @@ GameObject:
   - component: {fileID: 513384458409624327}
   - component: {fileID: 9043049558294751360}
   - component: {fileID: 4093029465430793977}
+  - component: {fileID: 4739510478999660474}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1262,6 +1313,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4739510478999660474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443056261937578356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bc34c1508e55f40bca7ae51c0de5fe09, type: 2}
 --- !u!1 &6500794938869823156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1475,8 @@ GameObject:
   - component: {fileID: 6538869977488519076}
   - component: {fileID: 5572023690992063049}
   - component: {fileID: 2343764352579045836}
+  - component: {fileID: 3266109711079852497}
+  - component: {fileID: 5895926202088345297}
   m_Layer: 5
   m_Name: HintArea
   m_TagString: Untagged
@@ -1529,6 +1598,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3266109711079852497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791486214058664026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d8c6f7ece1bb648f5854177ed4c5a89b, type: 2}
+--- !u!114 &5895926202088345297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791486214058664026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167362670169848a48cab0ba7bbbd7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputAction: {fileID: 6282996109314821291, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
 --- !u!1 &6890830867167103481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,6 +2233,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6358786369673510661, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
+      propertyPath: onClickSoundEffect.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b86d81c0f377480c843bad66a66d7d6, type: 2}
     - target: {fileID: 6892937019943541181, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
       propertyPath: m_text
       value: "\u9589\u3058\u308B"
@@ -2369,6 +2471,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6358786369673510661, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
+      propertyPath: onClickSoundEffect.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b86d81c0f377480c843bad66a66d7d6, type: 2}
     - target: {fileID: 6892937019943541181, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
       propertyPath: m_text
       value: "\u9589\u3058\u308B"
@@ -2611,6 +2717,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -498.3333
       objectReference: {fileID: 0}
+    - target: {fileID: 6358786369673510661, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
+      propertyPath: onClickSoundEffect.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d8c6f7ece1bb648f5854177ed4c5a89b, type: 2}
     - target: {fileID: 6892937019943541181, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
       propertyPath: m_text
       value: "\u9589\u3058\u308B"
@@ -2887,6 +2997,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6358786369673510661, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
+      propertyPath: onClickSoundEffect.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b86d81c0f377480c843bad66a66d7d6, type: 2}
     - target: {fileID: 6892937019943541181, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
       propertyPath: m_text
       value: "\u9589\u3058\u308B"
@@ -3121,6 +3235,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6358786369673510661, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
+      propertyPath: onClickSoundEffect.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b86d81c0f377480c843bad66a66d7d6, type: 2}
     - target: {fileID: 6892937019943541181, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
       propertyPath: m_text
       value: "\u9589\u3058\u308B"

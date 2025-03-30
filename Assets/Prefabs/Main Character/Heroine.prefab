@@ -1152,6 +1152,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 5
+  onInteractEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d8c6f7ece1bb648f5854177ed4c5a89b, type: 2}
 --- !u!54 &5357729439515461342
 Rigidbody:
   m_ObjectHideFlags: 0

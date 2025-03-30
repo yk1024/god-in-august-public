@@ -17,6 +17,9 @@ public class PlayerController : SingletonBehaviour<PlayerController>
     [SerializeField, Tooltip("インタラクトできる距離")]
     private float distance;
 
+    [SerializeField, Tooltip("インタラクト時に再生する音")]
+    private AK.Wwise.Event onInteractEvent;
+
     // インタラクトが発生しているかどうか。
     private bool interacting;
 
@@ -32,8 +35,8 @@ public class PlayerController : SingletonBehaviour<PlayerController>
     // アニメーションが終わるまで待つために使用するUnityEvent
     private readonly UnityEvent onAnimationEnd = new UnityEvent();
 
-    // 祈りアニメーションをトリガーするためのアニメーション用トリガー名
-    private const string PrayAnimatorTrigger = "Pray";
+    // 祈りアニメーションをトリガーするためのアニメーションパラメータ
+    private const string PrayAnimatorParameter = "Praying";
 
     private void Start()
     {
@@ -71,6 +74,7 @@ public class PlayerController : SingletonBehaviour<PlayerController>
         // インタラクトが発生中で、見ている対象がインタラクト可能で、対象への距離がインタラクト可能な距離以下である場合、インタラクトする。
         if (interacting && target is IInteractable interactable && distance <= this.distance)
         {
+            onInteractEvent.Post(gameObject);
             interactable.Interact();
         }
     }
@@ -96,12 +100,22 @@ public class PlayerController : SingletonBehaviour<PlayerController>
     }
 
     /// <summary>
-    /// 神社に祈りを捧げる
+    /// 神社に祈りを捧げるモーションを開始する。
     /// </summary>
     /// <returns>祈りアニメーションが終了するまで待つためのIEnumerator</returns>
-    public IEnumerator Pray()
+    public IEnumerator StartPray()
     {
-        animator.SetTrigger(PrayAnimatorTrigger);
+        animator.SetBool(PrayAnimatorParameter, true);
+        yield return Utilities.WaitForEvent(onAnimationEnd);
+    }
+
+    /// <summary>
+    /// 神社に祈りを捧げるモーションを終了する。
+    /// </summary>
+    /// <returns>祈りアニメーションが終了するまで待つためのIEnumerator</returns>
+    public IEnumerator EndPray()
+    {
+        animator.SetBool(PrayAnimatorParameter, false);
         yield return Utilities.WaitForEvent(onAnimationEnd);
     }
 

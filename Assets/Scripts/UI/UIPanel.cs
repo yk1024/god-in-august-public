@@ -16,9 +16,6 @@ public class UIPanel : MonoBehaviour
     // ヒエラルキー上で子孫のSelectableのコレクション
     private IEnumerable<Selectable> selectables;
 
-    [SerializeField, Tooltip("キャンセルアクション")]
-    private InputActionReference cancelAction;
-
     /// <summary>
     /// キャンセルボタンが押されて、パネルを閉じる時に実行されるUnityEvent
     /// </summary>
@@ -30,6 +27,9 @@ public class UIPanel : MonoBehaviour
     // パネルを開く前のアクションマップを保持しておくためのフィールド
     private string previousActionMap;
 
+    // UI用のInputActionMapの名前
+    private const string UIActionMap = "UI";
+
     private void Awake()
     {
         selectables = GetComponentsInChildren<Selectable>(true);
@@ -40,7 +40,7 @@ public class UIPanel : MonoBehaviour
         // 現在のアクションマップを保管した上で変更する。
         PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
         previousActionMap = playerInput.currentActionMap.name;
-        playerInput.SwitchCurrentActionMap(cancelAction.action.actionMap.name);
+        playerInput.SwitchCurrentActionMap(UIActionMap);
 
         // 選択可能な子孫のうち最初のものを選択しておく。
         selectables.First((selectable) => selectable.gameObject.activeSelf).Select();
@@ -48,9 +48,6 @@ public class UIPanel : MonoBehaviour
         // 現在のCursorLockModeを保管した上で、カーソルは表示するようにする。
         previousLockState = Cursor.lockState;
         Cursor.lockState = CursorLockMode.None;
-
-        // キャンセルの入力がされた時にキャンセルする処理を追加しておく。
-        cancelAction.action.performed += OnCancel;
     }
 
     private void OnDisable()
@@ -63,9 +60,6 @@ public class UIPanel : MonoBehaviour
             playerInput.SwitchCurrentActionMap(previousActionMap);
         }
 
-        // キャンセル処理を外しておく。
-        cancelAction.action.performed -= OnCancel;
-
         // CursorLockModeを元に戻す。
         Cursor.lockState = previousLockState;
     }
@@ -77,12 +71,6 @@ public class UIPanel : MonoBehaviour
     {
         gameObject.SetActive(false);
         OnCancelCallback.Invoke();
-    }
-
-    // パネルを閉じる入力を行なった時に、パネルを閉じてキャンセルする。
-    private void OnCancel(InputAction.CallbackContext context)
-    {
-        OnCancel();
     }
 }
 }

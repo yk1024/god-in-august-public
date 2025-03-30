@@ -16,11 +16,11 @@ public class OverlayPanel : SingletonBehaviour<OverlayPanel>
     // フェードイン・フェードアウトをアニメーションで行う。
     private Animator animator;
 
-    // アニメーションで使われるフェードイン用のトリガー
-    private const string FadeInTrigger = "FadeIn";
+    // アニメーションで使われるフェードイン用のステート名
+    private const string FadeInState = "FadeIn";
 
-    // アニメーションで使われるフェードアウト用のトリガー
-    private const string FadeOutTrigger = "FadeOut";
+    // アニメーションで使われるフェードアウト用のステート名
+    private const string FadeOutState = "FadeOut";
 
     // アニメーションで使われる、フェードの速度に関するパラメータ
     private const string TransitionSpeedParameter = "TransitionSpeed";
@@ -42,7 +42,7 @@ public class OverlayPanel : SingletonBehaviour<OverlayPanel>
     /// <returns>フェードインするまで待つIEnumerator</returns>
     public IEnumerator FadeIn(float transitionSeconds)
     {
-        yield return Animate(FadeInTrigger, transitionSeconds);
+        yield return Animate(FadeInState, transitionSeconds);
     }
 
     /// <summary>
@@ -52,11 +52,11 @@ public class OverlayPanel : SingletonBehaviour<OverlayPanel>
     /// <returns>フェードアウトするまで待つIEnumerator</returns>
     public IEnumerator FadeOut(float transitionSeconds)
     {
-        yield return Animate(FadeOutTrigger, transitionSeconds);
+        yield return Animate(FadeOutState, transitionSeconds);
     }
 
     // フェードイン・アウトする処理
-    private IEnumerator Animate(string trigger, float transitionSeconds)
+    private IEnumerator Animate(string stateName, float transitionSeconds)
     {
         PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
         // フェード中は入力を受け付けない
@@ -64,7 +64,7 @@ public class OverlayPanel : SingletonBehaviour<OverlayPanel>
 
         // アニメーターに速度とトリガーを渡す。
         animator.SetFloat(TransitionSpeedParameter, 1 / transitionSeconds);
-        animator.SetTrigger(trigger);
+        animator.Play(stateName);
 
         // アニメーションが終わるまで待つ。
         yield return Utilities.WaitForEvent(onAnimationEnd);

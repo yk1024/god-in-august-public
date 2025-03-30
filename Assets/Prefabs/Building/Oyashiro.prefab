@@ -3586,7 +3586,7 @@ GameObject:
   - component: {fileID: 8427100441888017065}
   - component: {fileID: 2113686730228587261}
   - component: {fileID: 954093849771642049}
-  - component: {fileID: 1257507852359326939}
+  - component: {fileID: 2369901130386772832}
   m_Layer: 5
   m_Name: Wish
   m_TagString: Untagged
@@ -3722,7 +3722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dateIndex: 0
   activationMode: 0
---- !u!114 &1257507852359326939
+--- !u!114 &2369901130386772832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3731,11 +3731,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243987744561072740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bc5ea42c54d842b9ba9186705735682, type: 3}
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dateIndex: 0
-  activationMode: 0
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bc34c1508e55f40bca7ae51c0de5fe09, type: 2}
 --- !u!1 &1257510443007801314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4477,6 +4479,7 @@ GameObject:
   - component: {fileID: 3947170575945036573}
   - component: {fileID: 6727150814090956745}
   - component: {fileID: 1135610352753045095}
+  - component: {fileID: 7446506107869889636}
   m_Layer: 5
   m_Name: FirstPray
   m_TagString: Untagged
@@ -4612,6 +4615,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dateIndex: 0
   activationMode: 1
+--- !u!114 &7446506107869889636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498309392315124341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bc34c1508e55f40bca7ae51c0de5fe09, type: 2}
 --- !u!1 &1538909127514282125
 GameObject:
   m_ObjectHideFlags: 0
@@ -9728,6 +9747,14 @@ MonoBehaviour:
   - "\u306A\u3093\u304B\u3061\u3087\u3063\u3068\u3060\u3051\u3044\u3044\u3053\u3068\u3057\u305F\u6C17\u5206\u3060\u3002"
   - "\u305F\u304F\u3055\u3093\u6B69\u304D\u56DE\u3063\u3066\u75B2\u308C\u305F\u3057\u3001\u4ECA\u65E5\u306F\u3082\u3046\u5E30\u3063\u3066\u5BDD\u3088\u3046\u3002"
   - "\u307E\u305F\u660E\u65E5\u3082\u3053\u3088\u3046\u304B\u306A\u3002"
+  prayForGratitudeJingle:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5180a10ceb71c433c871936cca765fe1, type: 2}
+  prayForWishJingle:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9d190c19d36d6441da02fcc7bf6634cb, type: 2}
 --- !u!65 &1364696748857002998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29147,6 +29174,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4523378875418545163, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6318452279378166000}
+    - targetCorrespondingSourceObject: {fileID: 4523378875418545163, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2678218885697554556}
   m_SourcePrefab: {fileID: 100100000, guid: 03b81d72c93b04dfbb349ea42769bc89, type: 3}
 --- !u!224 &712601379458345663 stripped
 RectTransform:
@@ -29207,3 +29237,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dateIndex: 0
   activationMode: 0
+--- !u!114 &2678218885697554556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8191088766835554012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}

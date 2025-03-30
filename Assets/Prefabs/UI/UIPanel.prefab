@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 6118962753864668918}
   - component: {fileID: 2191774482544954369}
   - component: {fileID: 59491288016664904}
+  - component: {fileID: 6358786369673510661}
   m_Layer: 5
   m_Name: OK
   m_TagString: Untagged
@@ -267,6 +268,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6358786369673510661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523378875418545163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bc34c1508e55f40bca7ae51c0de5fe09, type: 2}
 --- !u!1 &4780784420740214646
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +415,8 @@ GameObject:
   - component: {fileID: 7129802163579594614}
   - component: {fileID: 3287067549719233298}
   - component: {fileID: 2779042691881919913}
+  - component: {fileID: 4102326603569190994}
+  - component: {fileID: 772083213799657987}
   m_Layer: 5
   m_Name: Cancel
   m_TagString: Untagged
@@ -519,6 +538,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4102326603569190994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239371242847691227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167362670169848a48cab0ba7bbbd7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputAction: {fileID: -7720030492539040409, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+--- !u!114 &772083213799657987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239371242847691227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4b86d81c0f377480c843bad66a66d7d6, type: 2}
 --- !u!1 &7711152637696906895
 GameObject:
   m_ObjectHideFlags: 0

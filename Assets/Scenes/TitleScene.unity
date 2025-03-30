@@ -196,6 +196,8 @@ GameObject:
   - component: {fileID: 250281160}
   - component: {fileID: 250281159}
   - component: {fileID: 250281158}
+  - component: {fileID: 250281162}
+  - component: {fileID: 250281163}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -289,6 +291,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &250281162
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250281157}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54919cf05f79a449f9f1a5f72cfcae0e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &250281163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250281157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46986376e4e0e4338bb5cbb6932b00a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &260671955 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3810409006565645602, guid: 5c2ba4b83ef8d4a86988121fd808bea4, type: 3}
@@ -458,6 +493,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76d6d0b7ab26493a94149d74128dea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playBGMEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6048d7b5816f34e8fbd08a5bdae9eb68, type: 2}
+  stopBGMEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cd882b4d799874e68ab68cc81fdc8e69, type: 2}
+  nextSceneName: PrologueScene
+  animator: {fileID: 250281162}
 --- !u!4 &532598153
 Transform:
   m_ObjectHideFlags: 0
@@ -802,9 +847,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 870485902}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 532598152}
+        m_TargetAssemblyTypeName: GodInAugust.System.TitleManager, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -861,10 +906,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 870485897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347ae383296974db7ac1c25ee443516b, type: 3}
+  m_Script: {fileID: 11500000, guid: d1ced4d21256542c5b09a938bfc2f673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PrologueScene
+  onClickSoundEffect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5c72ede19ad354b54b88cc065d4dc0e6, type: 2}
 --- !u!1 &1159719469
 GameObject:
   m_ObjectHideFlags: 0

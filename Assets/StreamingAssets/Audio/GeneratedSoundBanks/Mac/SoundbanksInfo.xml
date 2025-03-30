@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{87090F39-C42B-B472-9B95-4DBD2919F75D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0710D82D-77C5-07E4-743A-8CF7821D66DE}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,10 +19,11 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="412724365" Name="BGM"/>
 				<Bus Id="1229948536" Name="Environment"/>
 				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="3073030106" Name="Jingle"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
-				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
@@ -61,7 +62,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1F939CB7-F8C5-E541-C3D3-8AFD9C24EC7A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E16E064A-153F-F6C0-F4B3-AF9532CD7155}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -105,6 +106,10 @@
 					<ShortName>Dirt run 9.wav</ShortName>
 					<CachePath>SFX/Dirt run 9_818F3B66.wem</CachePath>
 				</File>
+				<File Id="135441044" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE_GameStart.wav</ShortName>
+					<CachePath>SFX/SE_GameStart_818F3B66.wem</CachePath>
+				</File>
 				<File Id="165684977" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.1.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.1_818F3B66.wem</CachePath>
@@ -128,6 +133,10 @@
 				<File Id="211083415" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 9.wav</ShortName>
 					<CachePath>SFX/Dirt walk 9_818F3B66.wem</CachePath>
+				</File>
+				<File Id="222929705" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jingle_Pray(Wish)_250330.wav</ShortName>
+					<CachePath>SFX/Jingle_Pray(Wish)_250330_5CB672E9.wem</CachePath>
 				</File>
 				<File Id="225504356" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 5.wav</ShortName>
@@ -156,6 +165,10 @@
 				<File Id="361337595" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gravel walk 7.wav</ShortName>
 					<CachePath>SFX/Gravel walk 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="393559864" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jingle_Pray(Gratitude)_250330.wav</ShortName>
+					<CachePath>SFX/Jingle_Pray(Gratitude)_250330_5CB672E9.wem</CachePath>
 				</File>
 				<File Id="399830354" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 3.wav</ShortName>
@@ -193,6 +206,10 @@
 					<ShortName>Dirt walk 7.wav</ShortName>
 					<CachePath>SFX/Dirt walk 7_818F3B66.wem</CachePath>
 				</File>
+				<File Id="549937620" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jingle_Sleep_250330.wav</ShortName>
+					<CachePath>SFX/Jingle_Sleep_250330_2AAA0E0B.wem</CachePath>
+				</File>
 				<File Id="555775989" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.3.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.3_818F3B66.wem</CachePath>
@@ -224,6 +241,10 @@
 				<File Id="607916078" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 1.wav</ShortName>
 					<CachePath>SFX/Dirt walk 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="616998283" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE_Simple_Decide_250330.wav</ShortName>
+					<CachePath>SFX/SE_Simple_Decide_250330_439B9FDF.wem</CachePath>
 				</File>
 				<File Id="626202736" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gravel walk 5.wav</ShortName>
@@ -269,6 +290,10 @@
 					<ShortName>NextCharacterSound.wav</ShortName>
 					<CachePath>SFX/NextCharacterSound_818F3B66.wem</CachePath>
 				</File>
+				<File Id="804722814" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TitleBGM_BPM132.wav</ShortName>
+					<CachePath>SFX/TitleBGM_BPM132_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="824705841" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.8.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.8_818F3B66.wem</CachePath>
@@ -309,6 +334,10 @@
 					<ShortName>Dirt run 5.wav</ShortName>
 					<CachePath>SFX/Dirt run 5_818F3B66.wem</CachePath>
 				</File>
+				<File Id="974369196" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE_Decide_250330.wav</ShortName>
+					<CachePath>SFX/SE_Decide_250330_A9EEE9EB.wem</CachePath>
+				</File>
 				<File Id="996891236" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 4.wav</ShortName>
 					<CachePath>SFX/Dirt walk 4_818F3B66.wem</CachePath>
@@ -341,8 +370,22 @@
 					<ShortName>Dirt walk 6.wav</ShortName>
 					<CachePath>SFX/Dirt walk 6_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1068592128" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE_Cancel.wav</ShortName>
+					<CachePath>SFX/SE_Cancel_C20967A4.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="1351875428" Name="Play_Cancel" DurationType="OneShot" DurationMin="4.037012" DurationMax="4.037012">
+					<MediaRefs>
+						<MediaRef Id="1068592128"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="162465350" Name="Play_Decide" DurationType="OneShot" DurationMin="4.05546" DurationMax="4.05546">
+					<MediaRefs>
+						<MediaRef Id="974369196"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="639345804" Name="Play_Engine" MaxAttenuation="50" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="663888226"/>
@@ -452,6 +495,11 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1497459184" Name="Play_GameStart" DurationType="OneShot" DurationMin="5.721247" DurationMax="5.721247">
+					<MediaRefs>
+						<MediaRef Id="135441044"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2702864411" Name="Play_NextCharacterSound" DurationType="OneShot" DurationMin="1.4860771" DurationMax="1.4860771">
 					<MediaRefs>
 						<MediaRef Id="799135290"/>
@@ -460,6 +508,26 @@
 				<Event Id="2704269105" Name="Play_NextTextSound" DurationType="OneShot" DurationMin="1.4860771" DurationMax="1.4860771">
 					<MediaRefs>
 						<MediaRef Id="577316467"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1381261672" Name="Play_PrayForGratitude" DurationType="OneShot" DurationMin="9" DurationMax="9">
+					<MediaRefs>
+						<MediaRef Id="393559864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1164057410" Name="Play_PrayForWish" DurationType="OneShot" DurationMin="9" DurationMax="9">
+					<MediaRefs>
+						<MediaRef Id="222929705"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1042987450" Name="Play_Select" DurationType="OneShot" DurationMin="4.06145" DurationMax="4.06145">
+					<MediaRefs>
+						<MediaRef Id="616998283"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3734418179" Name="Play_Sleep" DurationType="OneShot" DurationMin="11.665556" DurationMax="11.665556">
+					<MediaRefs>
+						<MediaRef Id="549937620"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="313775518" Name="Play_Spatial_Sound" DurationType="Infinite">
@@ -476,12 +544,18 @@
 						<MediaRef Id="855388387"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3396612446" Name="Play_TitleBGM" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="804722814"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="661288100" Name="Play_TreeRustling" MaxAttenuation="50" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1038510396"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3671162836" Name="Stop_TitleBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
@@ -521,5 +595,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8814B88D-236F-986B-B468-7B948F913E84}</FileHash>
+	<FileHash>{EC9DFDB3-0E29-BF28-B756-7CCC9054BCB6}</FileHash>
 </SoundBanksInfo>

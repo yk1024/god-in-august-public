@@ -1,6 +1,8 @@
 using UnityEngine;
 using GodInAugust.System;
 using GodInAugust.UI;
+using System.Collections;
+using UnityEngine.InputSystem;
 
 namespace GodInAugust.Level
 {
@@ -18,6 +20,12 @@ public class Bed : SingletonBehaviour<Bed>, IInteractable
 
     [SerializeField, Tooltip("初日の祈り前に寝ようとすると表示されるメッセージ"), TextArea]
     private string[] tutorialText;
+
+    [SerializeField, Tooltip("寝る際のジングルのイベント")]
+    private AK.Wwise.Event sleepJingle;
+
+    // Wwise側で設定するフェードを始めるタイミングのマーカー
+    private const string StardFadeMarker = "StartFade";
 
     public void Interact()
     {
@@ -37,8 +45,39 @@ public class Bed : SingletonBehaviour<Bed>, IInteractable
     /// </summary>
     public void Sleep()
     {
+        StartCoroutine(EndDay());
+    }
+
+    private IEnumerator EndDay()
+    {
+        // パネルを非表示にする
         confirmationPanel.SetActive(false);
-        StartCoroutine(GameManager.Instance.EndDay());
+
+        // 入力を無効にする
+        PlayerInput playerInput = PlayerInput.GetPlayerByIndex(0);
+        playerInput.DeactivateInput();
+
+        // UIのクリック音とジングルが被らないように少し待つ。
+        yield return new WaitForSeconds(1);
+
+        // 寝るジングルを呼び、フェードするタイミングまで待つ。
+        bool startFade = false;
+        sleepJingle.Post(gameObject, (uint)AkCallbackType.AK_Marker, WaitForStartFade);
+        yield return new WaitUntil(() => startFade);
+
+        // 日を終える処理を呼ぶ。
+        yield return GameManager.Instance.EndDay();
+
+        void WaitForStartFade(object cookie, AkCallbackType type, AkCallbackInfo callbackInfo)
+        {
+            // フェードし始めるタイミングはWwise側のマーカーで設定する。
+            AkMarkerCallbackInfo markerCallbackInfo = (AkMarkerCallbackInfo)callbackInfo;
+
+            if (markerCallbackInfo.strLabel == StardFadeMarker)
+            {
+                startFade = true;
+            }
+        }
     }
 }
 }
