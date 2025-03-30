@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace GodInAugust.UI
 {
@@ -9,9 +8,6 @@ namespace GodInAugust.UI
 [AddComponentMenu("God In August/UI/Menu Manager")]
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField, Tooltip("メニューを開くアクション")]
-    private InputActionReference menuAction;
-
     [SerializeField, Tooltip("メニューパネル")]
     private GameObject menuPanel;
 
@@ -32,19 +28,7 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
-        menuAction.action.performed += OpenMenu;
         panels = new GameObject[] { menuPanel, aboutGamePanel, controlPanel, creditPanel, quitPanel };
-    }
-
-    private void OnDestroy()
-    {
-        menuAction.action.performed -= OpenMenu;
-    }
-
-    // メニューを開く入力をプレイヤーが行なった時に、メニューを開くメソッド
-    private void OpenMenu(InputAction.CallbackContext context)
-    {
-        OpenMenu();
     }
 
     /// <summary>

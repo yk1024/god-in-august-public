@@ -13,10 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_CANCEL = 1351875428U;
+        static const AkUniqueID PLAY_DECIDE = 162465350U;
         static const AkUniqueID PLAY_ENGINE = 639345804U;
         static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
+        static const AkUniqueID PLAY_GAMESTART = 1497459184U;
         static const AkUniqueID PLAY_NEXTCHARACTERSOUND = 2702864411U;
         static const AkUniqueID PLAY_NEXTTEXTSOUND = 2704269105U;
+        static const AkUniqueID PLAY_SELECT = 1042987450U;
+        static const AkUniqueID PLAY_SLEEP = 3734418179U;
         static const AkUniqueID PLAY_SPATIAL_SOUND = 313775518U;
         static const AkUniqueID PLAY_TITLEBGM = 3396612446U;
         static const AkUniqueID PLAY_TREERUSTLING = 661288100U;
@@ -89,9 +94,10 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID BGM = 412724365U;
         static const AkUniqueID ENVIRONMENT = 1229948536U;
+        static const AkUniqueID JINGLE = 3073030106U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 

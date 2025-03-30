@@ -71,6 +71,137 @@
 								<ActiveSource Name="NextTextSound" ID="{5D1DC922-7F8F-4FF6-B352-AF6EE14B6DBC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Cancel" ID="{BA97C538-92AF-4BC2-93F4-5742BC6C32BF}" ShortID="639536204">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SE_Cancel" ID="{817A7B70-5685-4B28-AFA7-2B662D5BDEDD}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.198158121728029"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.198158121728029"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SE_Cancel.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1068592128"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SE_Cancel" ID="{817A7B70-5685-4B28-AFA7-2B662D5BDEDD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Decide" ID="{8B56B301-80D1-4358-8827-7320A05E8605}" ShortID="547844279">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-18</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SE_Decide_250330" ID="{1D054499-0890-4217-BC4E-F3896CC86BEE}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.179710186762116"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.179710186762116"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SE_Decide_250330.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="974369196"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SE_Decide_250330" ID="{1D054499-0890-4217-BC4E-F3896CC86BEE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="GameStart" ID="{DEA1D73F-4E43-415B-8021-D5FCB2B0433F}" ShortID="428783055">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SE_GameStart" ID="{A121D974-837B-4B90-B6C3-7BD85EFABBCA}">
+									<Language>SFX</Language>
+									<AudioFile>SE_GameStart.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="135441044"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SE_GameStart" ID="{A121D974-837B-4B90-B6C3-7BD85EFABBCA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Select" ID="{BDD757E4-D6DC-4997-9450-CFBD9581F52C}" ShortID="743954651">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SE_Simple_Decide_250330" ID="{8C5AA2A9-4C56-494C-A8B4-C194DCC62E5E}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.173719847203379"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.173719847203379"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SE_Simple_Decide_250330.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="616998283"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SE_Simple_Decide_250330" ID="{8C5AA2A9-4C56-494C-A8B4-C194DCC62E5E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Environment" ID="{9529C891-93D4-4F7D-AAE0-15E60A98051D}" ShortID="695076424">
@@ -2337,6 +2468,64 @@
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="07012018" ID="{47363ACD-0CC8-45D0-9B39-2AA4733A6285}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Jingle" ID="{5FDDF130-607B-4274-8377-3AF0B6E8A7DC}" ShortID="215793796">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Jingle" ID="{8212F3D9-2D0B-4F61-B82E-23066E7C7BB6}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Sleep" ID="{24CFF837-1740-4469-85D1-72206E0B2375}" ShortID="276934796">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jingle_Sleep_250330" ID="{698E01E7-C76F-4AE0-B248-26784795CCCB}">
+									<PropertyList>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Jingle_Sleep_250330.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="549937620"/>
+									</MediaIDList>
+									<ObjectLists>
+										<ObjectList Name="Markers">
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{646A9487-491E-4025-B361-EF0E4426AD0B}">
+														<PropertyList>
+															<Property Name="Label" Type="string" Value="StartFade"/>
+															<Property Name="Time" Type="Real64" Value="2.49151186547226"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Jingle_Sleep_250330" ID="{698E01E7-C76F-4AE0-B248-26784795CCCB}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

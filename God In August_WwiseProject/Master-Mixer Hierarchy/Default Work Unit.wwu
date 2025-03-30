@@ -25,7 +25,7 @@
 									</DuckingParam>
 								</DuckItem>
 								<DuckItem>
-									<BusRef Name="Music" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}"/>
+									<BusRef Name="BGM" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}"/>
 									<DuckingParam>
 										<Volume>-6</Volume>
 										<FadeInTime>2</FadeInTime>
@@ -35,8 +35,30 @@
 								</DuckItem>
 							</DuckingList>
 						</Bus>
-						<Bus Name="Music" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}"/>
+						<Bus Name="BGM" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}"/>
 						<Bus Name="Environment" ID="{D3B74405-5870-40EF-AD81-44A7FA759561}"/>
+						<Bus Name="Jingle" ID="{8212F3D9-2D0B-4F61-B82E-23066E7C7BB6}">
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="BGM" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}"/>
+									<DuckingParam>
+										<Volume>-6</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>0.5</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+								<DuckItem>
+									<BusRef Name="Environment" ID="{D3B74405-5870-40EF-AD81-44A7FA759561}"/>
+									<DuckingParam>
+										<Volume>-6</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>0.5</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

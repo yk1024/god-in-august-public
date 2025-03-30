@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{40BC542B-E91F-E95D-9782-B192D6F2CE70}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2CBE4453-DBAF-699A-D32B-1FAFC7D3C114}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,10 +19,11 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="412724365" Name="BGM"/>
 				<Bus Id="1229948536" Name="Environment"/>
 				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="3073030106" Name="Jingle"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
-				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="1106591596" Name="DirectionToAnomalyZ"/>
@@ -61,7 +62,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BD81319B-7FC3-32AC-ABDE-A7BE2B754B4E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{779E58C5-97C4-2858-CB12-D218C2EA5B79}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -104,6 +105,10 @@
 				<File Id="129458914" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt run 9.wav</ShortName>
 					<CachePath>SFX/Dirt run 9_818F3B66.wem</CachePath>
+				</File>
+				<File Id="135441044" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE_GameStart.wav</ShortName>
+					<CachePath>SFX/SE_GameStart_818F3B66.wem</CachePath>
 				</File>
 				<File Id="165684977" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.1.wav</ShortName>
@@ -193,6 +198,10 @@
 					<ShortName>Dirt walk 7.wav</ShortName>
 					<CachePath>SFX/Dirt walk 7_818F3B66.wem</CachePath>
 				</File>
+				<File Id="549937620" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jingle_Sleep_250330.wav</ShortName>
+					<CachePath>SFX/Jingle_Sleep_250330_2AAA0E0B.wem</CachePath>
+				</File>
 				<File Id="555775989" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Asphalt Walk.3.wav</ShortName>
 					<CachePath>SFX/Asphalt Walk.3_818F3B66.wem</CachePath>
@@ -224,6 +233,10 @@
 				<File Id="607916078" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 1.wav</ShortName>
 					<CachePath>SFX/Dirt walk 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="616998283" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE_Simple_Decide_250330.wav</ShortName>
+					<CachePath>SFX/SE_Simple_Decide_250330_439B9FDF.wem</CachePath>
 				</File>
 				<File Id="626202736" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gravel walk 5.wav</ShortName>
@@ -313,6 +326,10 @@
 					<ShortName>Dirt run 5.wav</ShortName>
 					<CachePath>SFX/Dirt run 5_818F3B66.wem</CachePath>
 				</File>
+				<File Id="974369196" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE_Decide_250330.wav</ShortName>
+					<CachePath>SFX/SE_Decide_250330_A9EEE9EB.wem</CachePath>
+				</File>
 				<File Id="996891236" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dirt walk 4.wav</ShortName>
 					<CachePath>SFX/Dirt walk 4_818F3B66.wem</CachePath>
@@ -345,8 +362,22 @@
 					<ShortName>Dirt walk 6.wav</ShortName>
 					<CachePath>SFX/Dirt walk 6_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1068592128" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE_Cancel.wav</ShortName>
+					<CachePath>SFX/SE_Cancel_C20967A4.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="1351875428" Name="Play_Cancel" DurationType="OneShot" DurationMin="4.037012" DurationMax="4.037012">
+					<MediaRefs>
+						<MediaRef Id="1068592128"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="162465350" Name="Play_Decide" DurationType="OneShot" DurationMin="4.05546" DurationMax="4.05546">
+					<MediaRefs>
+						<MediaRef Id="974369196"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="639345804" Name="Play_Engine" MaxAttenuation="50" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="663888226"/>
@@ -456,6 +487,11 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1497459184" Name="Play_GameStart" DurationType="OneShot" DurationMin="5.721247" DurationMax="5.721247">
+					<MediaRefs>
+						<MediaRef Id="135441044"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2702864411" Name="Play_NextCharacterSound" DurationType="OneShot" DurationMin="1.4860771" DurationMax="1.4860771">
 					<MediaRefs>
 						<MediaRef Id="799135290"/>
@@ -464,6 +500,16 @@
 				<Event Id="2704269105" Name="Play_NextTextSound" DurationType="OneShot" DurationMin="1.4860771" DurationMax="1.4860771">
 					<MediaRefs>
 						<MediaRef Id="577316467"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1042987450" Name="Play_Select" DurationType="OneShot" DurationMin="4.06145" DurationMax="4.06145">
+					<MediaRefs>
+						<MediaRef Id="616998283"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3734418179" Name="Play_Sleep" DurationType="OneShot" DurationMin="11.665556" DurationMax="11.665556">
+					<MediaRefs>
+						<MediaRef Id="549937620"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="313775518" Name="Play_Spatial_Sound" DurationType="Infinite">
@@ -531,5 +577,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1337E61E-D75E-6169-7832-1897B425CCEA}</FileHash>
+	<FileHash>{C62185F0-CA10-10DF-0327-F99538617C96}</FileHash>
 </SoundBanksInfo>

@@ -17,7 +17,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Music" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+							<ObjectRef Name="BGM" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>
@@ -837,13 +837,18 @@
 				<MusicPlaylistContainer Name="TitleBGM" ID="{AA620756-9AE4-4941-A5C6-E8040D80F955}" ShortID="736821684">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="132"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+							<ObjectRef Name="BGM" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>
@@ -893,7 +898,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28A08C31-3434-459F-80EF-3873C56D4ACE}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Music" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
+									<ObjectRef Name="BGM" ID="{4941B269-0B98-4E77-9EB9-1978570AD547}" WorkUnitID="{8FA9071E-0301-483C-9B80-8DC0EE064833}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>

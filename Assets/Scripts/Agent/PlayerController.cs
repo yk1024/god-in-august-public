@@ -17,6 +17,9 @@ public class PlayerController : SingletonBehaviour<PlayerController>
     [SerializeField, Tooltip("インタラクトできる距離")]
     private float distance;
 
+    [SerializeField, Tooltip("インタラクト時に再生する音")]
+    private AK.Wwise.Event onInteractEvent;
+
     // インタラクトが発生しているかどうか。
     private bool interacting;
 
@@ -71,6 +74,7 @@ public class PlayerController : SingletonBehaviour<PlayerController>
         // インタラクトが発生中で、見ている対象がインタラクト可能で、対象への距離がインタラクト可能な距離以下である場合、インタラクトする。
         if (interacting && target is IInteractable interactable && distance <= this.distance)
         {
+            onInteractEvent.Post(gameObject);
             interactable.Interact();
         }
     }
